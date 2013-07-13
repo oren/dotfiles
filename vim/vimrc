@@ -1,7 +1,10 @@
 call pathogen#infect()
 
 syntax on
-colorscheme resistor
+set t_Co=16
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 filetype indent plugin on
 
 " Windows
@@ -31,10 +34,6 @@ let maplocalleader = ","
 :noremap <leader>r :! make test/%<CR>
 :noremap <leader>R :! deaccessor.py < % > %.temp && jslint --es5 --node --vars --forin --nomen --color --undef --sloppy --maxlen 80 --indent 4 %.temp; rm -f %.temp<CR>
 :noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
-:noremap <leader>n :NERDTreeToggle<CR>
-
-:noremap <leader>f :FufFile<CR>
-:noremap <leader>b :FufBuffer<CR>
 
 :noremap <leader>gst :!tig status<CR>
 :noremap <leader>gpr :!git pull --rebase<CR>
@@ -50,8 +49,40 @@ set tabstop=2
 set smarttab
 set autoindent
 set textwidth=0
-set showtabline=2
+set showtabline=0
 set laststatus=1
+
+" Status line
+set statusline=%t     " tail only filename from path
+set statusline+=%h    " help file flag
+set statusline+=%m    " modified flag
+set statusline+=%r    " read only flag
+set statusline+=%=    " left/right separator
+set statusline+=%c,   " cursor column
+set statusline+=%l/%L " cursor line/total lines
+set statusline+=\ %P  " percent through file
+set laststatus=2      " always show status line
+
+" ; is easier than :
+nnoremap ; :
+" hh is easier than esc
+inoremap hh <ESC>
+
+"<c-l> clear the highlight as well as redraw
+nnoremap <C-L> :nohls<CR><C-L>
+inoremap <C-L> <C-O>:nohls<CR>
+
+"buffers
+map <C-h> <Esc>:bn<CR>
+map <C-t> <Esc>:bp<CR>
+map <C-d> <Esc>:bd<CR>
+
+"F keys
+map <F1> :e.<CR>
+nnoremap <F2> :set nonumber!<CR>
+set pastetoggle=<F3> " hit this before pasting to fix indentation
+nnoremap <F3> :set invpaste paste?<CR>
+set pastetoggle=<F3>
 
 " Searching
 " ============================================================================
@@ -91,3 +122,4 @@ set backspace=indent,eol,start
 
 " Change mapping of CtrlP
 let g:ctrlp_map = '<leader>t'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
