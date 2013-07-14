@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# BASH PROFILE
+ln -vfs ~/.dotfiles/debian-laptop/bashrc ~/.bashrc
+ln -vfs ~/.dotfiles/debian-laptop/bash_profile ~/.bash_profile
+ln -vfs ~/.dotfiles/debian-laptop/bash_aliases ~/.bash_aliases
+ln -vfs ~/.dotfiles/debian-laptop/xinitrc ~/.xinitrc
+ln -vfs ~/.dotfiles/debian-laptop/Xdefaults ~/.Xdefaults
+
+# VIM FILES
+ln -vfs ~/.dotfiles/debian-laptop/vim ~/.vim
+ln -vfs ~/.dotfiles/debian-laptop/vim/vimrc ~/.vimrc
+ln -vfs ~/.dotfiles/debian-laptop/vim/gvimrc ~/.gvimrc
+
+# GEMRC
+ln -vfs ~/.dotfiles/debian-laptop/etc/gemrc ~/.gemrc
+ln -vfs ~/.dotfiles/debian-laptop/etc/irbrc ~/.irbrc
+
+# SCREEN
+ln -vfs ~/.dotfiles/debian-laptop/etc/screenrc ~/.screenrc
+
+ln -vfs ~/.dotfiles/debian-laptop/tmux.conf ~/.tmux.conf
+ln -vfs ~/.dotfiles/debian-laptop/weechat ~/.weechat
+ln -vfs ~/.dotfiles/debian-laptop/i3 ~/.i3
+
+# CREATE VIM BACKUP DIR
+mkdir -p ~/.backup/vim/swap
