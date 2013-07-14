@@ -35,7 +35,8 @@ alias monitor='xrandr --output LVDS --auto --output HDMI-0 --auto --above LVDS'
 
 alias h='sudo halt'
 alias hib='sudo pm-hibernate'
-alias usb='pmount /dev/sdb1 usb'
+
+# mount
 alias clip='sudo mount /dev/sdb /media/usb/ -o uid=1000,gid=1000'
 alias u='sudo umount /media/usb'
 
