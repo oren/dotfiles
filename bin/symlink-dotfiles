@@ -4,6 +4,8 @@
 ln -vfs ~/.dotfiles/bashrc ~/.bashrc
 ln -vfs ~/.dotfiles/bash_profile ~/.bash_profile
 ln -vfs ~/.dotfiles/bash_aliases ~/.bash_aliases
+ln -vfs ~/.dotfiles/xinitrc ~/.xinitrc
+ln -vfs ~/.dotfiles/Xdefaults ~/.Xdefaults
 
 # VIM FILES
 ln -vfs ~/.dotfiles/vim ~/.vim
@@ -16,6 +18,10 @@ ln -vfs ~/.dotfiles/etc/irbrc ~/.irbrc
 
 # SCREEN
 ln -vfs ~/.dotfiles/etc/screenrc ~/.screenrc
+
+ln -vfs ~/.dotfiles/tmux.conf ~/.tmux.conf
+ln -vfs ~/.dotfiles/weechat ~/.weechat
+ln -vfs ~/.dotfiles/i3 ~/.i3
 
 # CREATE VIM BACKUP DIR
 mkdir -p ~/.backup/vim/swap
