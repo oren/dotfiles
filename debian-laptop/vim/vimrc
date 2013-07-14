@@ -51,11 +51,10 @@ set autoindent
 set textwidth=0
 set showtabline=0
 set laststatus=1
-
 set cursorline
 
-nnoremap ; :
 " ; is easier than :
+nnoremap ; :
 " hh is easier than esc
 inoremap hh <ESC>
 "  tab is easier than %
@@ -67,7 +66,8 @@ map <C-h> <Esc>:bn<CR>
 map <C-t> <Esc>:bp<CR>
 map <C-d> <Esc>:bd<CR>
 
-"F keys
+" F keys
+" ============================================================================
 map <F1> :e.<CR>
 nnoremap <F2> :set nonumber!<CR>
 set pastetoggle=<F3> " hit this before pasting to fix indentation
