@@ -52,6 +52,8 @@ set textwidth=0
 set showtabline=0
 set laststatus=1
 
+set cursorline
+
 nnoremap ; :
 " ; is easier than :
 " hh is easier than esc

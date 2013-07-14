@@ -2,7 +2,7 @@
 
 export EDITOR="vim"
 export RUBY_BREW_PATH=/usr/local/Cellar/ruby/2.0.0-p0/bin
-export PS1='$(_gemset):: \[\033[32m\]\w \[\033[00;34m\]$(echo $(br) $(_suspended)) \$\[\033[00m\] '
+export PS1='\[\033[32m\]\w \[\033[00;34m\]$(echo $(br) $(_suspended)) \$\[\033[00m\] '
 export PATH=$RUBY_BREW_PATH:~/.dotfiles/bin:./node_modules/.bin:/usr/local/sbin:/usr/local/bin:/opt/local/bin:$PATH
 export GREP_OPTIONS="--color=auto"
 export LANG="en_US.UTF-8"
@@ -107,16 +107,6 @@ br() {
   test -d .git && git symbolic-ref HEAD 2> /dev/null | sed 's/refs\/heads\///'
 }
 
-alias gc='git commit -v'
-alias gca='git commit -v -a'
-alias gpp='git pull && git push'
-alias gco='git checkout'
-alias gd='git diff'
-alias gdm='git diff master'
-alias gst='tig status'
-alias g='git status -sb'
-alias gpr='git pull --rebase'
-
 function github() {
   git clone git@github.com:$1.git
 }
@@ -151,6 +141,10 @@ function vbox-stop() {
 function vbox-save() {
   vboxmanage controlvm "$1" savestate
 }
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

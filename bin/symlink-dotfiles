@@ -3,6 +3,7 @@
 # BASH PROFILE
 ln -vfs ~/.dotfiles/bashrc ~/.bashrc
 ln -vfs ~/.dotfiles/bash_profile ~/.bash_profile
+ln -vfs ~/.dotfiles/bash_aliases ~/.bash_aliases
 
 # VIM FILES
 ln -vfs ~/.dotfiles/vim ~/.vim
