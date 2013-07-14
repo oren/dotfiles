@@ -52,25 +52,13 @@ set textwidth=0
 set showtabline=0
 set laststatus=1
 
-" Status line
-set statusline=%t     " tail only filename from path
-set statusline+=%h    " help file flag
-set statusline+=%m    " modified flag
-set statusline+=%r    " read only flag
-set statusline+=%=    " left/right separator
-set statusline+=%c,   " cursor column
-set statusline+=%l/%L " cursor line/total lines
-set statusline+=\ %P  " percent through file
-set laststatus=2      " always show status line
-
-" ; is easier than :
 nnoremap ; :
+" ; is easier than :
 " hh is easier than esc
 inoremap hh <ESC>
-
-"<c-l> clear the highlight as well as redraw
-nnoremap <C-L> :nohls<CR><C-L>
-inoremap <C-L> <C-O>:nohls<CR>
+"  tab is easier than %
+nnoremap <tab> %
+vnoremap <tab> %
 
 "buffers
 map <C-h> <Esc>:bn<CR>
@@ -90,6 +78,9 @@ set hlsearch   " highlight search
 set incsearch  " incremental search, search as you type
 set ignorecase " Ignore case when searching
 set smartcase  " Ignore case when searching lowercase
+"<c-l> clear the highlight as well as redraw
+nnoremap <C-L> :nohls<CR><C-L>
+inoremap <C-L> <C-O>:nohls<CR>
 
 " Directories
 " ============================================================================
