@@ -3,7 +3,13 @@ Dotfiles FTW
 
     cd ~/
     git clone git://github.com/oren/dotfiles.git
+    mv dotfiles .dotfiles
+
+run one of the following:
+
     ~/dotfiles/debian-laptop/bin/symlink-dotfiles
+    ~/dotfiles/debian-server/bin/symlink-dotfiles
+    ~/dotfiles/mac/bin/symlink-dotfiles
 
     # You're done!
 
