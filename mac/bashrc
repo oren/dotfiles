@@ -117,6 +117,8 @@ alias gst='tig status'
 alias g='git status -sb'
 alias gpr='git pull --rebase'
 
+alias l='ls -G'
+
 function github() {
   git clone git@github.com:$1.git
 }
