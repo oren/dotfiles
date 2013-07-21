@@ -19,6 +19,10 @@ set spelllang=en_us
 let mapleader = ","
 let maplocalleader = ","
 
+" Show extra space in red
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
 :noremap <leader>v :vsp<CR>:enew<CR>:pwd<CR>
 :noremap <leader>s :split<CR>:enew<CR>:pwd<CR>
 :noremap <leader>l <C-w>l
@@ -39,6 +43,10 @@ let maplocalleader = ","
 :noremap <leader>gpr :!git pull --rebase<CR>
 :noremap <leader>gup :!git pull<CR>
 :noremap <leader>gush :!git push<CR>
+
+:noremap <C-c> <ESC>
+:noremap <C-w><C-c> <ESC>
+:noremap <C-w>c <ESC>
 
 " Tabs
 " ============================================================================
@@ -62,7 +70,6 @@ nnoremap ; :
 inoremap hh <ESC>
 "  tab is easier than %
 nnoremap <tab> %
-vnoremap <tab> %
 
 "buffers
 map <C-h> <Esc>:bn<CR>
