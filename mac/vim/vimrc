@@ -6,6 +6,7 @@ let g:solarized_termcolors=256
 colorscheme solarized
 " colorscheme resistor
 
+" turns on filetype detection, and loads indent scripts and plugins
 filetype indent plugin on
 
 " Windows
@@ -19,6 +20,10 @@ set spelllang=en_us
 
 let mapleader = ","
 let maplocalleader = ","
+
+" Show extra space in red
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
 :noremap <leader>v :vsp<CR>:enew<CR>:pwd<CR>
 :noremap <leader>s :split<CR>:enew<CR>:pwd<CR>
@@ -79,7 +84,6 @@ map <C-t> <Esc>:bp<CR>
 map <C-d> <Esc>:bd<CR>
 
 " F keys
-"
 " ============================================================================
 map <F1> :e.<CR>
 nnoremap <F2> :set nonumber!<CR>
@@ -128,7 +132,7 @@ set backspace=indent,eol,start
 
 " Change mapping of CtrlP
 let g:ctrlp_map = '<leader>t'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = '\\\\v[\\\\/]\\\\.(git|hg|svn)$'
 
 "jump to last cursor position when opening a file
 "dont do it when writing a commit log entry
@@ -140,4 +144,3 @@ function! SetCursorPosition()
         endif
     end
 endfunction
-
