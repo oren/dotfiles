@@ -1,7 +1,11 @@
 call pathogen#infect()
 
 syntax on
-colorscheme resistor
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
+" colorscheme resistor
+
 filetype indent plugin on
 
 " Windows

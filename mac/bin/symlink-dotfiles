@@ -16,6 +16,9 @@ ln -vfs ~/.dotfiles/mac/etc/irbrc ~/.irbrc
 # SCREEN
 ln -vfs ~/.dotfiles/mac/etc/screenrc ~/.screenrc
 
+# TMUX
+ln -vfs ~/.dotfiles/mac/etc/tmux.conf ~/.tmux.conf
+
 # GIT
 ln -vfs ~/.dotfiles/mac/etc/gitconfig ~/.gitconfig
 

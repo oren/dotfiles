@@ -58,6 +58,10 @@ vack() {
   vi -p -c "/$1" $(ack -al $@)
 }
 
+alias v="mvim -v"
+alias vi="mvim -v"
+alias vim="mvim -v"
+
 ## Search all files by default. This fixes the problem that *.css, *.less,
 ## *.sass files aren't usually seacrched.
 # alias ack="ack -a"
@@ -117,6 +121,7 @@ alias g='git status -sb'
 alias gpr='git pull --rebase'
 
 alias l='ls -G'
+alias ls='ls -G'
 
 function github() {
   git clone git@github.com:$1.git
