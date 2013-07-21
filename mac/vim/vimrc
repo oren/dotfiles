@@ -129,3 +129,15 @@ set backspace=indent,eol,start
 " Change mapping of CtrlP
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+"jump to last cursor position when opening a file
+"dont do it when writing a commit log entry
+autocmd BufReadPost * call SetCursorPosition()
+function! SetCursorPosition()
+    if &filetype !~ 'commit\c'
+        if line("'\"") > 0 && line("'\"") <= line("$")
+            exe "normal g`\""
+        endif
+    end
+endfunction
+
