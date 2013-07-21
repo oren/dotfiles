@@ -1,3 +1,5 @@
 .DS_Store
 /vim/.netrwhist
 /bin/pgstart
+/debian-laptop/weechat/logs
+/debian-laptop/weechat/weechat.log
