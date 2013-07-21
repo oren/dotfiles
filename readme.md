@@ -3,18 +3,21 @@ Dotfiles FTW
 
     cd ~/
     git clone git://github.com/oren/dotfiles.git
-    ~/dotfiles/debian-laptop/bin/symlink-dotfiles
+    mv dotfiles .dotfiles
+
+run one of the following:
+
+    ~/.dotfiles/debian-laptop/bin/symlink-dotfiles
+    ~/.dotfiles/debian-server/bin/symlink-dotfiles
+    ~/.dotfiles/mac/bin/symlink-dotfiles
 
     # You're done!
 
 Assupmtions
 -----------
 
-Make sure to `rm -r .vim .i3 .weechat` before symlinking.
-
-The configuration assumes that you have the binary executable `mvim` somewhere in your path.
-
-This is also adds /opt/ruby-enterprise/bin to your path, and also adds lots of conveniences for git.
+Make sure to `rm -r .vim .i3 .weechat` before symlinking.  
+I use vim but like to capy paste from one vim to another. I do that by aliasing vim to mvim -v so make sure [macvim](http://code.google.com/p/macvim/) is installed.
 
 Credits
 -------

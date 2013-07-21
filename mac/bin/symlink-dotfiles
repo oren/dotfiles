@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# BASH PROFILE
+ln -vfs ~/.dotfiles/mac/bashrc ~/.bashrc
+ln -vfs ~/.dotfiles/mac/bash_profile ~/.bash_profile
+
+# VIM FILES
+ln -vfs ~/.dotfiles/mac/vim ~/.vim
+ln -vfs ~/.dotfiles/mac/vim/vimrc ~/.vimrc
+ln -vfs ~/.dotfiles/mac/vim/gvimrc ~/.gvimrc
+
+# GEMRC
+ln -vfs ~/.dotfiles/mac/etc/gemrc ~/.gemrc
+ln -vfs ~/.dotfiles/mac/etc/irbrc ~/.irbrc
+
+# SCREEN
+ln -vfs ~/.dotfiles/mac/etc/screenrc ~/.screenrc
+
+# TMUX
+ln -vfs ~/.dotfiles/mac/etc/tmux.conf ~/.tmux.conf
+
+# GIT
+ln -vfs ~/.dotfiles/mac/etc/gitconfig ~/.gitconfig
+
+# CREATE VIM BACKUP DIR
+mkdir -p ~/.backup/vim/swap
