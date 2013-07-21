@@ -62,6 +62,9 @@ set showtabline=0
 set laststatus=1
 set cursorline
 
+" detect indentation based on source
+autocmd BufReadPost * DetectIndent
+
 " ; is easier than :
 nnoremap ; :
 " hh is easier than esc
@@ -74,9 +77,6 @@ vnoremap <tab> %
 map <C-h> <Esc>:bn<CR>
 map <C-t> <Esc>:bp<CR>
 map <C-d> <Esc>:bd<CR>
-
-" detect indentation based on source
-" autocmd BufReadPost * DetectIndent
 
 " F keys
 "
