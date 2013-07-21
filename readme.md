@@ -16,10 +16,10 @@ run one of the following:
 Assupmtions
 -----------
 
-Make sure to `rm -r .vim .i3 .weechat` before symlinking.  
+Make sure to `rm -r .vim .i3 .weechat` before symlinking.
 I use vim but like to capy paste from one vim to another. I do that by aliasing vim to mvim -v so make sure [macvim](http://code.google.com/p/macvim/) is installed.
 
 Credits
 -------
 
-Most of the credits would go to http://peepcode.com/products/advanced-command-line. 
+Most of the credits would go to http://peepcode.com/products/advanced-command-line.
