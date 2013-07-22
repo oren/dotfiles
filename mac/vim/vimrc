@@ -1,9 +1,12 @@
 call pathogen#infect()
 
 syntax on
+
+" Solarized
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+
 " colorscheme resistor
 
 " turns on filetype detection, and loads indent scripts and plugins
