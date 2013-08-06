@@ -107,9 +107,6 @@ inoremap <C-L> <C-O>:nohls<CR>
 set backupdir=~/.backup/vim
 set backup
 
-" Set Swap directory
-set directory=~/.backup/vim/swap
-
 " Change file completion to mimic shell behavior
 set wildmenu
 set wildmode=list:longest
