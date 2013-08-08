@@ -106,6 +106,7 @@ inoremap <C-L> <C-O>:nohls<CR>
 " Setup backup location and enable
 set backupdir=~/.backup/vim
 set backup
+set directory=~/.backup/vim/swap
 
 " Change file completion to mimic shell behavior
 set wildmenu
