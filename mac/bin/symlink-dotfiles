@@ -21,6 +21,7 @@ ln -vfs ~/.dotfiles/mac/etc/tmux.conf ~/.tmux.conf
 
 # GIT
 ln -vfs ~/.dotfiles/mac/etc/gitconfig ~/.gitconfig
+ln -vfs ~/.dotfiles/mac/etc/git-completion.bash ~/.gitcompletion.bash
 
 # CREATE VIM BACKUP DIR
 mkdir -p ~/.backup/vim/swap
