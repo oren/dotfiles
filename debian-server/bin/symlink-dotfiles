@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# BASH PROFILE
+ln -vfs ~/.dotfiles/debian-server/bashrc ~/.bashrc
+ln -vfs ~/.dotfiles/debian-server/bash_profile ~/.bash_profile
+ln -vfs ~/.dotfiles/debian-server/bash_aliases ~/.bash_aliases
+ln -vfs ~/.dotfiles/debian-server/Xdefaults ~/.Xdefaults
+
+# VIM FILES
+ln -vfs ~/.dotfiles/debian-server/vim ~/.vim
+ln -vfs ~/.dotfiles/debian-server/vim/vimrc ~/.vimrc
+ln -vfs ~/.dotfiles/debian-server/vim/gvimrc ~/.gvimrc
+
+# GEMRC
+ln -vfs ~/.dotfiles/debian-server/etc/gemrc ~/.gemrc
+ln -vfs ~/.dotfiles/debian-server/etc/irbrc ~/.irbrc
+
+# SCREEN
+ln -vfs ~/.dotfiles/debian-server/etc/screenrc ~/.screenrc
+
+ln -vfs ~/.dotfiles/debian-server/tmux.conf ~/.tmux.conf
+ln -vfs ~/.dotfiles/debian-server/weechat ~/.weechat
+
+# CREATE VIM BACKUP DIR
+mkdir -p ~/.backup/vim/swap
