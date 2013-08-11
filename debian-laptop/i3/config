@@ -68,6 +68,8 @@ bindsym $mod+f fullscreen
 bindsym $mod+s layout tabbed
 bindsym $mod+e layout default
 
+# bindsym $mod+x layout toggle
+
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 

@@ -22,6 +22,7 @@ ln -vfs ~/.dotfiles/debian-laptop/etc/screenrc ~/.screenrc
 ln -vfs ~/.dotfiles/debian-laptop/tmux.conf ~/.tmux.conf
 ln -vfs ~/.dotfiles/debian-laptop/weechat ~/.weechat
 ln -vfs ~/.dotfiles/debian-laptop/i3 ~/.i3
+ln -vfs ~/.dotfiles/debian-laptop/git-completion ~/.git-completion
 
 # CREATE VIM BACKUP DIR
 mkdir -p ~/.backup/vim/swap

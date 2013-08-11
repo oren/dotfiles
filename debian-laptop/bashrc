@@ -54,3 +54,7 @@ _suspended() {
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+if [ -f ~/.git-completion ]; then
+    . ~/.git-completion
+fi
