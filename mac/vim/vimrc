@@ -3,11 +3,10 @@ call pathogen#infect()
 syntax on
 
 " Solarized
-set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
-
-" colorscheme resistor
+" set background=dark
+" let g:solarized_termcolors=256
+" colorscheme solarized
+colorscheme resistor
 
 " turns on filetype detection, and loads indent scripts and plugins
 filetype indent plugin on
@@ -20,6 +19,7 @@ set winminheight=0
 set winminwidth=0
 
 set spelllang=en_us
+set nowrap
 
 let mapleader = ","
 let maplocalleader = ","
@@ -45,8 +45,7 @@ match ExtraWhitespace /\s\+$/
 :noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 :noremap <leader>n :NERDTreeToggle<CR>
 
-:noremap <leader>f :FufFile<CR>
-:noremap <leader>b :FufBuffer<CR>
+noremap <leader>b :CtrlPBuffer<CR>
 
 :noremap <leader>gst :!tig status<CR>
 :noremap <leader>gpr :!git pull --rebase<CR>
@@ -60,9 +59,9 @@ match ExtraWhitespace /\s\+$/
 " Tabs
 " ============================================================================
 set expandtab
-set softtabstop=2
-set shiftwidth=2
-set tabstop=2
+set softtabstop=4
+set shiftwidth=4
+set tabstop=4
 set smarttab
 set autoindent
 set textwidth=0
@@ -108,8 +107,6 @@ inoremap <C-L> <C-O>:nohls<CR>
 " Setup backup location and enable
 set backupdir=~/.backup/vim
 set backup
-
-" Set Swap directory
 set directory=~/.backup/vim/swap
 
 " Change file completion to mimic shell behavior
@@ -134,7 +131,7 @@ set backspace=indent,eol,start
 
 " Change mapping of CtrlP
 let g:ctrlp_map = '<leader>t'
-let g:ctrlp_custom_ignore = '\\\\v[\\\\/]\\\\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
 
 "jump to last cursor position when opening a file
 "dont do it when writing a commit log entry

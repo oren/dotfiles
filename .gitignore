@@ -7,3 +7,5 @@
 debian-laptop/vim/.netrwhist
 debian-server/vim/.netrwhist
 mac/vim/.netrwhist
+/debian-server/weechat/logs
+/debian-server/weechat/weechat.log
