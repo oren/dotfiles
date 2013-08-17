@@ -124,7 +124,6 @@ alias ld='ls -al -d * | egrep "^d"' # only subdirectories
 
 alias m='mplayer'
 alias v='vim'
-alias ack='ack-grep'
 alias r='reset'
 alias in='sudo aptitude install'
 alias p='sudo aptitude purge'
