@@ -12,19 +12,52 @@
 "       It tries to preserve cursor position and avoids
 "       replacing the buffer with stderr output.
 "
+" Options:
+"
+"   g:go_fmt_commands [default=1]
+"
+"       Flag to indicate whether to enable the commands listed above.
+"
+if exists("b:did_ftplugin_go_fmt")
+    finish
+endif
 
-command! -buffer Fmt call s:GoFormat()
+
+if !exists("g:go_fmt_commands")
+    let g:go_fmt_commands = 1
+endif
+
+
+if g:go_fmt_commands
+    command! -buffer Fmt call s:GoFormat()
+endif
 
 function! s:GoFormat()
     let view = winsaveview()
-    %!gofmt
+    silent %!gofmt
     if v:shell_error
-        %| " output errors returned by gofmt
-           " TODO(dchest): perhaps, errors should go to quickfix
+        let errors = []
+        for line in getline(1, line('$'))
+            let tokens = matchlist(line, '^\(.\{-}\):\(\d\+\):\(\d\+\)\s*\(.*\)')
+            if !empty(tokens)
+                call add(errors, {"filename": @%,
+                                 \"lnum":     tokens[2],
+                                 \"col":      tokens[3],
+                                 \"text":     tokens[4]})
+            endif
+        endfor
+        if empty(errors)
+            % | " Couldn't detect gofmt error format, output errors
+        endif
         undo
-	echohl Error | echomsg "Gofmt returned error" | echohl None
+        if !empty(errors)
+            call setloclist(0, errors, 'r')
+        endif
+        echohl Error | echomsg "Gofmt returned error" | echohl None
     endif
     call winrestview(view)
 endfunction
+
+let b:did_ftplugin_go_fmt = 1
 
 " vim:ts=4:sw=4:et
