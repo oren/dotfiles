@@ -1,0 +1,32 @@
+#!/bin/bash
+
+repos=(
+  "https://github.com/kien/ctrlp.vim.git"
+  "https://github.com/vim-scripts/DetectIndent.git"
+  "https://github.com/uggedal/go-vim.git"
+  "https://github.com/tpope/vim-markdown.git"
+  "https://github.com/juvenn/mustache.vim.git"
+  "https://github.com/cakebaker/scss-syntax.vim.git"
+  "https://github.com/tomtom/tcomment_vim.git"
+  "https://github.com/kchmck/vim-coffee-script.git"
+  "https://github.com/altercation/vim-colors-solarized.git"
+  "https://github.com/digitaltoad/vim-jade.git"
+  "https://github.com/tomtom/tlib_vim.git"
+  "https://github.com/MarcWeber/vim-addon-mw-utils.git"
+  "https://github.com/garbas/vim-snipmate.git"
+  "https://github.com/honza/vim-snippets"
+)
+
+echo "cloning plugin repositories"
+
+rm -r /Users/ogolan/.vim/bundle/*
+cd /Users/ogolan/.vim/bundle
+
+folderRegex='.+\/(.+).git'
+
+for repo in "${repos[@]}"
+  do
+    git clone "$repo"
+    [[ $repo =~ $folderRegex ]]
+    rm -r ${BASH_REMATCH[1]}/.git
+done
