@@ -15,7 +15,7 @@ currentVersion=$(node --version)
 
 if [ $currentVersion = v$1 ]; then
   echo Node $1 already installed.
-    exit 1
+  exit 0
 fi
 
 version=$1
