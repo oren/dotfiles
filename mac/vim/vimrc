@@ -69,7 +69,7 @@ set cursorline
 
 " Status line
 set laststatus=2      " always show it
-set statusline=%t     " tail only filename from path
+set statusline=%f     " tail only filename from path
 set statusline+=%h    " help file flag
 set statusline+=%m    " modified flag
 set statusline+=%r    " read only flag
