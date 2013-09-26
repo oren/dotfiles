@@ -117,21 +117,22 @@ function vbox-save() {
 alias ack="ack -a"
 
 alias ..="cd .."  # Go up one dir.
-alias c='cd'  
-alias l='ls --color'  
-alias la='ls -Fa'  
-alias ld='ls -al -d * | egrep "^d"' # only subdirectories  
+alias c='cd'
+alias l='ls --color'
+alias la='ls -Fa'
+alias ld='ls -al -d * | egrep "^d"' # only subdirectories
 
 alias m='mplayer'
 alias v='vim'
-alias ack='ack-grep'
 alias r='reset'
 alias in='sudo aptitude install'
 alias p='sudo aptitude purge'
 alias monitor='xrandr --output LVDS --auto --output HDMI-0 --auto --above LVDS'
+alias vpn='sudo vpnc-connect /home/oren/vpn'
 
-alias h='sudo halt'
 alias hib='sudo pm-hibernate'
+alias res='sudo reboot'
+alias hal='sudo halt'
 
 # mount
 alias clip='sudo mount /dev/sdb /media/usb/ -o uid=1000,gid=1000'
@@ -147,3 +148,5 @@ alias gdm='git diff master'
 alias gst='tig status'
 alias g='git status -sb'
 alias gpr='git pull --rebase'
+alias gf='git fetch --prune'
+alias gb='git branch'

@@ -5,6 +5,7 @@ set t_Co=16
 let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
+" turns on filetype detection, and loads indent scripts and plugins
 filetype indent plugin on
 
 " Windows
@@ -15,6 +16,7 @@ set winminheight=0
 set winminwidth=0
 
 set spelllang=en_us
+set nowrap
 
 let mapleader = ","
 let maplocalleader = ","
@@ -36,7 +38,7 @@ match ExtraWhitespace /\s\+$/
 :noremap J <Esc><C-w>j<C-w>_
 :noremap K <Esc><C-w>k<C-w>_
 :noremap <leader>r :! make test/%<CR>
-:noremap <leader>R :! deaccessor.py < % > %.temp && jslint --es5 --node --vars --forin --nomen --color --undef --sloppy --maxlen 80 --indent 4 %.temp; rm -f %.temp<CR>
+:noremap <leader>R :! jshint %<CR>
 :noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 
 :noremap <leader>gst :!tig status<CR>
@@ -99,7 +101,6 @@ inoremap <C-L> <C-O>:nohls<CR>
 " Setup backup location and enable
 set backupdir=~/.backup/vim
 set backup
-
 " Set Swap directory
 set directory=~/.backup/vim/swap
 
@@ -125,7 +126,7 @@ set backspace=indent,eol,start
 
 " Change mapping of CtrlP
 let g:ctrlp_map = '<leader>t'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
 
 "jump to last cursor position when opening a file
 "dont do it when writing a commit log entry
