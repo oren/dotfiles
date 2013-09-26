@@ -11,3 +11,5 @@
   br = branch
   up = rebase
   ci = commit
+[merge]
+	conflictstyle = diff3
