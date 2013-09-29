@@ -65,8 +65,18 @@ set smarttab
 set autoindent
 set textwidth=0
 set showtabline=0
-set laststatus=1
 set cursorline
+
+" Status line
+set laststatus=2      " always show it
+set statusline=%f     " tail only filename from path
+set statusline+=%h    " help file flag
+set statusline+=%m    " modified flag
+set statusline+=%r    " read only flag
+set statusline+=%=    " left/right separator
+set statusline+=%c,   " cursor column
+set statusline+=%l/%L " cursor line/total lines
+set statusline+=\ %P  " percent through file
 
 " detect indentation based on source
 autocmd BufReadPost * DetectIndent

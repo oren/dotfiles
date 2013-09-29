@@ -58,6 +58,7 @@ vack() {
   vi -p -c "/$1" $(ack -al $@)
 }
 
+alias ag="git grep"
 alias v="mvim -v"
 alias vi="mvim -v"
 alias vim="mvim -v"
