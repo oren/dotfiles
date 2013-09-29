@@ -1,51 +1,14 @@
 #/bin/bash
 
 export EDITOR="vim"
-export RUBY_BREW_PATH=/usr/local/Cellar/ruby/2.0.0-p0/bin
 export PS1='\[\033[32m\]\w \[\033[00;34m\]$(echo $(br) $(_suspended)) \$\[\033[00m\] '
-# export PATH=$RUBY_BREW_PATH:~/.dotfiles/debian-laptop/bin:./node_modules/.bin:/usr/local/sbin:/usr/local/bin:/opt/local/bin:$PATH
-export PATH=~/.dotfiles/debian-laptop/bin:$PATH
-export PATH="$PATH:/usr/bin"
-export PATH="$PATH:/home/oren/misc/apps/android-sdk-linux/tools"
-export PATH="$PATH:/home/oren/misc/apps/android-sdk-linux/platform-tools"
-export PATH="$PATH:/home/oren/misc/apps/android-sdk-linux/build-tools"
-export ANDROID_BIN="/home/oren/misc/apps/android-sdk-linux/tools/android"
+export PATH=~/.dotfiles/debian-server/bin:$PATH
 export GREP_OPTIONS="--color=auto"
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
 export NODE_PATH=/usr/local/lib/node_modules
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-
-## app specific secrets
-if [ -e ~/.openredis_secret ]; then source ~/.openredis_secret; fi
-
-## amazon s3 configuration
-if [[ -f ~/.amazon_keys ]]; then source ~/.amazon_keys; fi
-
-## authorize.net development settings
-if [[ -f ~/.authorize-net ]]; then source ~/.authorize-net; fi
-
-## malone development settings
-if [[ -f ~/.malone ]]; then source ~/.malone; fi
-
-## mailchimp settings
-if [[ -f ~/.mailchimp ]]; then source ~/.mailchimp; fi
-
-## xend settings
-if [[ -f ~/.xend ]]; then source ~/.xend; fi
-
-## golang settings
-if [[ -f ~/.golangconf ]]; then source ~/.golangconf; fi
 
 # common aliases & functions
-
-_gemset() {
-  if [[ -z $GS_NAME ]]; then
-    echo ""
-  else
-    echo "$GS_NAME "
-  fi
-}
 
 _suspended() {
   jobs | wc -l | tr -d " "
