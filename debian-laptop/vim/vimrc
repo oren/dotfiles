@@ -35,7 +35,6 @@ match ExtraWhitespace /\s\+$/
 :noremap <leader>N <C-W>n<C-W>_
 :noremap <leader>? <C-W>n<C-W>H<C-W>q
 :noremap <leader>c :only<CR>:tabonly<CR>
-:noremap J <Esc><C-w>j<C-w>_
 :noremap K <Esc><C-w>k<C-w>_
 :noremap <leader>r :! make test/%<CR>
 :noremap <leader>R :! jshint %<CR>
@@ -85,8 +84,8 @@ inoremap hh <ESC>
 nnoremap <tab> %
 
 "buffers
-map <C-h> <Esc>:bn<CR>
-map <C-t> <Esc>:bp<CR>
+map <C-h> <Esc>:bp<CR>
+map <C-t> <Esc>:bn<CR>
 map <C-d> <Esc>:bd<CR>
 
 " F keys
@@ -118,7 +117,7 @@ set directory=~/.backup/vim/swap
 " Change file completion to mimic shell behavior
 set wildmenu
 set wildmode=list:longest
-set wildignore+=*/tmp/*,*/.gs/*,*.DS_Store,*.rdb,*.aof,*.sqlite3,*.pid
+set wildignore+=*/.gs/*,*.DS_Store,*.rdb,*.aof,*.sqlite3,*.pid
 
 " Inser New Line
 " ============================================================================

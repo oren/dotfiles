@@ -7,8 +7,7 @@ export GREP_OPTIONS="--color=auto"
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
 export NODE_PATH=/usr/local/lib/node_modules
-
-# common aliases & functions
+export TERM=xterm-256color
 
 _suspended() {
   jobs | wc -l | tr -d " "
