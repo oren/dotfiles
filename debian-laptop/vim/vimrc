@@ -36,8 +36,8 @@ match ExtraWhitespace /\s\+$/
 :noremap <leader>? <C-W>n<C-W>H<C-W>q
 :noremap <leader>c :only<CR>:tabonly<CR>
 :noremap K <Esc><C-w>k<C-w>_
-:noremap <leader>r :! make test/%<CR>
-:noremap <leader>R :! jshint %<CR>
+:noremap <leader>R :! make test/%<CR>
+:noremap <leader>r :! jshint %<CR>
 :noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 
 :noremap <leader>gst :!tig status<CR>
