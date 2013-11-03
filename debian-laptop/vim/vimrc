@@ -6,7 +6,7 @@ let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 " turns on filetype detection, and loads indent scripts and plugins
-filetype indent plugin on
+" filetype indent plugin on
 
 " Windows
 " ============================================================================
