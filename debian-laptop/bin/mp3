@@ -1,4 +1,4 @@
 #!/bin/sh
 
-find /home/oren/podcasts/ -type f -name "*.mp3" -exec cp {} /media/usb/MUSIC \;
+find /home/oren/gpodder-downloads/ -type f -name "*.mp3" -exec cp {} /media/usb/PODCASTS \;
 
