@@ -4,6 +4,7 @@ syntax on
 set t_Co=16
 let g:solarized_termcolors=256
 set background=dark
+" set background=light
 colorscheme solarized
 " turns on filetype detection, and loads indent scripts and plugins
 " filetype indent plugin on
