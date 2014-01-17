@@ -1,12 +1,14 @@
 #/bin/bash
 
 export EDITOR="vim"
-export PS1='\[\033[01;32m\]$\[\033[00m\] '
+# export PS1='\\[\\033[01;32m\\]$\\[\\033[00m\\] '
+export PS1="\w\[$WHITE\] "
 export PATH=~/.dotfiles/mac/bin:./node_modules/.bin:/usr/local/sbin:/usr/local/bin:/opt/local/bin:$PATH
 export GREP_OPTIONS="--color=auto"
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
 export NODE_PATH=/usr/local/lib/node_modules
+export PATH=${PATH}:/Users/zod/apps/android-sdk-macosx/platform-tools:/Users/zod/apps/android-sdk-macosx/tools
 
 ## app specific secrets
 if [ -e ~/.openredis_secret ]; then source ~/.openredis_secret; fi
