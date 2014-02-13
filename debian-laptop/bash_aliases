@@ -119,6 +119,7 @@ alias ack="ack -a"
 alias ..="cd .."  # Go up one dir.
 alias c='cd'
 alias l='ls --color'
+alias ls='ls --color'
 alias la='ls -Fa'
 alias ld='ls -al -d * | egrep "^d"' # only subdirectories
 
