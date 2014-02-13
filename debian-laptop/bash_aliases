@@ -150,3 +150,5 @@ alias g='git status -sb'
 alias gpr='git pull --rebase'
 alias gf='git fetch --prune'
 alias gb='git branch'
+
+alias jing='cd ~/projects/jingjs-talk/code'
