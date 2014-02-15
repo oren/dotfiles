@@ -7,9 +7,9 @@ set background=dark
 " set background=light
 colorscheme solarized
 " turns on filetype detection, and loads indent scripts and plugins
-filetype indent plugin on
-runtime macros/matchit.vim
-filetype detect
+" filetype indent plugin on
+" runtime macros/matchit.vim
+" filetype detect
 
 " Windows
 " ============================================================================
