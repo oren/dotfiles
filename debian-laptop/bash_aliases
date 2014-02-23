@@ -123,7 +123,7 @@ alias ls='ls --color'
 alias la='ls -Fa'
 alias ld='ls -al -d * | egrep "^d"' # only subdirectories
 
-alias m='mplayer'
+alias m='mpv'
 alias v='vim'
 alias r='reset'
 alias in='sudo aptitude install'
@@ -152,4 +152,4 @@ alias gpr='git pull --rebase'
 alias gf='git fetch --prune'
 alias gb='git branch'
 
-alias jing='cd ~/projects/jingjs-talk/code'
+alias s='python -m SimpleHTTPServer'

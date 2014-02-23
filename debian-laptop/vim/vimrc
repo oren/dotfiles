@@ -1,11 +1,12 @@
 call pathogen#infect()
 
-syntax on
-set t_Co=16
-let g:solarized_termcolors=256
+syntax enable
 set background=dark
 " set background=light
 colorscheme solarized
+filetype plugin on
+call togglebg#map("<F5>")
+
 " turns on filetype detection, and loads indent scripts and plugins
 " filetype indent plugin on
 " runtime macros/matchit.vim

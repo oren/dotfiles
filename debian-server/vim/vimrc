@@ -1,11 +1,16 @@
 call pathogen#infect()
 
-syntax on
-set t_Co=16
-let g:solarized_termcolors=256
+syntax enable
 set background=dark
+" set background=light
 colorscheme solarized
-filetype indent plugin on
+filetype plugin on
+call togglebg#map("<F5>")
+
+" turns on filetype detection, and loads indent scripts and plugins
+" filetype indent plugin on
+" runtime macros/matchit.vim
+" filetype detect
 
 " Windows
 " ============================================================================
@@ -15,6 +20,7 @@ set winminheight=0
 set winminwidth=0
 
 set spelllang=en_us
+set nowrap
 
 let mapleader = ","
 let maplocalleader = ","
@@ -33,10 +39,9 @@ match ExtraWhitespace /\s\+$/
 :noremap <leader>N <C-W>n<C-W>_
 :noremap <leader>? <C-W>n<C-W>H<C-W>q
 :noremap <leader>c :only<CR>:tabonly<CR>
-:noremap J <Esc><C-w>j<C-w>_
 :noremap K <Esc><C-w>k<C-w>_
-:noremap <leader>r :! make test/%<CR>
-:noremap <leader>R :! deaccessor.py < % > %.temp && jslint --es5 --node --vars --forin --nomen --color --undef --sloppy --maxlen 80 --indent 4 %.temp; rm -f %.temp<CR>
+:noremap <leader>R :! make test/%<CR>
+:noremap <leader>r :! jshint %<CR>
 :noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 
 :noremap <leader>gst :!tig status<CR>
@@ -61,8 +66,19 @@ set showtabline=0
 set laststatus=1
 set cursorline
 
+" Status line
+set laststatus=2      " always show status line
+set statusline=%f       "full path
+set statusline+=%h    " help file flag
+set statusline+=%m    " modified flag
+set statusline+=%r    " read only flag
+set statusline+=%=    " left/right separator
+set statusline+=%c,   " cursor column
+set statusline+=%l/%L " cursor line/total lines
+set statusline+=\ %P  " percent through file
+
 " detect indentation based on source
-autocmd BufReadPost * DetectIndent
+" autocmd BufReadPost * DetectIndent
 
 " ; is easier than :
 nnoremap ; :
@@ -72,8 +88,8 @@ inoremap hh <ESC>
 nnoremap <tab> %
 
 "buffers
-map <C-h> <Esc>:bn<CR>
-map <C-t> <Esc>:bp<CR>
+map <C-h> <Esc>:bp<CR>
+map <C-t> <Esc>:bn<CR>
 map <C-d> <Esc>:bd<CR>
 
 " F keys
@@ -99,14 +115,13 @@ inoremap <C-L> <C-O>:nohls<CR>
 " Setup backup location and enable
 set backupdir=~/.backup/vim
 set backup
-
 " Set Swap directory
 set directory=~/.backup/vim/swap
 
 " Change file completion to mimic shell behavior
 set wildmenu
 set wildmode=list:longest
-set wildignore+=*/tmp/*,*/.gs/*,*.DS_Store,*.rdb,*.aof,*.sqlite3,*.pid
+set wildignore+=*/.gs/*,*.DS_Store,*.rdb,*.aof,*.sqlite3,*.pid
 
 " Inser New Line
 " ============================================================================
@@ -125,7 +140,7 @@ set backspace=indent,eol,start
 
 " Change mapping of CtrlP
 let g:ctrlp_map = '<leader>t'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
 
 "jump to last cursor position when opening a file
 "dont do it when writing a commit log entry
