@@ -89,7 +89,7 @@ xterm*utf8: true
 xterm*faceName: DejaVu Sans Mono Book
 xterm*faceNameDoublesize: WenQuanYi Zen Hei Mono
 xterm*faceSize: 11
-! ! workaround of disappearing underscore ('_') character
+! workaround of disappearing underscore ('_') character
 xterm*scaleHeight: 1.01
 
 xterm*saveLines: 10240

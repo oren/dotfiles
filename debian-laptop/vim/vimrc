@@ -4,8 +4,10 @@ syntax enable
 set background=dark
 " set background=light
 colorscheme solarized
-filetype plugin on
 call togglebg#map("<F5>")
+
+filetype indent plugin on
+" filetype detect
 
 " turns on filetype detection, and loads indent scripts and plugins
 " filetype indent plugin on
