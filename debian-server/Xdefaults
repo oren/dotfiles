@@ -77,12 +77,20 @@
 *color15:               S_base3
 
 
-xterm*faceName: Inconsolata
-xterm*faceSize: 11
+! xterm*faceName: Inconsolata
+! xterm*faceSize: 11
 ! xterm*faceName: DejaVuSansMono
 ! xterm*faceSize: 12
 !xterm*faceName: liberationmono-regular
 !xterm*faceSize: 14
+
+! Chinese
+xterm*utf8: true
+xterm*faceName: DejaVu Sans Mono Book
+xterm*faceNameDoublesize: WenQuanYi Zen Hei Mono
+xterm*faceSize: 11
+! ! workaround of disappearing underscore ('_') character
+xterm*scaleHeight: 1.01
 
 xterm*saveLines: 10240
 
