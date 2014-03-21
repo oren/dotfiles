@@ -31,5 +31,9 @@ else
 	echo .weechat is already a symlink
 fi
 
+# GIT
+ln -vfs ~/.dotfiles/debian-laptop/git-completion ~/.git-completion
+ln -vfs ~/.dotfiles/debian-laptop/gitconfig ~/.gitconfig
+
 # CREATE VIM BACKUP DIR
 mkdir -p ~/.backup/vim/swap
