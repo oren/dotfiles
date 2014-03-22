@@ -26,6 +26,8 @@ ln -vfs ~/.dotfiles/debian-laptop/etc/screenrc ~/.screenrc
 
 ln -vfs ~/.dotfiles/debian-laptop/tmux.conf ~/.tmux.conf
 
+ln -vfs ~/.dotfiles/debian-laptop/pentadactylrc ~/.pentadactylrc
+
 if [ ! -L ~/.weechat ]; then
 	ln -vfs ~/.dotfiles/debian-laptop/weechat ~/.weechat
 else
