@@ -153,3 +153,4 @@ alias gf='git fetch --prune'
 alias gb='git branch'
 
 alias s='python -m SimpleHTTPServer'
+alias open='xdg-open'
