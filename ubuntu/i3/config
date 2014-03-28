@@ -15,11 +15,6 @@ set $mod Mod4
 exec i3-msg --no-startup-id 'exec startup'
 
 # exec_always commands run on startup and restart i3
-# startup script
-exec_always i3-msg --no-startup-id 'workspace 1;exec firefox'
-exec_always i3-msg --no-startup-id 'workspace 2;exec google-chrome'
-exec_always i3-msg --no-startup-id 'workspace 9; exec i3-sensible-terminal; ls'
-exec_always i3-msg --no-startup-id 'workspace 9;exec i3-sensible-terminal && mosh oren'
 
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1

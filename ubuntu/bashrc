@@ -2,7 +2,7 @@
 
 export EDITOR="vim"
 export PS1="\w "
-export PATH=~/.dotfiles/debian-laptop/bin:$PATH
+export PATH=~/.dotfiles/ubuntu/bin:$PATH
 export PATH="$PATH:/usr/bin"
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/tools"
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/platform-tools"
