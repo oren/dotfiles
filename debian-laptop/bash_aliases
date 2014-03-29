@@ -129,7 +129,7 @@ alias r='reset'
 alias in='sudo aptitude install'
 alias p='sudo aptitude purge'
 alias monitor='xrandr --output LVDS --auto --output HDMI-0 --auto --above LVDS'
-alias vpn='sudo vpnc-connect /home/oren/vpn'
+alias vpn='sudo vpnc-connect /home/oren/.vpn'
 
 alias hib='sudo pm-hibernate'
 alias res='sudo reboot'
@@ -153,3 +153,4 @@ alias gf='git fetch --prune'
 alias gb='git branch'
 
 alias s='python -m SimpleHTTPServer'
+alias open='xdg-open'
