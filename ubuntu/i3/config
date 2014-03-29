@@ -12,7 +12,7 @@
 set $mod Mod4
 
 # exec commands run only on startup
-exec i3-msg --no-startup-id 'exec startup'
+exec --no-startup-id ~/.dotfiles/ubuntu/bin/startup
 
 # exec_always commands run on startup and restart i3
 

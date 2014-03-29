@@ -5,7 +5,7 @@ ln -vfs ~/.dotfiles/ubuntu/bashrc ~/.bashrc
 ln -vfs ~/.dotfiles/ubuntu/bash_profile ~/.bash_profile
 ln -vfs ~/.dotfiles/ubuntu/bash_aliases ~/.bash_aliases
 ln -vfs ~/.dotfiles/ubuntu/xinitrc ~/.xinitrc
-ln -vfs ~/.dotfiles/ubuntu/Xdefaults ~/.Xdefaults
+ln -vfs ~/.dotfiles/ubuntu/Xresources ~/.Xresources
 
 # VIM FILES
 if [ ! -L ~/.vim ]; then
