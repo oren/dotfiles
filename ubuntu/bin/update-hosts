@@ -2,7 +2,7 @@
 
 cd /tmp
 wget http://winhelp2002.mvps.org/hosts.txt
-rm /etc/hosts
-mv hosts.txt /etc/hosts
-cat ~/.etchosts >> /etc/hosts
+sudo rm /etc/hosts
+sudo mv hosts.txt /etc/hosts
+sudo cat ~/.etchosts >> /etc/hosts
 
