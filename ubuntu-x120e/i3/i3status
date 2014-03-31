@@ -3,19 +3,21 @@ general {
         interval = 5
 }
 
-#order += "ipv6"
-order += "disk /"
-#order += "run_watch DHCP"
-#order += "run_watch VPN"
-order += "wireless wlan0"
-#order += "ethernet eth0"
+order += "volume master"
 order += "battery 0"
-order += "load"
+order += "wireless wlan0"
 order += "time"
 
+# order += "load"
+# order += "disk /"
+# order += "run_watch DHCP"
+# order += "run_watch VPN"
+# order += "ethernet eth0"
+
 wireless wlan0 {
-        format_up = "W: (%quality at %essid) %ip"
-        format_down = "W: down"
+        # format_up = "W: (%quality at %essid) %ip"
+        format_up = "%ip"
+        format_down = "down"
 }
 
 ethernet eth0 {
@@ -25,11 +27,12 @@ ethernet eth0 {
 }
 
 battery 0 {
-        format = "%status %percentage %remaining"
+        format = "%status %percentage"
         path = "/sys/class/power_supply/BAT1/uevent"
         integer_battery_capacity = true
-        low_threshold: 60
-        threshold_type: "time"
+        last_full_capacity = true
+        /*low_threshold: 30*/
+        /*threshold_type: time*/
 }
 
 run_watch DHCP {
@@ -50,4 +53,11 @@ load {
 
 disk "/" {
         format = "%free"
+}
+
+volume master {
+  format = "♪: %volume"
+  device = "default"
+  mixer = "Master"
+  mixer_idx = 0
 }
