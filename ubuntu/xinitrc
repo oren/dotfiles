@@ -1,6 +1,0 @@
-#!/bin/sh
-
-xset b off &
-xrdb -merge ~/.Xdefaults &
-xset r rate 200 60 # typematic delay and rate &
-i3
