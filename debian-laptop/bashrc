@@ -17,7 +17,7 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-
+export PATH=$PATH:~/.bin
 
 ## amazon s3 configuration
 if [[ -f ~/.amazon_keys ]]; then source ~/.amazon_keys; fi
