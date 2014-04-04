@@ -126,8 +126,12 @@ alias ld='ls -al -d * | egrep "^d"' # only subdirectories
 alias m='mpv'
 alias v='vim'
 alias r='reset'
+
 alias in='sudo aptitude install'
-alias p='sudo aptitude purge'
+alias pu='sudo apt-get purge'
+alias se='apt-cache search'
+alias sh='apt-cache show'
+
 alias monitor='xrandr --output LVDS --auto --output HDMI-0 --auto --above LVDS'
 alias vpn='sudo vpnc-connect /home/oren/.vpn'
 
