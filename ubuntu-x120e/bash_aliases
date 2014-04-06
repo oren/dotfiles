@@ -136,7 +136,7 @@ alias monitor='xrandr --output HDMI-0 --auto --above LVDS'
 alias vpn='sudo vpnc-connect /home/oren/.vpn'
 
 alias hib='sudo pm-hibernate'
-alias res='sudo reboot'
+alias reb='sudo reboot'
 alias hal='sudo halt'
 
 # mount
