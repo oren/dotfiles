@@ -1,0 +1,120 @@
+2014-04-11 13:02:13	--	irc: connected to chat.freenode.net/6667 (195.148.124.79)
+2014-04-11 13:02:13	--	rajaniemi.freenode.net (rajaniemi.freenode.net): *** Looking up your hostname...
+2014-04-11 13:02:13	--	rajaniemi.freenode.net (rajaniemi.freenode.net): *** Checking Ident
+2014-04-11 13:02:13	--	rajaniemi.freenode.net (rajaniemi.freenode.net): *** Found your hostname
+2014-04-11 13:02:20	--	rajaniemi.freenode.net (rajaniemi.freenode.net): *** No Ident response
+2014-04-11 13:02:20	--	Welcome to the freenode Internet Relay Chat Network oren
+2014-04-11 13:02:20	--	Your host is rajaniemi.freenode.net[195.148.124.79/6667], running version ircd-seven-1.1.3
+2014-04-11 13:02:20	--	This server was created Mon Dec 31 2012 at 23:37:13 EET
+2014-04-11 13:02:20	--	rajaniemi.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2014-04-11 13:02:20	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2014-04-11 13:02:20	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2014-04-11 13:02:20	--	EXTBAN=$,arxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2014-04-11 13:02:20	--	There are 196 users and 92124 invisible on 29 servers
+2014-04-11 13:02:20	--	29 :IRC Operators online
+2014-04-11 13:02:20	--	14 :unknown connection(s)
+2014-04-11 13:02:20	--	53610 :channels formed
+2014-04-11 13:02:20	--	I have 8004 clients and 1 servers
+2014-04-11 13:02:20	--	8004 8105 :Current local users 8004, max 8105
+2014-04-11 13:02:20	--	92320 95150 :Current global users 92320, max 95150
+2014-04-11 13:02:20	--	Highest connection count: 8106 (8105 clients) (86806 connections received)
+2014-04-11 13:02:20	--	- rajaniemi.freenode.net Message of the Day -
+2014-04-11 13:02:20	--	- Welcome to rajaniemi.freenode.net in Helsinki, Finland.  Our thanks to
+2014-04-11 13:02:20	--	- Aalto University for sponsoring this server!
+2014-04-11 13:02:20	--	-
+2014-04-11 13:02:20	--	- RAJANIEMI, Hannu  (1978-). Born in Ylivieska, Finland, Rajaniemi is the
+2014-04-11 13:02:20	--	- author of two novels and several short stories, and his debut novel 'The
+2014-04-11 13:02:20	--	- Quantum Thief' was nominated for the 2011 Locus Award for Best First
+2014-04-11 13:02:20	--	- Novel.  Rajaniemi lives in Edinburgh, Scotland where he is founding
+2014-04-11 13:02:20	--	- director of ThinkTank Maths, a commercial research
+2014-04-11 13:02:20	--	-
+2014-04-11 13:02:20	--	-
+2014-04-11 13:02:20	--	- Welcome to freenode - supporting the free and open source
+2014-04-11 13:02:20	--	- software communities since 1998.
+2014-04-11 13:02:20	--	-
+2014-04-11 13:02:20	--	- By connecting to freenode you indicate that you have read and
+2014-04-11 13:02:20	--	- accept our policies as set out on http://www.freenode.net
+2014-04-11 13:02:20	--	- freenode runs an open proxy scanner. Please join #freenode for
+2014-04-11 13:02:20	--	- any network-related questions or queries, where a number of
+2014-04-11 13:02:20	--	- volunteer staff and helpful users will be happy to assist you.
+2014-04-11 13:02:20	--	-
+2014-04-11 13:02:20	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2014-04-11 13:02:20	--	- together with like-minded FOSS enthusiasts for talks and
+2014-04-11 13:02:20	--	- real-life collaboration, if you're more keen on the outdoors why
+2014-04-11 13:02:20	--	- not attend or arrange a local geeknic (http://www.geeknic.org).
+2014-04-11 13:02:20	--	-
+2014-04-11 13:02:20	--	- We would like to thank Private Internet Access
+2014-04-11 13:02:20	--	- (https://www.privateinternetaccess.com/) and the other
+2014-04-11 13:02:20	--	- organisations that help keep freenode and our other projects
+2014-04-11 13:02:20	--	- running for their sustained support.
+2014-04-11 13:02:20	--	-
+2014-04-11 13:02:20	--	- In particular we would like to thank the sponsor
+2014-04-11 13:02:20	--	- of this server, details of which can be found above.
+2014-04-11 13:02:20	--	-
+2014-04-11 13:02:20	--	- ***************************************************************
+2014-04-11 13:02:20	--	- Please read http://blog.freenode.net/2010/11/be-safe-out-there/
+2014-04-11 13:02:20	--	- ***************************************************************
+2014-04-11 13:02:20	--	End of /MOTD command.
+2014-04-11 13:02:20	--	User mode [+i] by oren
+2014-04-11 13:04:38	--	irc: connected to chat.freenode.net/6667 (185.30.166.38)
+2014-04-11 13:04:38	--	orwell.freenode.net (orwell.freenode.net): *** Looking up your hostname...
+2014-04-11 13:04:38	--	orwell.freenode.net (orwell.freenode.net): *** Checking Ident
+2014-04-11 13:04:38	--	orwell.freenode.net (orwell.freenode.net): *** Found your hostname
+2014-04-11 13:04:45	--	orwell.freenode.net (orwell.freenode.net): *** No Ident response
+2014-04-11 13:04:45	--	Welcome to the freenode Internet Relay Chat Network oren
+2014-04-11 13:04:45	--	Your host is orwell.freenode.net[185.30.166.38/6667], running version ircd-seven-1.1.3
+2014-04-11 13:04:45	--	This server was created Sat Feb 22 2014 at 16:03:54 BRT
+2014-04-11 13:04:45	--	orwell.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2014-04-11 13:04:45	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2014-04-11 13:04:45	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2014-04-11 13:04:45	--	EXTBAN=$,arxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2014-04-11 13:04:45	--	There are 195 users and 92078 invisible on 29 servers
+2014-04-11 13:04:45	--	29 :IRC Operators online
+2014-04-11 13:04:45	--	21 :unknown connection(s)
+2014-04-11 13:04:45	--	53578 :channels formed
+2014-04-11 13:04:45	--	I have 5404 clients and 1 servers
+2014-04-11 13:04:45	--	5404 5429 :Current local users 5404, max 5429
+2014-04-11 13:04:45	--	92273 95150 :Current global users 92273, max 95150
+2014-04-11 13:04:45	--	Highest connection count: 5430 (5429 clients) (72484 connections received)
+2014-04-11 13:04:45	--	- orwell.freenode.net Message of the Day -
+2014-04-11 13:04:45	--	- Welcome to orwell.freenode.net in Amsterdam, NL.
+2014-04-11 13:04:45	--	- Thanks to http://www.hyperfilter.com/ for sponsoring
+2014-04-11 13:04:45	--	- this server!
+2014-04-11 13:04:45	--	-
+2014-04-11 13:04:45	--	- ORWELL, GEORGE [1903 - 1950] Born in India, his mother
+2014-04-11 13:04:45	--	- moved him to England when he was one year old, and it
+2014-04-11 13:04:45	--	- was in England where he was educated and spent most of
+2014-04-11 13:04:45	--	- his life.  Orwell is perhaps best known for his novels
+2014-04-11 13:04:45	--	- Nineteen Eighty-Four and Animal Farm.
+2014-04-11 13:04:45	--	-
+2014-04-11 13:04:45	--	-
+2014-04-11 13:04:45	--	- Welcome to freenode - supporting the free and open source
+2014-04-11 13:04:45	--	- software communities since 1998.
+2014-04-11 13:04:45	--	-
+2014-04-11 13:04:45	--	- By connecting to freenode you indicate that you have read and
+2014-04-11 13:04:45	--	- accept our policies as set out on http://www.freenode.net
+2014-04-11 13:04:45	--	- freenode runs an open proxy scanner. Please join #freenode for
+2014-04-11 13:04:45	--	- any network-related questions or queries, where a number of
+2014-04-11 13:04:45	--	- volunteer staff and helpful users will be happy to assist you.
+2014-04-11 13:04:45	--	-
+2014-04-11 13:04:45	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2014-04-11 13:04:45	--	- together with like-minded FOSS enthusiasts for talks and
+2014-04-11 13:04:45	--	- real-life collaboration, if you're more keen on the outdoors why
+2014-04-11 13:04:45	--	- not attend or arrange a local geeknic (http://www.geeknic.org).
+2014-04-11 13:04:45	--	-
+2014-04-11 13:04:45	--	- We would like to thank Private Internet Access
+2014-04-11 13:04:45	--	- (https://www.privateinternetaccess.com/) and the other
+2014-04-11 13:04:45	--	- organisations that help keep freenode and our other projects
+2014-04-11 13:04:45	--	- running for their sustained support.
+2014-04-11 13:04:45	--	-
+2014-04-11 13:04:45	--	- In particular we would like to thank the sponsor
+2014-04-11 13:04:45	--	- of this server, details of which can be found above.
+2014-04-11 13:04:45	--	-
+2014-04-11 13:04:45	--	- ***************************************************************
+2014-04-11 13:04:45	--	- Please read http://blog.freenode.net/2010/11/be-safe-out-there/
+2014-04-11 13:04:46	--	- ***************************************************************
+2014-04-11 13:04:46	--	End of /MOTD command.
+2014-04-11 13:04:46	--	User mode [+i] by oren
+2014-04-11 13:05:36	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2014-04-11 13:06:00	--	MSG(nickserv): identify 1111
+2014-04-11 13:06:00	--	NickServ (NickServ@services.): You are now identified for owen1.
