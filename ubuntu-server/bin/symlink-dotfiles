@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# BASH PROFILE
+ln -vfs ~/.dotfiles/ubuntu-server/bashrc ~/.bashrc
+ln -vfs ~/.dotfiles/ubuntu-server/bash_profile ~/.bash_profile
+ln -vfs ~/.dotfiles/ubuntu-server/bash_aliases ~/.bash_aliases
+ln -vfs ~/.dotfiles/ubuntu-server/Xresources ~/.Xresources
+
+# VIM FILES
+if [ ! -L ~/.vim ]; then
+	ln -vfs ~/.dotfiles/ubuntu-server/vim ~/.vim
+else
+	echo .vim is already a symlink
+fi
+
+ln -vfs ~/.dotfiles/ubuntu-server/vim/vimrc ~/.vimrc
+ln -vfs ~/.dotfiles/ubuntu-server/vim/gvimrc ~/.gvimrc
+
+# GEMRC
+ln -vfs ~/.dotfiles/ubuntu-server/etc/gemrc ~/.gemrc
+ln -vfs ~/.dotfiles/ubuntu-server/etc/irbrc ~/.irbrc
+
+# SCREEN
+ln -vfs ~/.dotfiles/ubuntu-server/etc/screenrc ~/.screenrc
+
+ln -vfs ~/.dotfiles/ubuntu-server/tmux.conf ~/.tmux.conf
+
+if [ ! -L ~/.weechat ]; then
+	ln -vfs ~/.dotfiles/ubuntu-server/weechat ~/.weechat
+else
+	echo .weechat is already a symlink
+fi
+
+# GIT
+ln -vfs ~/.dotfiles/ubuntu-server/git-completion ~/.git-completion
+ln -vfs ~/.dotfiles/ubuntu-server/gitconfig ~/.gitconfig
+
+# CREATE VIM BACKUP DIR
+mkdir -p ~/.backup/vim/swap

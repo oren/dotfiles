@@ -4,3 +4,14 @@
 ubuntu-x120e/weechat/weechat.log
 ubuntu-x120e/weechat/logs
 ubuntu-x120e/vim/.netrwhist
+
+ubuntu-server/weechat/logs
+ubuntu-server/weechat/weechat.log
+ubuntu-server/vim/.netrwhist
+
+debian-laptop/weechat/logs
+debian-laptop/weechat/weechat.log
+debian-laptop/vim/.netrwhist
+
+mac/vim/.netrwhist
+
