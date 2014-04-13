@@ -1,4 +1,0 @@
-#!/bin/sh
-
-find /home/oren/podcasts/ -type f -name "*.mp3" -exec cp {} /media/usb/MUSIC \;
-

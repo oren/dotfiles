@@ -1,4 +1,0 @@
-#!/bin/bash
-
-sudo mount /dev/$1 /media/usb/ -o uid=1000,gid=1000
-
