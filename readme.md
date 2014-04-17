@@ -7,9 +7,8 @@ Dotfiles FTW
 
 run one of the following:
 
-    ~/.dotfiles/debian-laptop/bin/symlink-dotfiles
-    ~/.dotfiles/debian-server/bin/symlink-dotfiles
-    ~/.dotfiles/mac/bin/symlink-dotfiles
+    ~/.dotfiles/ubuntu/bin/symlink-dotfiles
+    ~/.dotfiles/ubuntu/bin/symlink-dotfiles
 
     # You're done!
 
