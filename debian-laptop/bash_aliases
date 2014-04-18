@@ -145,6 +145,7 @@ alias u='sudo umount /media/usb'
 
 # git
 alias gc='git commit -v'
+alias gcl='git clone'
 alias gca='git commit -v -a'
 alias gpp='git pull && git push'
 alias gco='git checkout'
