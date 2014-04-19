@@ -1,7 +1,13 @@
 #/bin/bash
 
+<<<<<<< HEAD:ubuntu-desktop/bashrc
 #env
+||||||| merged common ancestors
+=======
+# env
+>>>>>>> 68d9bb8655d4ca99fdef027c54aaff2cd5aeeb75:debian-laptop/bashrc
 export EDITOR="vim"
+<<<<<<< HEAD:ubuntu-desktop/bashrc
 export TERM=screen-256color
 export LANG="en_US.UTF-8"
 export PS1="\w "
@@ -17,10 +23,53 @@ export PATH="$PATH:/usr/bin"
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/tools"
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/platform-tools"
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/build-tools"
+||||||| merged common ancestors
+export PS1="\w "
+export PATH=~/.dotfiles/debian-laptop/bin:$PATH
+export PATH="$PATH:/usr/bin"
+export PATH="$PATH:/home/oren/apps/android-sdk-linux/tools"
+export PATH="$PATH:/home/oren/apps/android-sdk-linux/platform-tools"
+export PATH="$PATH:/home/oren/apps/android-sdk-linux/build-tools"
+export TERM=screen-256color
+export ANDROID_BIN="/home/oren/apps/android-sdk-linux/tools/android"
+export GREP_OPTIONS="--color=auto"
+export LANG="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export NODE_PATH=/usr/local/lib/node_modules
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+=======
+export TERM=screen-256color
+export LANG="en_US.UTF-8"
+export PS1="\w "
+export LC_COLLATE="en_US.UTF-8"
+export GREP_OPTIONS="--color=auto"
+export NODE_PATH=/usr/local/lib/node_modules
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 
+# path
+export PATH=~/.dotfiles/debian-laptop/bin:$PATH
+export PATH="$PATH:/usr/bin"
+export PATH="$PATH:/home/oren/apps/android-sdk-linux/tools"
+export PATH="$PATH:/home/oren/apps/android-sdk-linux/platform-tools"
+export PATH="$PATH:/home/oren/apps/android-sdk-linux/build-tools"
+export PATH=$PATH:/usr/local/go/bin
+>>>>>>> 68d9bb8655d4ca99fdef027c54aaff2cd5aeeb75:debian-laptop/bashrc
+
+<<<<<<< HEAD:ubuntu-desktop/bashrc
 # go
 export GOROOT=/usr/lib/go
 export GOBIN=/usr/bin/go
+||||||| merged common ancestors
+=======
+# go
+export PATH=$PATH:/usr/local/go/bin
+
+# ansible from source
+source ~/projects/ansible/hacking/env-setup > /dev/null
+>>>>>>> 68d9bb8655d4ca99fdef027c54aaff2cd5aeeb75:debian-laptop/bashrc
 
 ## amazon s3 configuration
 if [[ -f ~/.amazon_keys ]]; then source ~/.amazon_keys; fi

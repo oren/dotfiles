@@ -126,6 +126,7 @@ alias ld='ls -al -d * | egrep "^d"' # only subdirectories
 alias m='mpv'
 alias v='vim'
 alias r='reset'
+<<<<<<< HEAD:ubuntu-desktop/bash_aliases
 
 alias in='sudo apt-get install'
 alias pu='sudo apt-get purge'
@@ -133,6 +134,19 @@ alias se='apt-cache search'
 alias sh='apt-cache show'
 
 alias monitor='xrandr --output HDMI-0 --auto --above LVDS'
+||||||| merged common ancestors
+alias in='sudo aptitude install'
+alias p='sudo aptitude purge'
+alias monitor='xrandr --output LVDS --auto --output HDMI-0 --auto --above LVDS'
+=======
+
+alias in='sudo aptitude install'
+alias pu='sudo apt-get purge'
+alias se='apt-cache search'
+alias sh='apt-cache show'
+
+alias monitor='xrandr --output LVDS --auto --output HDMI-0 --auto --above LVDS'
+>>>>>>> 68d9bb8655d4ca99fdef027c54aaff2cd5aeeb75:debian-laptop/bash_aliases
 alias vpn='sudo vpnc-connect /home/oren/.vpn'
 
 alias hib='sudo pm-hibernate'
@@ -145,6 +159,7 @@ alias u='sudo umount /media/usb'
 
 # git
 alias gc='git commit -v'
+alias gcl='git clone'
 alias gca='git commit -v -a'
 alias gpp='git pull && git push'
 alias gco='git checkout'
@@ -155,5 +170,6 @@ alias g='git status -sb'
 alias gpr='git pull --rebase'
 alias gf='git fetch --prune'
 alias gb='git branch'
+alias ga='git add --all'
 
 alias s='python -m SimpleHTTPServer'
