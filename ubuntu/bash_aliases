@@ -126,13 +126,17 @@ alias ld='ls -al -d * | egrep "^d"' # only subdirectories
 alias m='mpv'
 alias v='vim'
 alias r='reset'
-alias in='sudo aptitude install'
-alias p='sudo aptitude purge'
+
+alias in='sudo apt-get install'
+alias pu='sudo apt-get purge'
+alias se='sudo apt-cache search'
+alias sh='sudo apt-cache show'
+
 alias monitor='xrandr --output LVDS --auto --output HDMI-0 --auto --above LVDS'
 alias vpn='sudo vpnc-connect /home/oren/.vpn'
 
 alias hib='sudo pm-hibernate'
-alias res='sudo reboot'
+alias reb='sudo reboot'
 alias hal='sudo halt'
 
 # mount
@@ -151,5 +155,6 @@ alias g='git status -sb'
 alias gpr='git pull --rebase'
 alias gf='git fetch --prune'
 alias gb='git branch'
+alias ga='git add --all'
 
 alias s='python -m SimpleHTTPServer'

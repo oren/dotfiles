@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd /tmp
+wget http://winhelp2002.mvps.org/hosts.txt
+sudo rm /etc/hosts
+sudo mv hosts.txt /etc/hosts
+sudo cat ~/.etchosts >> /etc/hosts
+
