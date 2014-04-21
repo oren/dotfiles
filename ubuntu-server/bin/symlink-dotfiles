@@ -35,5 +35,8 @@ fi
 ln -vfs ~/.dotfiles/ubuntu-server/git-completion ~/.git-completion
 ln -vfs ~/.dotfiles/ubuntu-server/gitconfig ~/.gitconfig
 
+# NEWSBEUTER
+ln -vfs ~/misc/newsbeuter-urls ~/.newsbeuter/urls
+
 # CREATE VIM BACKUP DIR
 mkdir -p ~/.backup/vim/swap

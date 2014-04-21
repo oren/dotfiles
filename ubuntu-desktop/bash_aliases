@@ -127,12 +127,12 @@ alias m='mpv'
 alias v='vim'
 alias r='reset'
 
-alias in='sudo aptitude install'
+alias in='sudo apt-get install'
 alias pu='sudo apt-get purge'
 alias se='apt-cache search'
 alias sh='apt-cache show'
 
-alias monitor='xrandr --output LVDS --auto --output HDMI-0 --auto --above LVDS'
+alias monitor='xrandr --output DP-2 --auto --primary --left-of DVI-I-1'
 alias vpn='sudo vpnc-connect /home/oren/.vpn'
 
 alias hib='sudo pm-hibernate'
@@ -145,6 +145,7 @@ alias u='sudo umount /media/usb'
 
 # git
 alias gc='git commit -v'
+alias gcl='git clone'
 alias gca='git commit -v -a'
 alias gpp='git pull && git push'
 alias gco='git checkout'
@@ -155,6 +156,6 @@ alias g='git status -sb'
 alias gpr='git pull --rebase'
 alias gf='git fetch --prune'
 alias gb='git branch'
+alias ga='git add --all'
 
 alias s='python -m SimpleHTTPServer'
-alias open='xdg-open'
