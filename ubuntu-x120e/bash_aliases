@@ -156,5 +156,6 @@ alias gpr='git pull --rebase'
 alias gf='git fetch --prune'
 alias gb='git branch'
 alias ga='git add --all'
+alias gcl='git clone'
 
 alias s='python -m SimpleHTTPServer'

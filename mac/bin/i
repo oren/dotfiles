@@ -1,8 +1,0 @@
-#!/bin/sh
-
-if [ $1 ]; then
-  cat /Users/ogolan/misc/$1*
-else
-  ls /Users/ogolan/misc/
-fi
-
