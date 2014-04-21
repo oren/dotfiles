@@ -122,6 +122,7 @@ alias ld='ls -al -d * | egrep "^d"' # only subdirectories
 alias m='mpv'
 alias v='vim'
 alias r='reset'
+alias docker='docker.io'
 
 alias in='sudo apt-get install'
 alias pu='sudo apt-get purge'
