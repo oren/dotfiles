@@ -9,6 +9,10 @@ ubuntu-server/weechat/logs
 ubuntu-server/weechat/weechat.log
 ubuntu-server/vim/.netrwhist
 
+ubuntu-work-desktop/weechat/logs
+ubuntu-work-desktop/weechat/weechat.log
+ubuntu-work-desktop/vim/.netrwhist
+
 debian-laptop/weechat/logs
 debian-laptop/weechat/weechat.log
 debian-laptop/vim/.netrwhist
