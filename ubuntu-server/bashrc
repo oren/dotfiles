@@ -39,3 +39,5 @@ fi
 if [ -f ~/.git-completion ]; then
     . ~/.git-completion
 fi
+
+complete -F _docker.io docker
