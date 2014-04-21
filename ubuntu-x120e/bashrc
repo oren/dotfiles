@@ -21,11 +21,13 @@ export PATH="$PATH:/home/oren/apps/android-sdk-linux/build-tools"
 export GOROOT=/usr/lib/go
 export GOBIN=/usr/bin/go
 
+# ansible
+source ~/projects/ansible/hacking/env-setup > /dev/null
+
 ## amazon s3 configuration
 if [[ -f ~/.amazon_keys ]]; then source ~/.amazon_keys; fi
 
 # common aliases & functions
-
 _gemset() {
   if [[ -z $GS_NAME ]]; then
     echo ""
