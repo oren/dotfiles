@@ -1,48 +1,44 @@
 #!/bin/bash
 
-# BASH PROFILE
+# before running this clone the misc project
+
+# bash profile
 ln -vfs ~/.dotfiles/ubuntu-x120e/bashrc ~/.bashrc
-ln -vfs ~/.dotfiles/ubuntu-x120e/bash_profile ~/.bash_profile
 ln -vfs ~/.dotfiles/ubuntu-x120e/bash_aliases ~/.bash_aliases
-ln -vfs ~/.dotfiles/ubuntu-x120e/xinitrc ~/.xinitrc
 ln -vfs ~/.dotfiles/ubuntu-x120e/Xresources ~/.Xresources
 
-# VIM FILES
+# vim files
 if [ ! -L ~/.vim ]; then
-  ln -vfs ~/.dotfiles/ubuntu-x120e/vim ~/.vim
+	ln -vfs ~/.dotfiles/ubuntu-x120e/vim ~/.vim
 else
 	echo .vim is already a symlink
 fi
 
+# create vim backup dir
+mkdir -p ~/.backup/vim/swap
+
 ln -vfs ~/.dotfiles/ubuntu-x120e/vim/vimrc ~/.vimrc
 ln -vfs ~/.dotfiles/ubuntu-x120e/vim/gvimrc ~/.gvimrc
 
-# GEMRC
-ln -vfs ~/.dotfiles/ubuntu-x120e/etc/gemrc ~/.gemrc
-ln -vfs ~/.dotfiles/ubuntu-x120e/etc/irbrc ~/.irbrc
-
-# SCREEN
+# screen
 ln -vfs ~/.dotfiles/ubuntu-x120e/etc/screenrc ~/.screenrc
 
+# tmux
 ln -vfs ~/.dotfiles/ubuntu-x120e/tmux.conf ~/.tmux.conf
 
-ln -vfs ~/.dotfiles/ubuntu-x120e/pentadactylrc ~/.pentadactylrc
-
+# weechat
 if [ ! -L ~/.weechat ]; then
 	ln -vfs ~/.dotfiles/ubuntu-x120e/weechat ~/.weechat
 else
 	echo .weechat is already a symlink
 fi
 
-if [ ! -L ~/.i3 ]; then
-	ln -vfs ~/.dotfiles/ubuntu-x120e/i3 ~/.i3
-else
-	echo .i3 is already a symlink
-fi
+ln -vfs ~/misc/config/weechat-irc.conf ~/.weechat/irc.conf
 
-# GIT
+# git
 ln -vfs ~/.dotfiles/ubuntu-x120e/git-completion ~/.git-completion
 ln -vfs ~/.dotfiles/ubuntu-x120e/gitconfig ~/.gitconfig
 
-# CREATE VIM BACKUP DIR
-mkdir -p ~/.backup/vim/swap
+# newsbeuter
+ln -vfs ~/misc/config/newsbeuter-urls ~/.newsbeuter/urls
+ln -vfs ~/.dotfiles/ubuntu-x120e/newsbeuter-config ~/.newsbeuter/config
