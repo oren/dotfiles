@@ -1,0 +1,5 @@
+#!/bin/sh
+
+scp -r home:gpodder-downloads .
+find /home/oren/gpodder-downloads/ -type f -name "*.mp3" -exec cp {} /media/usb/PODCASTS \;
+

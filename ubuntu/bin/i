@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $1 ]; then
+  cat ~/misc/$1*
+else
+  ls ~/misc/
+fi
+
+

@@ -1,0 +1,154 @@
+call pathogen#infect()
+
+syntax enable
+set background=dark
+" set background=light
+colorscheme solarized
+filetype plugin on
+call togglebg#map("<F5>")
+
+" turns on filetype detection, and loads indent scripts and plugins
+" filetype indent plugin on
+" runtime macros/matchit.vim
+" filetype detect
+
+" Windows
+" ============================================================================
+set splitbelow splitright
+set equalalways
+set winminheight=0
+set winminwidth=0
+
+set spelllang=en_us
+set nowrap
+
+let mapleader = ","
+let maplocalleader = ","
+
+" Show extra space in red
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
+:noremap <leader>v :vsp<CR>:enew<CR>:pwd<CR>
+:noremap <leader>s :split<CR>:enew<CR>:pwd<CR>
+:noremap <leader>l <C-w>l
+:noremap <leader>h <C-w>h
+:noremap <leader>j <C-w>j
+:noremap <leader>k <C-w>k
+:noremap <leader>- <C-W>_
+:noremap <leader>N <C-W>n<C-W>_
+:noremap <leader>? <C-W>n<C-W>H<C-W>q
+:noremap <leader>c :only<CR>:tabonly<CR>
+:noremap K <Esc><C-w>k<C-w>_
+:noremap <leader>R :! make test/%<CR>
+:noremap <leader>r :! jshint %<CR>
+:noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
+
+:noremap <leader>gst :!tig status<CR>
+:noremap <leader>gpr :!git pull --rebase<CR>
+:noremap <leader>gup :!git pull<CR>
+:noremap <leader>gush :!git push<CR>
+
+:noremap <C-c> <ESC>
+:noremap <C-w><C-c> <ESC>
+:noremap <C-w>c <ESC>
+
+" Tabs
+" ============================================================================
+set expandtab
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
+set smarttab
+set autoindent
+set textwidth=0
+set showtabline=0
+set laststatus=1
+set cursorline
+
+" Status line
+set laststatus=2      " always show status line
+set statusline=%f       "full path
+set statusline+=%h    " help file flag
+set statusline+=%m    " modified flag
+set statusline+=%r    " read only flag
+set statusline+=%=    " left/right separator
+set statusline+=%c,   " cursor column
+set statusline+=%l/%L " cursor line/total lines
+set statusline+=\ %P  " percent through file
+
+" detect indentation based on source
+" autocmd BufReadPost * DetectIndent
+
+" ; is easier than :
+nnoremap ; :
+" hh is easier than esc
+inoremap hh <ESC>
+"  tab is easier than %
+nnoremap <tab> %
+
+"buffers
+map <C-h> <Esc>:bp<CR>
+map <C-t> <Esc>:bn<CR>
+map <C-d> <Esc>:bd<CR>
+
+" F keys
+" ============================================================================
+map <F1> :e.<CR>
+nnoremap <F2> :set nonumber!<CR>
+set pastetoggle=<F3> " hit this before pasting to fix indentation
+nnoremap <F3> :set invpaste paste?<CR>
+set pastetoggle=<F3>
+
+" Searching
+" ============================================================================
+set hlsearch   " highlight search
+set incsearch  " incremental search, search as you type
+set ignorecase " Ignore case when searching
+set smartcase  " Ignore case when searching lowercase
+"<c-l> clear the highlight as well as redraw
+nnoremap <C-L> :nohls<CR><C-L>
+inoremap <C-L> <C-O>:nohls<CR>
+
+" Directories
+" ============================================================================
+" Setup backup location and enable
+set backupdir=~/.backup/vim
+set backup
+" Set Swap directory
+set directory=~/.backup/vim/swap
+
+" Change file completion to mimic shell behavior
+set wildmenu
+set wildmode=list:longest
+set wildignore+=*/.gs/*,*.DS_Store,*.rdb,*.aof,*.sqlite3,*.pid
+
+" Inser New Line
+" ============================================================================
+:noremap <S-Enter> O<ESC>
+:noremap <Enter> o<ESC>
+
+" Set encodings to UTF8
+" ============================================================================
+set encoding=utf-8
+set fileencoding=utf-8
+
+" set list listchars=tab:>-,trail:.,extends:>
+
+" Allow backspace to work on auto indents, EOL, or start of lines.
+set backspace=indent,eol,start
+
+" Change mapping of CtrlP
+let g:ctrlp_map = '<leader>t'
+let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
+
+"jump to last cursor position when opening a file
+"dont do it when writing a commit log entry
+autocmd BufReadPost * call SetCursorPosition()
+function! SetCursorPosition()
+    if &filetype !~ 'commit\c'
+        if line("'\"") > 0 && line("'\"") <= line("$")
+            exe "normal g`\""
+        endif
+    end
+endfunction

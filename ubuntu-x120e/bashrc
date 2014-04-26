@@ -1,0 +1,46 @@
+#/bin/bash
+
+# env
+export EDITOR="vim"
+export TERM=screen-256color
+export LANG="en_US.UTF-8"
+export PS1="\w "
+export LC_COLLATE="en_US.UTF-8"
+export GREP_OPTIONS="--color=auto"
+export NODE_PATH=/usr/local/lib/node_modules
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export ANDROID_BIN="/home/oren/apps/android-sdk-linux/tools/android"
+
+# path
+export PATH=~/.dotfiles/ubuntu-work-desktop/bin:$PATH
+export PATH="$PATH:/home/oren/apps/android-sdk-linux/tools"
+export PATH="$PATH:/home/oren/apps/android-sdk-linux/platform-tools"
+export PATH="$PATH:/home/oren/apps/android-sdk-linux/build-tools"
+
+# go
+export GOROOT=/usr/lib/go
+export GOBIN=/usr/bin/go
+
+## amazon s3 configuration
+if [[ -f ~/.amazon_keys ]]; then source ~/.amazon_keys; fi
+
+# common aliases & functions
+_gemset() {
+  if [[ -z $GS_NAME ]]; then
+    echo ""
+  else
+    echo "$GS_NAME "
+  fi
+}
+
+_suspended() {
+  jobs | wc -l | tr -d " "
+}
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+if [ -f ~/.git-completion ]; then
+    . ~/.git-completion
+fi
