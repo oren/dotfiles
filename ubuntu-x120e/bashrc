@@ -12,7 +12,7 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export ANDROID_BIN="/home/oren/apps/android-sdk-linux/tools/android"
 
 # path
-export PATH=~/.dotfiles/ubuntu-work-desktop/bin:$PATH
+export PATH=~/.dotfiles/ubuntu-x120e/bin:$PATH
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/tools"
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/platform-tools"
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/build-tools"
