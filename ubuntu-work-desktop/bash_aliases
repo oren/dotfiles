@@ -1,4 +1,4 @@
-# # bash function to decompress archives - http://www.shell-fu.org/lister.php?id=375  
+# bash function to decompress archives - http://www.shell-fu.org/lister.php?id=375  
 extract () {  
     if [ -f $1 ] ; then  
         case $1 in  
@@ -140,7 +140,6 @@ alias reb='sudo reboot'
 alias hal='sudo halt'
 
 alias nodejs='node'
-alias d='docker.io'
 
 # mount
 alias clip='sudo mount /dev/sdb /media/usb/ -o uid=1000,gid=1000'

@@ -4,7 +4,7 @@
 
 # needed for i3
 i3-msg 'workspace 1;exec firefox'
-i3-msg 'workspace 2;exec google-chrome'
+i3-msg 'workspace 2;exec chromium-browser'
 
 setxkbmap dvorak
 # turn capslock into esc

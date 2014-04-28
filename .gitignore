@@ -1,18 +1,24 @@
-.DS_Store
-/bin/pgstart
-
-ubuntu-x120e/weechat/weechat.log
 ubuntu-x120e/weechat/logs
+ubuntu-x120e/weechat/weechat.log
+ubuntu-x120e/weechat/irc.conf
 ubuntu-x120e/vim/.netrwhist
 
 ubuntu-server/weechat/logs
 ubuntu-server/weechat/weechat.log
+ubuntu-server/weechat/irc.conf
 ubuntu-server/vim/.netrwhist
 
 ubuntu-work-desktop/weechat/logs
 ubuntu-work-desktop/weechat/weechat.log
+ubuntu-work-desktop/weechat/irc.conf
 ubuntu-work-desktop/vim/.netrwhist
 
 debian-laptop/weechat/logs
 debian-laptop/weechat/weechat.log
+debian-laptop/weechat/irc.conf
 debian-laptop/vim/.netrwhist
+
+ubuntu/weechat/logs
+ubuntu/weechat/weechat.log
+ubuntu/weechat/irc.conf
+ubuntu/vim/.netrwhist
