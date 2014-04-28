@@ -140,6 +140,7 @@ alias reb='sudo reboot'
 alias hal='sudo halt'
 
 alias nodejs='node'
+alias d='docker.io'
 
 # mount
 alias clip='sudo mount /dev/sdb /media/usb/ -o uid=1000,gid=1000'
