@@ -40,10 +40,7 @@ function take() {
     cd "$1"
 }
 
-alias k9="killall -9"
 
-## Finder
-alias o='open . &'
 
 ## Syntax check Javascript
 function jsc() {
@@ -139,7 +136,8 @@ alias hib='sudo pm-hibernate'
 alias reb='sudo reboot'
 alias hal='sudo halt'
 
-alias nodejs='node'
+alias docker='docker.io'
+alias o='xdg-open'
 
 # mount
 alias clip='sudo mount /dev/sdb /media/usb/ -o uid=1000,gid=1000'
