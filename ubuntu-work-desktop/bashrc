@@ -1,6 +1,7 @@
 #/bin/bash
 
 # env
+export EDITOR="vim"
 export TERM=screen-256color
 export PS1="\w "
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
