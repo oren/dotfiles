@@ -6,6 +6,7 @@ export PATH=~/.dotfiles/ubuntu-x120e/bin:$PATH
 # env
 export TERM=screen-256color
 export PS1="\w "
+export EDITOR="vim"
 
 # java
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
