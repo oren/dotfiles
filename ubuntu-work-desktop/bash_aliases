@@ -1,4 +1,4 @@
-# # bash function to decompress archives - http://www.shell-fu.org/lister.php?id=375  
+# bash function to decompress archives - http://www.shell-fu.org/lister.php?id=375  
 extract () {  
     if [ -f $1 ] ; then  
         case $1 in  
