@@ -124,12 +124,10 @@ alias v='vim'
 alias docker='docker.io'
 alias m='mpv'
 alias o='xdg-open'
-alias k9="killall -9"
 alias r='reset'
 alias s='python -m SimpleHTTPServer'
 
 # mount
-alias clip='sudo mount /dev/sdb /media/usb/ -o uid=1000,gid=1000'
 alias u='sudo umount /media/usb'
 
 # git
