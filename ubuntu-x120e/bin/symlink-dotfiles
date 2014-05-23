@@ -42,3 +42,9 @@ ln -vfs ~/.dotfiles/ubuntu-x120e/gitconfig ~/.gitconfig
 # newsbeuter
 ln -vfs ~/misc/config/newsbeuter-urls ~/.newsbeuter/urls
 ln -vfs ~/.dotfiles/ubuntu-x120e/newsbeuter-config ~/.newsbeuter/config
+
+# compton (remove black box of fcitx)
+ln -vfs ~/.dotfiles/ubuntu-x120e/compton.conf ~/.compton.conf
+
+# pentadactyl
+ln -vfs ~/.dotfiles/ubuntu-x120e/pentadactylrc ~/.pentadactylrc

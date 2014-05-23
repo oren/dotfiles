@@ -40,5 +40,3 @@ ln -vfs ~/.dotfiles/ubuntu-server/gitconfig ~/.gitconfig
 # newsbeuter
 ln -vfs ~/misc/config/newsbeuter-urls ~/.newsbeuter/urls
 ln -vfs ~/.dotfiles/ubuntu-server/newsbeuter-config ~/.newsbeuter/config
-
-
