@@ -156,4 +156,3 @@ alias gb='git branch'
 alias ga='git add --all'
 
 alias s='python -m SimpleHTTPServer'
->>>>>>> 42286c0e743f5ced7955c23d3999658f0703e9db
