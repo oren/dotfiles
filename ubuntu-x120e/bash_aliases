@@ -1,23 +1,23 @@
-# # bash function to decompress archives - http://www.shell-fu.org/lister.php?id=375  
-extract () {  
-    if [ -f $1 ] ; then  
-        case $1 in  
-            *.tar.bz2)   tar xvjf $1        ;;  
-            *.tar.gz)    tar xvzf $1     ;;  
-            *.bz2)       bunzip2 $1       ;;  
-            *.rar)       unrar x $1     ;;  
-            *.gz)        gunzip $1     ;;  
-            *.tar)       tar xvf $1        ;;  
-            *.tbz2)      tar xvjf $1      ;;  
-            *.tgz)       tar xvzf $1       ;;  
-            *.zip)       unzip $1     ;;  
-            *.Z)         uncompress $1  ;;  
-            *.7z)        7z x $1    ;;  
-            *)           echo "'$1' cannot be extracted via >extract<" ;;  
-        esac  
-    else  
-        echo "'$1' is not a valid file"  
-    fi  
+# bash function to decompress archives - http://www.shell-fu.org/lister.php?id=375
+extract () {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xvjf $1        ;;
+            *.tar.gz)    tar xvzf $1     ;;
+            *.bz2)       bunzip2 $1       ;;
+            *.rar)       unrar x $1     ;;
+            *.gz)        gunzip $1     ;;
+            *.tar)       tar xvf $1        ;;
+            *.tbz2)      tar xvjf $1      ;;
+            *.tgz)       tar xvzf $1       ;;
+            *.zip)       unzip $1     ;;
+            *.Z)         uncompress $1  ;;
+            *.7z)        7z x $1    ;;
+            *)           echo "'$1' cannot be extracted via >extract<" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
 }
 
 pg() {
@@ -29,8 +29,8 @@ pg() {
   fi
 }
 
-## Kudos to djanowski for this. Use ack to search files and open it in
-## `vi` with the searched text as the last searched phrase in vi.
+# Kudos to djanowski for this. Use ack to search files and open it in
+# `vi` with the searched text as the last searched phrase in vi.
 vack() {
   vi -p -c "/$1" $(ack -al $@)
 }
@@ -40,23 +40,22 @@ function take() {
     cd "$1"
 }
 
-alias k9="killall -9"
-
-## Finder
-alias o='open . &'
-
-## Syntax check Javascript
-function jsc() {
-  jsl -process $1
-}
-
-# GIT
-
+# git
 ghpage() {
 
   git symbolic-ref HEAD refs/heads/gh-pages
   rm .git/index
   git clean -fdx
+}
+
+gush() {
+  REMOTE_EXISTS=$(git branch -r | grep $(br))
+
+  if [ -n "$REMOTE_EXISTS" ]; then
+    git push origin $(br)
+  else
+    git push -u origin $(br)
+  fi
 }
 
 gush() {
@@ -100,18 +99,6 @@ function decrypt-file() {
  cat "$1" | openssl base64 -d | openssl des3 -salt -pass env:SECRET -d
 }
 
-function vbox-start() {
-  vboxmanage startvm "$1" --type headless
-}
-
-function vbox-stop() {
-  vboxmanage controlvm "$1" poweroff
-}
-
-function vbox-save() {
-  vboxmanage controlvm "$1" savestate
-}
-
 ## Search all files by default. This fixes the problem that *.css, *.less,
 ## *.sass files aren't usually seacrched.
 alias ack="ack -a"
@@ -123,10 +110,6 @@ alias ls='ls --color'
 alias la='ls -Fa'
 alias ld='ls -al -d * | egrep "^d"' # only subdirectories
 
-alias m='mpv'
-alias v='vim'
-alias r='reset'
-
 alias in='sudo apt-get install'
 alias pu='sudo apt-get purge'
 alias se='apt-cache search'
@@ -134,15 +117,17 @@ alias sh='apt-cache show'
 
 alias monitor='xrandr --output HDMI-0 --auto --above LVDS'
 alias vpn='sudo vpnc-connect /home/oren/.vpn'
-
 alias hib='sudo pm-hibernate'
 alias reb='sudo reboot'
 alias hal='sudo halt'
-
-alias nodejs='node'
+alias v='vim'
+alias docker='docker.io'
+alias m='mpv'
+alias o='xdg-open'
+alias r='reset'
+alias s='python -m SimpleHTTPServer'
 
 # mount
-alias clip='sudo mount /dev/sdb /media/usb/ -o uid=1000,gid=1000'
 alias u='sudo umount /media/usb'
 
 # git
@@ -159,5 +144,3 @@ alias gf='git fetch --prune'
 alias gb='git branch'
 alias ga='git add --all'
 alias gcl='git clone'
-
-alias s='python -m SimpleHTTPServer'

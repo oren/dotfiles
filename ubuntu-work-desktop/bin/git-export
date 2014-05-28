@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+
 # Export git branch to a static directory.
 
 BRANCH="HEAD"
@@ -15,4 +15,3 @@ git archive $BRANCH | tar -x -C /tmp/$NAME
 cd /tmp
 
 tar -czf /tmp/$NAME.tgz $NAME
-

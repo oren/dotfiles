@@ -1,4 +1,4 @@
-# # bash function to decompress archives - http://www.shell-fu.org/lister.php?id=375  
+# bash function to decompress archives - http://www.shell-fu.org/lister.php?id=375  
 extract () {  
     if [ -f $1 ] ; then  
         case $1 in  
@@ -40,10 +40,7 @@ function take() {
     cd "$1"
 }
 
-alias k9="killall -9"
 
-## Finder
-alias o='open . &'
 
 ## Syntax check Javascript
 function jsc() {
@@ -132,14 +129,15 @@ alias pu='sudo apt-get purge'
 alias se='apt-cache search'
 alias sh='apt-cache show'
 
-alias monitor='xrandr --output HDMI-0 --auto --above LVDS'
+alias monitor='xrandr --output DP-2 --auto --primary --left-of DVI-I-1'
 alias vpn='sudo vpnc-connect /home/oren/.vpn'
 
 alias hib='sudo pm-hibernate'
 alias reb='sudo reboot'
 alias hal='sudo halt'
 
-alias nodejs='node'
+alias docker='docker.io'
+alias o='xdg-open'
 
 # mount
 alias clip='sudo mount /dev/sdb /media/usb/ -o uid=1000,gid=1000'
