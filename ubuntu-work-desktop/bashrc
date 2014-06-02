@@ -14,8 +14,11 @@ export PATH="$PATH:/home/oren/apps/android-sdk-linux/platform-tools"
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/build-tools"
 
 # go
-export GOROOT=/usr/lib/go
-export GOBIN=/usr/bin/go
+export GOPATH=$HOME/projects/go
+export PATH=$PATH:$GOPATH/bin
+
+# export GOROOT=/usr/lib/go
+# export GOBIN=/usr/bin/go
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases

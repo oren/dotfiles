@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $1 ]; then
+  grep "^$1 " ~/Downloads/cedict_1_0_ts_utf-8_mdbg.txt
+else
+  echo 'Use with 1 argument. Example: t 白話'
+fi
+
+
