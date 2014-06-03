@@ -48,3 +48,6 @@ ln -vfs ~/.dotfiles/ubuntu-x120e/compton.conf ~/.compton.conf
 
 # pentadactyl
 ln -vfs ~/.dotfiles/ubuntu-x120e/pentadactylrc ~/.pentadactylrc
+
+# npm
+ln -vfs ~/.dotfiles/ubuntu-x120e/npmrc ~/.npmrc
