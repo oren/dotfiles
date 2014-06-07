@@ -30,6 +30,9 @@ let maplocalleader = ","
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
+" remove whitespace with ,w
+:noremap <leader>w :%s/\s\+$//<CR>
+
 :noremap <leader>v :vsp<CR>:enew<CR>:pwd<CR>
 :noremap <leader>s :split<CR>:enew<CR>:pwd<CR>
 :noremap <leader>l <C-w>l
