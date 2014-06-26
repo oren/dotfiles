@@ -159,3 +159,4 @@ alias ga='git add --all'
 alias gcl='git clone'
 
 alias s='python -m SimpleHTTPServer'
+alias vpn='projects/anyconnect-3.1.05160/vpn/vpnui'
