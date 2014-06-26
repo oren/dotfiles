@@ -12,4 +12,6 @@ xset r rate 200 60 # typematic delay and rate
 xrdb ~/.Xresources
 fcitx-qimpanel
 setxkbmap dvorak
+
+# fix ui issue with chinese language switch
 compton &

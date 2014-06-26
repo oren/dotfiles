@@ -160,6 +160,7 @@ alias m='mpv'
 alias o='xdg-open'
 alias r='reset'
 alias s='python -m SimpleHTTPServer'
+alias lt='lt --port 3000 --subdomain oren'
 
 # mount
 alias u='sudo umount /media/usb'
