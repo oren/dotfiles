@@ -9,6 +9,7 @@ export ANDROID_BIN="/home/oren/apps/android-sdk-linux/tools/android"
 
 # path
 export PATH=~/.dotfiles/ubuntu-work-desktop/bin:$PATH
+export PATH=~/.bin:$PATH
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/tools"
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/platform-tools"
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/build-tools"

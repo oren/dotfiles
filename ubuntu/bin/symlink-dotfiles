@@ -44,5 +44,8 @@ fi
 ln -vfs ~/.dotfiles/ubuntu/git-completion ~/.git-completion
 ln -vfs ~/.dotfiles/ubuntu/gitconfig ~/.gitconfig
 
+# NPM
+ln -vfs ~/.dotfiles/ubuntu/npmrc ~/.npmrc
+
 # CREATE VIM BACKUP DIR
 mkdir -p ~/.backup/vim/swap

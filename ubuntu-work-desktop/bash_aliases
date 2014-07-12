@@ -159,3 +159,4 @@ alias ga='git add --all'
 alias gcl='git clone'
 
 alias s='python -m SimpleHTTPServer'
+alias lt='lt --port 3000 --subdomain oren'
