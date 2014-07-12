@@ -18,6 +18,9 @@ export LC_COLLATE="en_US.UTF-8"
 export NODE_PATH=/usr/local/lib/node_modules
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 
+# go
+export GOPATH='/home/oren/projects/go'
+
 ## amazon s3 configuration
 if [[ -f ~/.amazon_keys ]]; then source ~/.amazon_keys; fi
 
