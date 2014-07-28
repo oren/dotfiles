@@ -1,0 +1,25 @@
+# send message to a YO user
+
+# usage
+# yo oren "how are you doing?"
+# will execute this:
+# curl -X POST http://yofor.me/oren/how%20are%20you%20doing?
+
+user=$1
+msgIn=$2
+msgOut=""
+array=(${msgIn// / })
+
+# replace spaces with %20
+for i in "${array[@]}"
+do
+  if [ -n "$msgOut" ];
+  then
+    msgOut=$msgOut%20$i
+  else
+    msgOut=$i
+  fi
+done
+
+curl -X POST http://yofor.me/$user/$msgOut
+echo sending \"$msgIn\" to $user

@@ -123,8 +123,8 @@ alias ls='ls --color'
 alias la='ls -Fa'
 alias ld='ls -al -d * | egrep "^d"' # only subdirectories
 
-alias m='mpv'
 alias v='vim'
+alias m='mpv --fs'
 alias r='reset'
 
 alias in='sudo apt-get install'
@@ -133,6 +133,7 @@ alias se='apt-cache search'
 alias sh='apt-cache show'
 
 alias monitor='xrandr --output LVDS --auto --output HDMI-0 --auto --above LVDS'
+alias monitor-home='xrandr --output LVDS1 --auto --output VGA1 --auto --above LVDS1'
 alias vpn='sudo vpnc-connect /home/oren/.vpn'
 
 alias hib='sudo pm-hibernate'
@@ -161,7 +162,6 @@ alias gcl='git clone'
 alias s='python -m SimpleHTTPServer'
 alias lt='lt --port 3000 --subdomain oren'
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0 |grep percent'
-alias feh='feh --full-screen -d'
+alias f='feh --full-screen -d'
 alias un='unity-control-center'
-alias m='mpv --fs'
 alias vpn='sudo openconnect --pid-file /tmp/vpn -b -u ogolan --authgroup="..YP NO TOKEN" --passwd-on-stdin https://vpn.yp.com/ < ~/yppass'
