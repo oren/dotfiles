@@ -3,6 +3,7 @@
 # path
 export PATH=~/.dotfiles/ubuntu/bin:$PATH
 export PATH="$PATH:/usr/bin"
+export PATH="$PATH:/home/oren/.bin"
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/tools"
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/platform-tools"
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/build-tools"
@@ -19,6 +20,7 @@ export NODE_PATH=/usr/local/lib/node_modules
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 
 # go
+export PATH=$PATH:/usr/local/go/bin
 export GOPATH='/home/oren/projects/go'
 
 ## amazon s3 configuration
