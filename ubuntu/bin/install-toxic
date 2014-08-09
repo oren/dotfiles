@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# install toxic
+# sudo apt-get install libconfig-dev
+
+cd ~/projects
+wget https://jenkins.libtoxcore.so/job/toxic_linux_amd64/lastSuccessfulBuild/artifact/toxic_linux_amd64.tar.xz
+rm -r toxic
+mkdir toxic
+tar xpvf toxic_linux_amd64.tar.xz -C toxic
+rm toxic_linux*
+
