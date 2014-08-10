@@ -24,6 +24,13 @@ ln -vfs ~/.dotfiles/ubuntu-server/etc/screenrc ~/.screenrc
 # tmux
 ln -vfs ~/.dotfiles/ubuntu-server/tmux.conf ~/.tmux.conf
 
+# mutt
+if [ ! -L ~/.mutt ]; then
+	ln -vfs ~/.dotfiles/ubuntu-server/mutt ~/.mutt
+else
+	echo .mutt is already a symlink
+fi
+
 # weechat
 if [ ! -L ~/.weechat ]; then
 	ln -vfs ~/.dotfiles/ubuntu-server/weechat ~/.weechat

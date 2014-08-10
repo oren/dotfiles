@@ -1,0 +1,21 @@
+# vim: set filetype=muttrc :
+
+color normal white black
+color status white blue
+
+color indicator brightgreen black
+color tree cyan black
+color index yellow black ~F
+color index red black "~N|~O"
+
+color attachment yellow black
+color hdrdefault magenta black
+color markers red black
+color quoted green black
+color quoted1 cyan black
+color signature blue black
+color tilde magenta black
+
+color error brightred black
+color message red black
+color search black yellow

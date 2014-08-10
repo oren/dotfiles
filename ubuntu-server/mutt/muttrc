@@ -1,0 +1,38 @@
+# Load account information and credentials.
+source ~/.mutt/account
+
+# Update settings.
+set imap_idle
+set imap_check_subscribed
+set mail_check=300
+set timeout=10
+
+# Interface settings.
+set editor=vim
+set mailcap_path = ~/.mutt/mailcap
+set pager_index_lines=9
+set sort=reverse-threads
+set sort_aux=last-date-received
+set tilde
+
+# don't collapse thread if there is unread message
+unset collapse_unread
+
+# collapse threads by default
+folder-hook . push "<collapse-all>"
+
+auto_view text/html
+
+# Load colour settings.
+source ~/.mutt/colours
+
+# delete with d
+macro index d "<save-message>imaps://imap.gmail.com/[Gmail]/Trash<enter><sync-mailbox>y" "Delete message."
+
+macro index gi "<change-folder>=INBOX<enter>" "Go to all mail"
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder>=[Gmail]/Sent Mail<enter>" " Go to sent mail"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+
+# Fix backspace not working in screen.
+# bind pager  previous-line
