@@ -160,3 +160,5 @@ alias gcl='git clone'
 
 alias s='python -m SimpleHTTPServer'
 alias lt='lt --port 3000 --subdomain oren'
+alias f='feh --full-screen -d'
+alias un='unity-control-center'
