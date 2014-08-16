@@ -126,7 +126,7 @@ alias ld='ls -al -d * | egrep "^d"' # only subdirectories
 
 alias in='sudo apt-get install'
 alias pu='sudo apt-get purge'
-alias se='apt-cache search'
+alias se='aptitude search'
 alias sh='apt-cache show'
 
 alias monitor='xrandr --output LVDS --auto --output HDMI-0 --auto --above LVDS'
