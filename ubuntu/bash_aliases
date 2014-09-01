@@ -42,9 +42,6 @@ function take() {
 
 alias k9="killall -9"
 
-## Finder
-alias o='open . &'
-
 ## Syntax check Javascript
 function jsc() {
   jsl -process $1
@@ -156,12 +153,13 @@ alias gb='git branch'
 alias ga='git add --all'
 alias gcl='git clone'
 
+alias o='xdg-open'
 alias v='vim'
 alias m='mpv --fs'
 alias f='feh --full-screen -d'
 alias toxic='cd ~/projects/toxic && ./run_toxic.sh'
 alias utox='cd ~/projects/utox && ./utox'
-alias pastebinit='pastebinit -a me'
+alias pastebinit='pastebinit -a me -i'
 alias r='reset'
 alias s='python -m SimpleHTTPServer'
 alias lt='lt --port 3000 --subdomain oren'
