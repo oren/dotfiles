@@ -4,9 +4,16 @@
 export PATH=~/.dotfiles/ubuntu/bin:$PATH
 export PATH="$PATH:/usr/bin"
 export PATH="$PATH:/home/oren/.bin"
+
+# android
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/tools"
 export PATH="$PATH:/home/oren/apps/android-sdk-linux/platform-tools"
-export PATH="$PATH:/home/oren/apps/android-sdk-linux/build-tools"
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+# export PATH="$PATH:/home/oren/apps/android-sdk-linux/build-tools"
+
+# go
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH='/home/oren/projects/go'
 
 # env
 export EDITOR="vim"
@@ -17,11 +24,6 @@ export GREP_OPTIONS="--color=auto"
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
 export NODE_PATH=/usr/local/lib/node_modules
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-
-# go
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH='/home/oren/projects/go'
 
 ## amazon s3 configuration
 if [[ -f ~/.amazon_keys ]]; then source ~/.amazon_keys; fi
