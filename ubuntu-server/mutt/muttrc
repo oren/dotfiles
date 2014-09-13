@@ -14,6 +14,8 @@ set pager_index_lines=9
 set sort=reverse-threads
 set sort_aux=last-date-received
 set tilde
+# don't ask to modify unsent emails when hitting 'm'
+set recall=no
 
 # don't collapse thread if there is unread message
 unset collapse_unread
@@ -25,6 +27,9 @@ auto_view text/html
 
 # Load colour settings.
 source ~/.mutt/colours
+
+source ~/.mutt/aliases
+set query_command="~/.mutt/grepcontacts.sh '%s'"
 
 # delete with d
 macro index d "<save-message>imaps://imap.gmail.com/[Gmail]/Trash<enter><sync-mailbox>y<collapse-all>" "Delete message."
