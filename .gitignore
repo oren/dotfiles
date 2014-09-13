@@ -8,6 +8,7 @@ ubuntu-server/weechat/weechat.log
 ubuntu-server/weechat/irc.conf
 ubuntu-server/vim/.netrwhist
 ubuntu-server/mutt/account
+ubuntu-server/mutt/aliases
 
 ubuntu-work-desktop/weechat/logs
 ubuntu-work-desktop/weechat/weechat.log
