@@ -14,6 +14,8 @@ set pager_index_lines=9
 set sort=reverse-threads
 set sort_aux=last-date-received
 set tilde
+# don't ask to modify unsent emails when hitting 'm'
+set recall=no
 
 # don't collapse thread if there is unread message
 unset collapse_unread

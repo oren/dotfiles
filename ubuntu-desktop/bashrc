@@ -2,7 +2,6 @@
 
 # env
 export EDITOR="vim"
-export TERM=screen-256color
 export LANG="en_US.UTF-8"
 export PS1="\w "
 export LC_COLLATE="en_US.UTF-8"
