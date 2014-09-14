@@ -28,7 +28,7 @@ auto_view text/html
 # Load colour settings.
 source ~/.mutt/colours
 
-source ~/.mutt/aliases
+# source ~/.mutt/aliases
 set query_command="~/.mutt/grepcontacts.sh '%s'"
 
 # delete with d
