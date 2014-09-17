@@ -126,7 +126,7 @@ alias r='reset'
 
 alias in='sudo apt-get install'
 alias pu='sudo apt-get purge'
-alias se='apt-cache search'
+alias se='aptitude search'
 alias sh='apt-cache show'
 
 alias monitor='xrandr --output HDMI2 --auto --output DP1 --auto --right-of HDMI2'
@@ -162,3 +162,4 @@ alias s='python -m SimpleHTTPServer'
 alias lt='lt --port 3000 --subdomain oren'
 alias f='feh --full-screen -d'
 alias un='unity-control-center'
+alias pastebinit='pastebinit -a me -i'
