@@ -2,7 +2,6 @@
 
 # env
 export EDITOR="vim"
-export TERM=screen-256color
 export PS1="\w "
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export ANDROID_BIN="/home/oren/apps/android-sdk-linux/tools/android"

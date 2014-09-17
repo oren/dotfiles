@@ -2,6 +2,7 @@
 
 # bash profile
 ln -vfs ~/.dotfiles/ubuntu-server/bashrc ~/.bashrc
+ln -vfs ~/.dotfiles/ubuntu-server/bash_profile ~/.bash_profile
 ln -vfs ~/.dotfiles/ubuntu-server/bash_aliases ~/.bash_aliases
 ln -vfs ~/.dotfiles/ubuntu-server/Xresources ~/.Xresources
 
@@ -31,6 +32,9 @@ else
 	echo .mutt is already a symlink
 fi
 
+cp ~/misc/configs/mutt-account ~/.mutt/account
+ln -vfs ~/misc/configs/mutt-aliases ~/.mutt/aliases
+
 # weechat
 if [ ! -L ~/.weechat ]; then
 	ln -vfs ~/.dotfiles/ubuntu-server/weechat ~/.weechat
@@ -38,12 +42,12 @@ else
 	echo .weechat is already a symlink
 fi
 
-ln -vfs ~/misc/config/weechat-irc.conf ~/.weechat/irc.conf
+ln -vfs ~/misc/configs/weechat-irc.conf ~/.weechat/irc.conf
 
 # git
 ln -vfs ~/.dotfiles/ubuntu-server/git-completion ~/.git-completion
 ln -vfs ~/.dotfiles/ubuntu-server/gitconfig ~/.gitconfig
 
 # newsbeuter
-ln -vfs ~/misc/config/newsbeuter-urls ~/.newsbeuter/urls
+ln -vfs ~/misc/configs/newsbeuter-urls ~/.newsbeuter/urls
 ln -vfs ~/.dotfiles/ubuntu-server/newsbeuter-config ~/.newsbeuter/config
