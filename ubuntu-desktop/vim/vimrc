@@ -87,6 +87,8 @@ nnoremap ; :
 inoremap hh <ESC>
 "  tab is easier than %
 nnoremap <tab> %
+"  no need for Ex mode
+nnoremap Q <nop>
 
 "buffers
 map <C-h> <Esc>:bp<CR>
