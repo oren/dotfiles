@@ -7,7 +7,8 @@ i3-msg 'workspace 1;exec firefox'
 i3-msg 'workspace 2;exec google-chrome'
 
 setxkbmap dvorak
-# turn capslock into esc
-xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-xset r rate 200 60 # typematic delay and rate
+syndaemon -i 0.3 -K -d    # disable touchpad for 0.3 sec while typing
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'  # turn capslock into esc
+xset r rate 200 60      # typematic delay and rate
 xrdb ~/.Xresources
+
