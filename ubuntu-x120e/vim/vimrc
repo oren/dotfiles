@@ -3,6 +3,7 @@ call pathogen#infect()
 syntax enable
 set background=dark
 colorscheme solarized
+set t_Co=16
 call togglebg#map("<F5>")
 
 filetype indent plugin on

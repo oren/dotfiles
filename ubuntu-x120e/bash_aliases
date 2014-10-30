@@ -160,6 +160,7 @@ alias o='xdg-open'
 alias r='reset'
 alias s='python -m SimpleHTTPServer'
 alias lt='lt --port 3000 --subdomain oren'
+alias pastebinit='pastebinit -a me -i'
 
 # mount
 alias u='sudo umount /media/usb'
@@ -182,3 +183,5 @@ alias feh='feh --full-screen -d'
 alias feh='f --full-screen -d'
 alias un='unity-control-center'
 alias m='mpv --fs'
+alias toxic='cd ~/projects/toxic && ./run_toxic.sh'
+alias utox='cd ~/projects/utox && ./utox'
