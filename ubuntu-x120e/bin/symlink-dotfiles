@@ -51,3 +51,9 @@ ln -vfs ~/.dotfiles/ubuntu-x120e/pentadactylrc ~/.pentadactylrc
 
 # npm
 ln -vfs ~/.dotfiles/ubuntu-x120e/npmrc ~/.npmrc
+
+# mpv
+if [ ! -d "~/.config/mpv" ]; then
+  mkdir -p ~/.config/mpv
+fi
+ln -vfs ~/.dotfiles/ubuntu-x120e/mpv.conf ~/.config/mpv/mpv.conf
