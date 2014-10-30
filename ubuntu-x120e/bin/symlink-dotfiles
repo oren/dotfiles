@@ -53,7 +53,13 @@ ln -vfs ~/.dotfiles/ubuntu-x120e/pentadactylrc ~/.pentadactylrc
 ln -vfs ~/.dotfiles/ubuntu-x120e/npmrc ~/.npmrc
 
 # mpv
-if [ ! -d "~/.config/mpv" ]; then
-  mkdir -p ~/.config/mpv
+if [ ! -L ~/.config/mpv ]; then
+	ln -vfs ~/.dotfiles/ubuntu-x120e/mpv ~/.config/mpv
+else
+	echo mpv is already a symlink
 fi
-ln -vfs ~/.dotfiles/ubuntu-x120e/mpv.conf ~/.config/mpv/mpv.conf
+
+# if [ ! -d "~/.config/mpv" ]; then
+#   mkdir -p ~/.config/mpv
+# fi
+# ln -vfs ~/.dotfiles/ubuntu-x120e/mpv.conf ~/.config/mpv/mpv.conf
