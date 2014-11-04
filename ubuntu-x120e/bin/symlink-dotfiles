@@ -58,8 +58,3 @@ if [ ! -L ~/.config/mpv ]; then
 else
 	echo mpv is already a symlink
 fi
-
-# if [ ! -d "~/.config/mpv" ]; then
-#   mkdir -p ~/.config/mpv
-# fi
-# ln -vfs ~/.dotfiles/ubuntu-x120e/mpv.conf ~/.config/mpv/mpv.conf
