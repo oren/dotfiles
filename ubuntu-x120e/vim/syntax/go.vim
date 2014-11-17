@@ -29,9 +29,9 @@ if exists("b:current_syntax")
   finish
 endif
 
-set tabstop=8
-set shiftwidth=8
-set expandtab
+setlocal tabstop=8
+setlocal shiftwidth=8
+setlocal expandtab
 
 if !exists("go_highlight_array_whitespace_error")
   let go_highlight_array_whitespace_error = 1
