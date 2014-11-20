@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $1 ]; then
+  grep "^$1 " ~/misc/mandarin/cedict_1_0_ts_utf-8_mdbg.txt
+  if [ $? -ne 0 ]; then
+    grep "^$1 " ~/misc/mandarin/google-10000-english.txt
+  fi
+else
+  echo 'Use with 1 argument. Example: t 白話'
+fi
+

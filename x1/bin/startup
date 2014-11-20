@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# run those when x start. i3 will run it.
+
+# needed for i3
+i3-msg 'workspace 1;exec firefox'
+i3-msg 'workspace 2;exec chromium-browser'
+
+# turn capslock into esc
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+xset r rate 200 60 # typematic delay and rate
+xrdb ~/.Xresources
+fcitx-qimpanel
+setxkbmap dvorak
+
+# fix ui issue with chinese language switch
+compton &
