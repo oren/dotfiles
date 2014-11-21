@@ -136,7 +136,6 @@ gtrans() {
 ## Search all files by default. This fixes the problem that *.css, *.less,
 ## *.sass files aren't usually seacrched.
 alias ack="ack -a"
-
 alias ..="cd .."  # Go up one dir.
 alias c='cd'
 alias l='ls --color'
@@ -149,19 +148,12 @@ alias pu='sudo apt-get purge'
 alias se='aptitude search'
 alias sh='apt-cache show'
 
-alias monitor='xrandr --output LVDS --auto --output VGA-0 --auto --above LVDS'
-alias monitor-ascent='xrandr --output LVDS --auto --output HDMI-0 --auto --above LVDS'
-alias vpn='sudo vpnc-connect /home/oren/.vpn'
+alias monitor='xrandr --output eDP1 --auto --output HDMI2 --auto --above eDP1'
+
 alias hib='sudo pm-hibernate'
 alias reb='sudo reboot'
 alias hal='sudo halt'
-alias v='vim'
-alias docker='docker.io'
-alias o='xdg-open'
 alias r='reset'
-alias s='python -m SimpleHTTPServer'
-alias lt='lt --port 3000 --subdomain oren'
-alias pastebinit='pastebinit -a me -i'
 
 # mount
 alias u='sudo umount /media/usb'
@@ -180,10 +172,15 @@ alias gf='git fetch --prune'
 alias gb='git branch'
 alias ga='git add --all'
 alias gcl='git clone'
-alias feh='feh --full-screen -d'
+
+# apps
+alias v='vim'
+alias o='xdg-open'
 alias f='feh --full-screen -d'
+# alias docker='docker.io'
 alias un='unity-control-center'
 alias m='mpv'
 alias toxic='cd ~/projects/toxic && ./run_toxic.sh'
 alias utox='cd ~/projects/utox && ./utox'
 alias pastebinit='pastebinit -a me -i'
+alias s='python -m SimpleHTTPServer'
