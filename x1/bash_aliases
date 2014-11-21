@@ -143,7 +143,7 @@ alias ls='ls --color'
 alias la='ls -Fa'
 alias ld='ls -al -d * | egrep "^d"' # only subdirectories
 
-alias in='sudo apt-get install'
+alias in='sudo apt-get install -y'
 alias pu='sudo apt-get purge'
 alias se='aptitude search'
 alias sh='apt-cache show'
@@ -184,3 +184,4 @@ alias toxic='cd ~/projects/toxic && ./run_toxic.sh'
 alias utox='cd ~/projects/utox && ./utox'
 alias pastebinit='pastebinit -a me -i'
 alias s='python -m SimpleHTTPServer'
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0 |grep time'
