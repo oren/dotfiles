@@ -1,15 +1,7 @@
 #!/bin/bash
 
-# run those when x start. i3 will run it.
+# i3 run this file when x starts.
 
-# needed for i3
-i3-msg 'workspace 1;exec firefox'
-i3-msg 'workspace 2;exec chromium-browser'
-
+i3-msg 'workspace 1;exec chromium-browser'
 xset r rate 200 60 # typematic delay and rate
 xrdb ~/.Xresources
-# fcitx-qimpanel
-setxkbmap dvorak
-
-# fix ui issue with chinese language switch
-# compton &
