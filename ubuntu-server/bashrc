@@ -11,7 +11,7 @@ export LC_COLLATE="en_US.UTF-8"
 
 # go
 export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/go
+export GOPATH="/home/oren/projects/go"
 export PATH=$PATH:$GOPATH/bin
 
 # amazon s3 configuration

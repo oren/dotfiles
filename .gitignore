@@ -1,3 +1,8 @@
+x1/weechat/logs
+x1/weechat/weechat.log
+x1/weechat/irc.conf
+x1/vim/.netrwhist
+
 ubuntu-x120e/weechat/logs
 ubuntu-x120e/weechat/weechat.log
 ubuntu-x120e/weechat/irc.conf

@@ -51,3 +51,10 @@ ln -vfs ~/.dotfiles/ubuntu-x120e/pentadactylrc ~/.pentadactylrc
 
 # npm
 ln -vfs ~/.dotfiles/ubuntu-x120e/npmrc ~/.npmrc
+
+# mpv
+if [ ! -L ~/.config/mpv ]; then
+	ln -vfs ~/.dotfiles/ubuntu-x120e/mpv ~/.config/mpv
+else
+	echo mpv is already a symlink
+fi

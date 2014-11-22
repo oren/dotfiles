@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+# Export git branch to a static directory.
+
+BRANCH="HEAD"
+
+NAME="$1"
+test "$NAME" || NAME="ypu-$BRANCH"
+
+set -x
+rm -rf /tmp/$NAME*
+mkdir -p /tmp/$NAME
+git archive $BRANCH | tar -x -C /tmp/$NAME
+
+cd /tmp
+
+tar -czf /tmp/$NAME.tgz $NAME
+

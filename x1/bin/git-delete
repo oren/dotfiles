@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+#
+# Delete branch both locally and remotely
+#
+# Usage:
+#
+# ./git_delete.sh <BRANCH NAME>
+#
+# Options are taking via env vars:
+#
+# - ORIGIN  :: remote name (see: git remote -v)
+
+test "$ORIGIN" || ORIGIN="origin"
+BRANCH="$1"
+
+if ! test "$BRANCH"
+then
+  echo "Branch required."
+  exit 1
+fi
+
+set -ue
+git checkout master
+
+echo "git branch -D $BRANCH"
+git branch -D $BRANCH || true # don't fail on this step
+
+echo "git push origin :$BRANCH"
+git push origin :$BRANCH
+
