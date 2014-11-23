@@ -12,7 +12,7 @@
 set $mod Mod4
 
 # exec commands run only on startup
-exec --no-startup-id ~/.dotfiles/ubuntu-x120e/bin/startup
+exec --no-startup-id ~/.dotfiles/x1/bin/startup
 
 # exec_always commands run on startup and restart i3
 
