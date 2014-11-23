@@ -151,10 +151,12 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
 
-# audio keys on lenovo x120e
-bindcode 121 exec --no-startup-id amixer set Master mute
-bindcode 122 exec --no-startup-id amixer set Master 2- unmute
-bindcode 123 exec --no-startup-id amixer set Master 2+ unmute
+# Fn key
+# bindcode 151 exec --no-startup-id ~/some-script.sh
+
+# brigthness
+bindcode 232 exec --no-startup-id xbacklight -dec 10
+bindcode 233 exec --no-startup-id xbacklight -inc 10
 
 # volume control
 bindsym $mod+F12 exec --no-startup-id ~/.dotfiles/x1/bin/vol-up
