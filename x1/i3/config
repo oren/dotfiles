@@ -164,7 +164,8 @@ bindsym $mod+F11 exec --no-startup-id ~/.dotfiles/x1/bin/vol-down
 bindsym $mod+F10 exec --no-startup-id amixer -c 1 -D pulse set Master toggle
 
 # shift+insert on Home
-bindsym --release Home exec --no-startup-id xdotool key --clearmodifiers Shift+Insert
+# bindsym --release Home exec --no-startup-id xdotool key --clearmodifiers Shift+Insert
+# bindsym --release Home exec --no-startup-id ~/.dotfiles/x1/bin/home-release
 
 # left click on End
 # bindsym --release End exec --no-startup-id xdotool key --clearmodifiers mousedown --clearmodifiers 1

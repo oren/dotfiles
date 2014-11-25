@@ -5,4 +5,5 @@
 i3-msg 'workspace 1;exec chromium-browser'   # open chromium in workspace 1
 xset r rate 200 60                           # typematic delay and rate
 synclient TouchpadOff=1                      # turn off touchpad
+xbindkeys                                    # modify Home and End keys
 xrdb ~/.Xresources
