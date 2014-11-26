@@ -12,9 +12,10 @@
 set $mod Mod4
 
 # exec commands run only on startup
-exec --no-startup-id ~/.dotfiles/x1/bin/startup
+exec --no-startup-id ~/.dotfiles/x1/bin/boot
 
 # exec_always commands run on startup and restart i3
+exec_always --no-startup-id ~/.dotfiles/x1/bin/restart-i3
 
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -162,16 +163,6 @@ bindcode 233 exec --no-startup-id xbacklight -inc 10
 bindsym $mod+F12 exec --no-startup-id ~/.dotfiles/x1/bin/vol-up
 bindsym $mod+F11 exec --no-startup-id ~/.dotfiles/x1/bin/vol-down
 bindsym $mod+F10 exec --no-startup-id amixer -c 1 -D pulse set Master toggle
-
-# shift+insert on Home
-# bindsym --release Home exec --no-startup-id xdotool key --clearmodifiers Shift+Insert
-# bindsym --release Home exec --no-startup-id ~/.dotfiles/x1/bin/home-release
-
-# left click on End
-# bindsym --release End exec --no-startup-id xdotool key --clearmodifiers mousedown --clearmodifiers 1
-
-# middle click on End
-# bindsym --release End exec --no-startup-id xdotool key click --clearmodifiers 2
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
