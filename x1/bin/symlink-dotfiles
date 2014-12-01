@@ -2,10 +2,10 @@
 
 # before running this clone the misc project
 
-# bash profile
 ln -vfs ~/.dotfiles/x1/bashrc ~/.bashrc
 ln -vfs ~/.dotfiles/x1/bash_aliases ~/.bash_aliases
 ln -vfs ~/.dotfiles/x1/Xresources ~/.Xresources
+ln -vfs ~/.dotfiles/x1/Xmodmap ~/.Xmodmap
 
 # vim files
 if [ ! -L ~/.vim ]; then
