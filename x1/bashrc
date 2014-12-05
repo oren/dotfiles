@@ -28,12 +28,8 @@ export PATH=$PATH:$GOPATH/bin
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 
-# #amazon s3 configuration
-if [[ -f ~/.amazon_keys ]]; then source ~/.amazon_keys; fi
-
-_suspended() {
-  jobs | wc -l | tr -d " "
-}
+# use vim for manpages
+# export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -42,7 +38,6 @@ fi
 if [ -f ~/.git-completion ]; then
     . ~/.git-completion
 fi
-
 
 # The next line updates PATH for the Google Cloud SDK.
 source '/home/oren/google-cloud-sdk/path.bash.inc'
