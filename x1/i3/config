@@ -167,5 +167,6 @@ bindsym $mod+F10 exec --no-startup-id amixer -c 1 -D pulse set Master toggle
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status --config ~/.i3/i3status
+        # status_command i3status --config ~/.i3/i3status
+        status_command i3blocks -c ~/.i3/i3blocks.conf
 }
