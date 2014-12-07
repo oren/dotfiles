@@ -2,6 +2,8 @@ x1/weechat/logs
 x1/weechat/weechat.log
 x1/weechat/irc.conf
 x1/vim/.netrwhist
+x1/weechat/highlights.txt
+x1/weechat/active_buffer.txt
 
 ubuntu-x120e/weechat/logs
 ubuntu-x120e/weechat/weechat.log
@@ -14,6 +16,8 @@ ubuntu-server/weechat/irc.conf
 ubuntu-server/vim/.netrwhist
 ubuntu-server/mutt/account
 ubuntu-server/mutt/aliases
+ubuntu-server/weechat/highlights.txt
+ubuntu-server/weechat/active_buffer.txt
 
 ubuntu-work-desktop/weechat/logs
 ubuntu-work-desktop/weechat/weechat.log
