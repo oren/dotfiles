@@ -29,7 +29,7 @@ export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 
 # use vim for manpages
-# export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
+export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
