@@ -28,11 +28,12 @@ ethernet eth0 {
 
 battery 0 {
         format = "%status %percentage %remaining"
-        path = "/sys/class/power_supply/BAT1/uevent"
+        path = "/sys/class/power_supply/BAT0/uevent"
         integer_battery_capacity = true
         last_full_capacity = true
         low_threshold = 10
         threshold_type = time
+        /*hide_seconds = true*/
 }
 
 run_watch DHCP {

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# delete weechat's highlights file
+
+ssh do "rm ~/.weechat/highlights.txt"

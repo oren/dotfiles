@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# display weechat highlight on i3blocks
+
+msg=$(ssh do "tail -n 1 ~/.weechat/highlights.txt | sed 's/[^(]\+(\w\+: \(.*\))$/\1/'")
+echo $msg
+echo
+echo \#f95f5f

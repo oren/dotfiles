@@ -3,15 +3,19 @@
 # run those when x start. i3 will run it.
 
 # needed for i3
-i3-msg 'workspace 1;exec firefox'
-i3-msg 'workspace 2;exec chromium-browser'
+# i3-msg 'workspace 1;exec firefox'
+i3-msg 'workspace 1;exec chromium-browser'
 
-# turn capslock into esc
-xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+# turn home into insert
+xmodmap -e 'keycode 110 = Insert NoSymbol Insert'
+
+# revert
+xmodmap -e 'keycode 110 = Home NoSymbol Home'
+
 xset r rate 200 60 # typematic delay and rate
 xrdb ~/.Xresources
-fcitx-qimpanel
+# fcitx-qimpanel
 setxkbmap dvorak
 
 # fix ui issue with chinese language switch
-compton &
+# compton &
