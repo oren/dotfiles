@@ -148,8 +148,6 @@ alias pu='sudo apt-get purge'
 alias se='aptitude search'
 alias sh='apt-cache show'
 
-alias monitor='xrandr --output eDP1 --auto --output HDMI2 --auto --above eDP1'
-
 alias hib='sudo pm-hibernate'
 alias reb='sudo reboot'
 alias hal='sudo halt'
