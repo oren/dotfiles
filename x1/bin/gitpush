@@ -1,5 +1,11 @@
 #!/bin/bash
 
 git add .
-git commit -m "misc"
+
+if [[ $1 ]]; then
+  git commit -m "$1"
+else
+  git commit -m "misc"
+fi
+
 git push origin master
