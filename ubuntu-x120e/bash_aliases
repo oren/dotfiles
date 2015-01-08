@@ -179,7 +179,6 @@ alias v='vim'
 alias o='xdg-open' > /dev/null 2>&1
 alias s='python -m SimpleHTTPServer'
 alias pastebinit='pastebinit -a me -i'
-alias feh='feh --full-screen -d'
 alias f='feh --full-screen -d'
 alias un='unity-control-center'
 alias m='mpv'
