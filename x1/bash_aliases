@@ -187,3 +187,7 @@ alias google-chrome='LIBGL_DRI3_DISABLE=1 google-chrome'
 alias chromium-browser='LIBGL_DRI3_DISABLE=1 chromium-browser'
 alias drm='docker stop $(docker ps -q) ; docker rm $(docker ps -aq)'
 alias drmi='docker rmi $(docker images |grep "<none>" | awk "{print $3}")'
+alias san='cd ~/projects/sanguine'
+alias node='docker run --rm -it -p 3000:3000 -v $(pwd):/home --name node-app node:0.10 /bin/bash'
+alias go='docker run --rm -it -p 3000:3000 -v $(pwd):/home --name go-app golang:1.4 /bin/bash'
+
