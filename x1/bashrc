@@ -38,3 +38,5 @@ fi
 if [ -f ~/.git-completion ]; then
     . ~/.git-completion
 fi
+
+set -o vi

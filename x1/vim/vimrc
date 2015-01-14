@@ -126,6 +126,11 @@ set backup
 " Set Swap directory
 set directory=~/.backup/vim/swap
 
+" https://gist.github.com/substack/7745bb6ff9ad58d4805d
+set nowritebackup
+set noswapfile
+set nobackup
+
 " Change file completion to mimic shell behavior
 set wildmenu
 set wildmode=list:longest
