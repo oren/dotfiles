@@ -14,4 +14,4 @@ fi
 xinput --set-prop "Logitech USB Trackball" "Device Accel Constant Deceleration" 0.3
 
 # trackpoint speed
-xinput --set-prop "TPPS/2 IBM TrackPoint" "Device Accel Constant Deceleration" 0.3
+xinput --set-prop "TPPS/2 IBM TrackPoint" "Device Accel Constant Deceleration" 0.2
