@@ -39,4 +39,4 @@ if [ -f ~/.git-completion ]; then
     . ~/.git-completion
 fi
 
-set -o vi
+# set -o vi
