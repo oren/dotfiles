@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# convert out.ogv into optimised.gif
+
+mplayer -ao null out.ogv -vo jpeg:outdir=output
+convert output/* output.gif
+convert output.gif -fuzz 10% -layers Optimize optimised.gif
