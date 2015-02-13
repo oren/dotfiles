@@ -53,8 +53,8 @@ ln -vfs ~/.dotfiles/x1/pentadactylrc ~/.pentadactylrc
 ln -vfs ~/.dotfiles/x1/npmrc ~/.npmrc
 
 # mpv
-if [ ! -L ~/.config/mpv ]; then
-	ln -vfs ~/.dotfiles/x1/mpv ~/.config/mpv
+if [ ! -L ~/.mpv ]; then
+	ln -vfs ~/.dotfiles/x1/mpv ~/.mpv
 else
 	echo mpv is already a symlink
 fi
