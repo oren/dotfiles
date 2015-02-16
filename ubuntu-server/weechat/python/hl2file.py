@@ -48,10 +48,10 @@ settings = {
         'output_file': '%h/highlights.txt',
         'output_active_buffer': '%h/active_buffer.txt',
         #'ignore_chans': 'server',
-        'output_format': '%{message}',
+        'output_format': '%{buffer}: %{nick} (%{message})',
         'summarize_by_buffer': 'off',
         'short_buffer_names': 'on',
-        'clear_visited_buffers': 'off',
+        'clear_visited_buffers': 'on',
         }
 
 for opt, val in settings.iteritems():
