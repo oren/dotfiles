@@ -1,0 +1,8 @@
+#!/bin/bash
+
+xinput --set-prop "Logitech USB Trackball" "Device Accel Constant Deceleration" 0.3
+xmodmap -e "keycode 110 = Pointer_Button1"
+xmodmap -e "keycode 115 = Pointer_Button2"
+xkbset m
+xset r rate 200 60
+

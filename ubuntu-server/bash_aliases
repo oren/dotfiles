@@ -148,8 +148,6 @@ alias pu='sudo apt-get purge'
 alias se='aptitude search'
 alias sh='apt-cache show'
 
-alias monitor='xrandr --output eDP1 --auto --output HDMI2 --auto --above eDP1'
-
 alias hib='sudo pm-hibernate'
 alias reb='sudo reboot'
 alias hal='sudo halt'
@@ -179,3 +177,9 @@ alias toxic='cd ~/projects/toxic && ./run_toxic.sh'
 alias utox='cd ~/projects/utox && ./utox'
 alias pastebinit='pastebinit -a me -i'
 alias s='python -m SimpleHTTPServer'
+
+# docker
+alias d='docker'
+alias node='docker run --rm -it -p 3000:3000 -v $(pwd):/home/developer oreng/node /bin/bash'
+alias iojs='docker run --rm -it -p 3000:3000 -v $(pwd):/home/developer oreng/iojs /bin/bash'
+alias golang='docker run --rm -it -p 3000:3000 -v $(pwd):/go --name go-app oreng/go /bin/bash'

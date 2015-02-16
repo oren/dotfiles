@@ -1,8 +1,3 @@
-if exists('g:loaded_gocode')
-    finish
-endif
-let g:loaded_gocode = 1
-
 if !exists("g:go_gocode_bin")
     let g:go_gocode_bin = "gocode"
 endif
@@ -24,7 +19,12 @@ fu! s:gocodeCurrentBuffer()
     return file
 endf
 
-let s:vim_system = get(g:, 'gocomplete#system_function', 'system')
+
+if go#vimproc#has_vimproc()
+    let s:vim_system = get(g:, 'gocomplete#system_function', 'vimproc#system2')
+else
+    let s:vim_system = get(g:, 'gocomplete#system_function', 'system')
+endif
 
 fu! s:system(str, ...)
     return call(s:vim_system, [a:str] + a:000)
@@ -48,7 +48,12 @@ fu! s:gocodeCommand(cmd, preargs, args)
         let a:preargs[i] = s:gocodeShellescape(a:preargs[i])
     endfor
 
-    let result = s:system(printf('%s %s %s %s', g:go_gocode_bin, join(a:preargs), a:cmd, join(a:args)))
+    let bin_path = go#tool#BinPath(g:go_gocode_bin)
+    if empty(bin_path)
+        return
+    endif
+
+    let result = s:system(printf('%s %s %s %s', bin_path, join(a:preargs), a:cmd, join(a:args)))
     if v:shell_error != 0
         return "[\"0\", []]"
     else
@@ -96,7 +101,7 @@ function! go#complete#GetInfo()
 
     " no candidates are found
     if len(out) == 1
-        return
+        return ""
     endif
 
     " only one candiate is found
@@ -112,22 +117,23 @@ function! go#complete#GetInfo()
     endfor
 
     let wordMatch = '\<' . expand("<cword>") . '\>'
+    " escape single quotes in wordMatch before passing it to filter
+    let wordMatch = substitute(wordMatch, "'", "''", "g")
     let filtered =  filter(infos, "v:val =~ '".wordMatch."'")
 
     if len(filtered) == 1
         return filtered[0]
     endif
+
+    return ""
 endfunction
 
 function! go#complete#Info()
-    " return early if the command doesn't exist
-    if go#tool#BinExists(g:go_gocode_bin) == -1 | return | endif
-
     let result = go#complete#GetInfo()
-    if len(result) > 0
+    if !empty(result)
         echo "vim-go: " | echohl Function | echon result | echohl None
     endif
-endfunction!
+endfunction
 
 fu! go#complete#Complete(findstart, base)
     "findstart = 1 when we need to get the text length

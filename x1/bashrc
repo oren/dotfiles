@@ -39,8 +39,11 @@ if [ -f ~/.git-completion ]; then
     . ~/.git-completion
 fi
 
-# The next line updates PATH for the Google Cloud SDK.
-source '/home/oren/google-cloud-sdk/path.bash.inc'
+# set -o vi
 
-# The next line enables bash completion for gcloud.
-source '/home/oren/google-cloud-sdk/completion.bash.inc'
+# Open terminal in current dir
+# Commands to be executed before the prompt is displayed
+# Save current working dir
+PROMPT_COMMAND='pwd > "${HOME}/.cwd"'
+# Change to saved working dir
+[[ -f "${HOME}/.cwd" ]] && cd "$(< ${HOME}/.cwd)"

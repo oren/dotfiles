@@ -6,13 +6,16 @@ colorscheme solarized
 set t_Co=16
 call togglebg#map("<F5>")
 
-filetype indent plugin on
-" filetype detect
+filetype indent plugin on " turns on filetype detection, and loads indent scripts and plugins
 
-" turns on filetype detection, and loads indent scripts and plugins
-" filetype indent plugin on
-" runtime macros/matchit.vim
-" filetype detect
+" i have no idea what the following do:
+set showcmd                       " Display incomplete commands.
+set showmode                      " Display the mode you're in.
+set scrolloff=3
+set number
+" set title
+
+nnoremap <C-n> :call NumberToggle()<cr>
 
 " Windows
 " ============================================================================
@@ -46,7 +49,7 @@ match ExtraWhitespace /\s\+$/
 :noremap <leader>c :only<CR>:tabonly<CR>
 :noremap K <Esc><C-w>k<C-w>_
 :noremap <leader>R :! make test/%<CR>
-:noremap <leader>r :! jshint %<CR>
+:noremap <leader>r :! jshint %<CR>:! jscs %<CR>
 :noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
 
 :noremap <leader>gst :!tig status<CR>
@@ -60,10 +63,10 @@ match ExtraWhitespace /\s\+$/
 
 " Tabs
 " ============================================================================
-set expandtab
+set expandtab            " insert space chars when tab is pressed
 set softtabstop=2
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=2         " 2 spaceson indentation
+set tabstop=2            " 2 spaces when tab is pressed
 set smarttab
 set autoindent
 set textwidth=0
@@ -106,13 +109,14 @@ nnoremap <F2> :set nonumber!<CR>
 set pastetoggle=<F3> " hit this before pasting to fix indentation
 nnoremap <F3> :set invpaste paste?<CR>
 set pastetoggle=<F3>
+nmap <F8> :TagbarToggle<CR>
 
 " Searching
 " ============================================================================
 set hlsearch   " highlight search
-set incsearch  " incremental search, search as you type
+set incsearch  " incremental search - highlight matches as you type
 set ignorecase " Ignore case when searching
-set smartcase  " Ignore case when searching lowercase
+set smartcase  " But case-sensitive if expression contains a capital letter
 "<c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
@@ -124,6 +128,11 @@ set backupdir=~/.backup/vim
 set backup
 " Set Swap directory
 set directory=~/.backup/vim/swap
+
+" https://gist.github.com/substack/7745bb6ff9ad58d4805d
+set noswapfile
+set nobackup  " Don't make a backup before overwriting a file.
+set nowritebackup
 
 " Change file completion to mimic shell behavior
 set wildmenu
@@ -179,3 +188,35 @@ function! SetCursorPosition()
         endif
     end
 endfunction
+
+" needed for gotags - https://github.com/jstemmer/gotags
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+    \ }
+
+" Supertab. not sure why it's needed
+let g:SuperTabDefaultCompletionType = "context"

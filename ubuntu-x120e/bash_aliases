@@ -144,24 +144,17 @@ alias ls='ls --color'
 alias la='ls -Fa'
 alias ld='ls -al -d * | egrep "^d"' # only subdirectories
 
-alias in='sudo apt-get install'
+alias in='sudo apt-get install -y'
 alias pu='sudo apt-get purge'
 alias se='aptitude search'
 alias sh='apt-cache show'
 
-alias monitor='xrandr --output LVDS --auto --output VGA-0 --auto --above LVDS'
-alias monitor-ascent='xrandr --output LVDS --auto --output HDMI-0 --auto --above LVDS'
-alias vpn='sudo vpnc-connect /home/oren/.vpn'
+alias monitor='xrandr --output HDMI-0 --auto --above LVDS'
+
 alias hib='sudo pm-hibernate'
 alias reb='sudo reboot'
 alias hal='sudo halt'
-alias v='vim'
-alias docker='docker.io'
-alias o='xdg-open'
 alias r='reset'
-alias s='python -m SimpleHTTPServer'
-alias lt='lt --port 3000 --subdomain oren'
-alias pastebinit='pastebinit -a me -i'
 
 # mount
 alias u='sudo umount /media/usb'
@@ -180,10 +173,17 @@ alias gf='git fetch --prune'
 alias gb='git branch'
 alias ga='git add --all'
 alias gcl='git clone'
-alias feh='feh --full-screen -d'
+
+# apps
+alias v='vim'
+alias o='xdg-open' > /dev/null 2>&1
+alias s='python -m SimpleHTTPServer'
+alias pastebinit='pastebinit -a me -i'
 alias f='feh --full-screen -d'
 alias un='unity-control-center'
 alias m='mpv'
 alias toxic='cd ~/projects/toxic && ./run_toxic.sh'
 alias utox='cd ~/projects/utox && ./utox'
 alias pastebinit='pastebinit -a me -i'
+alias drm='docker stop $(docker ps -q) ; docker rm $(docker ps -aq)'
+alias drmi='docker rmi $(docker images |grep "<none>" | awk "{print $3}")'

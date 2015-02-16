@@ -23,6 +23,14 @@ set winminwidth=0
 
 set spelllang=en_us
 set nowrap
+set cmdheight=2 "don't tell me to "Press ENTER or type command to continue"
+
+
+" copied from substack. not sure
+" https://gist.github.com/substack/7745bb6ff9ad58d4805d
+" set nowritebackup
+" set noswapfile
+" set nobackup
 
 let mapleader = ","
 let maplocalleader = ","
@@ -106,6 +114,7 @@ nnoremap <F2> :set nonumber!<CR>
 set pastetoggle=<F3> " hit this before pasting to fix indentation
 nnoremap <F3> :set invpaste paste?<CR>
 set pastetoggle=<F3>
+nmap <F8> :TagbarToggle<CR>
 
 " Searching
 " ============================================================================
@@ -120,10 +129,13 @@ inoremap <C-L> <C-O>:nohls<CR>
 " Directories
 " ============================================================================
 " Setup backup location and enable
-set backupdir=~/.backup/vim
-set backup
+" set backupdir=~/.backup/vim
+" set backup
 " Set Swap directory
-set directory=~/.backup/vim/swap
+" set directory=~/.backup/vim/swap
+set nowritebackup
+set noswapfile
+set nobackup
 
 " Change file completion to mimic shell behavior
 set wildmenu
@@ -179,3 +191,35 @@ function! SetCursorPosition()
         endif
     end
 endfunction
+
+" needed for gotags - https://github.com/jstemmer/gotags
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+    \ }
+
+" jshint plugin
+" let JSHintUpdateWriteOnly=1

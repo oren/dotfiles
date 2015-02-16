@@ -166,6 +166,15 @@ bindsym $mod+F10 exec --no-startup-id amixer -c 1 -D pulse set Master toggle
 
 bindsym $mod+c exec --no-startup-id ~/.dotfiles/x1/bin/irc2
 
+# put workspaces on external monitor
+# workspace 3 output HDMI2
+# workspace 4 output HDMI2
+# workspace 5 output HDMI2
+# workspace 6 output HDMI2
+# workspace 7 output HDMI2
+# workspace 8 output HDMI2
+# workspace 9 output HDMI2
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
