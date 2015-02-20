@@ -197,3 +197,4 @@ alias golang='docker run --rm -it -p 3000:3000 -v $(pwd):/go --name go-app oreng
 alias node-go='docker run --rm -it -p 3000:3000 -v $(pwd):/go/src/app --name node-go-app oreng/node-go /bin/bash'
 alias cordova='docker run --rm -it -p 3000:3000 -v $(pwd):/workspace --privileged -v /dev/bus/usb:/dev/bus/usb oreng/cordova cordova'
 alias morkdown='xhost + && docker run --rm -v $(pwd):/tmp -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --privileged oreng/chromium /run.sh'
+alias ocaml='docker run --rm -it -p 3000:3000 -v $(pwd):/home/developer oreng/ocaml /bin/bash'

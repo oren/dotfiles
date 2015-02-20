@@ -47,3 +47,10 @@ fi
 PROMPT_COMMAND='pwd > "${HOME}/.cwd"'
 # Change to saved working dir
 [[ -f "${HOME}/.cwd" ]] && cd "$(< ${HOME}/.cwd)"
+
+# docker autocomplete
+source /etc/bash_completion.d/docker
+
+# donate site
+export DONATE_ENV=laptop
+export DONATE_HOST=laptop-sanguinebio.com
