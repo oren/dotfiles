@@ -26,6 +26,8 @@ set winminwidth=0
 
 set spelllang=en_us
 set nowrap
+" not working
+" set shortmess=at  " donet' show <press enter> message
 
 let mapleader = ","
 let maplocalleader = ","

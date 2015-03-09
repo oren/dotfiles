@@ -76,10 +76,6 @@ br() {
   test -d .git && git symbolic-ref HEAD 2> /dev/null | sed 's/refs\/heads\///'
 }
 
-function github() {
-  git clone git@github.com:$1.git
-}
-
 # STEP 1: Run tunnel <hostname>
 # STEP 2: Go to network, SOCKS proxy, and specify localhost 9999
 # STEP 3: BAM, profit :-)
@@ -159,6 +155,7 @@ alias r='reset'
 alias u='sudo umount /media/usb'
 
 # git
+alias git=hub
 alias gc='git commit -v'
 alias gca='git commit -v -a'
 alias gpp='git pull && git push'
@@ -187,7 +184,7 @@ alias google-chrome='LIBGL_DRI3_DISABLE=1 google-chrome'
 alias chromium-browser='LIBGL_DRI3_DISABLE=1 chromium-browser'
 alias drm='docker stop $(docker ps -q) ; docker rm $(docker ps -aq)'
 alias drmi='docker rmi $(docker images -f "dangling=true" -q)'
-alias san='cd ~/projects/sanguine'
+alias san='cd ~/projects/sanguine/patient/donate'
 
 # docker
 alias d='docker'
