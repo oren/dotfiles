@@ -188,6 +188,7 @@ alias san='cd ~/projects/sanguine/patient/donate'
 
 # docker
 alias d='docker'
+alias dc='docker-compose'
 alias node='docker run --rm -it -p 3000:3000 -v $(pwd):/home/developer oreng/node /bin/bash'
 alias iojs='docker run --rm -it -p 3000:3000 -v $(pwd):/home/developer oreng/iojs /bin/bash'
 alias golang='docker run --rm -it -p 3000:3000 -v $(pwd):/go --name go-app oreng/go /bin/bash'
