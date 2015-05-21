@@ -184,14 +184,13 @@ alias google-chrome='LIBGL_DRI3_DISABLE=1 google-chrome'
 alias chromium-browser='LIBGL_DRI3_DISABLE=1 chromium-browser'
 alias drm='docker stop $(docker ps -q) ; docker rm $(docker ps -aq)'
 alias drmi='docker rmi $(docker images -f "dangling=true" -q)'
-alias san='cd ~/projects/sanguine/patient/donate'
+alias san='cd ~/projects/sanguine'
 
 # docker
 alias d='docker'
 alias dc='docker-compose'
-alias node='docker run --rm -it -p 3000:3000 -v $(pwd):/home/developer oreng/node /bin/bash'
-alias iojs='docker run --rm -it -p 3000:3000 -v $(pwd):/home/developer oreng/iojs /bin/bash'
 alias golang='docker run --rm -it -p 3000:3000 -v $(pwd):/go --name go-app oreng/go /bin/bash'
 alias cordova='docker run --rm -it -p 3000:3000 -v $(pwd):/workspace --privileged -v /dev/bus/usb:/dev/bus/usb oreng/cordova cordova'
-alias morkdown='xhost + && docker run --rm -v $(pwd):/tmp -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --privileged oreng/chromium /run.sh'
-alias ocaml='docker run --rm -it -p 3000:3000 -v $(pwd):/home/developer oreng/ocaml /bin/bash'
+
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0|grep -E "state|to\ full|percentage"'
+# alias morkdown='xhost + && docker run --rm -v $(pwd):/tmp -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --privileged oreng/chromium /run.sh'
