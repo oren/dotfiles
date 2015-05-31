@@ -39,11 +39,6 @@ if [ -f ~/.git-completion ]; then
     . ~/.git-completion
 fi
 
-# hub
-if [ -f ~/.hub.bash_completion ]; then
-    . ~/.hub.bash_completion
-fi
-
 # set -o vi
 
 # Open terminal in current dir
@@ -53,6 +48,9 @@ PROMPT_COMMAND='pwd > "${HOME}/.cwd"'             # Save current working dir
 
 # docker autocomplete
 source /etc/bash_completion.d/docker
+
+# git-hub
+source ~/projects/git-hub/init
 
 # donate site
 export NODE_ENV=laptop

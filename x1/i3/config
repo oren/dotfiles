@@ -162,6 +162,8 @@ bindsym $mod+F11 exec --no-startup-id ~/.dotfiles/x1/bin/vol-down
 bindsym $mod+F10 exec --no-startup-id amixer -c 1 -D pulse set Master toggle
 
 bindsym $mod+c exec --no-startup-id ~/.dotfiles/x1/bin/irc2
+bindsym $mod+Control+c exec --no-startup-id clip
+bindsym $mod+Control+d exec --no-startup-id dll
 
 # for_window [class="Chromium-browser"] floating enabled
 

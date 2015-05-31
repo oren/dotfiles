@@ -39,9 +39,6 @@ ln -vfs ~/misc/config/weechat-irc.conf ~/.weechat/irc.conf
 ln -vfs ~/.dotfiles/x1/git-completion ~/.git-completion
 ln -vfs ~/.dotfiles/x1/gitconfig ~/.gitconfig
 
-# hub
-ln -vfs ~/.dotfiles/x1/hub.bash_completion.sh ~/.hub.bash_completion.sh
-
 # newsbeuter
 ln -vfs ~/misc/config/newsbeuter-urls ~/.newsbeuter/urls
 ln -vfs ~/.dotfiles/x1/newsbeuter-config ~/.newsbeuter/config
@@ -67,3 +64,6 @@ if [ ! -L ~/.i3 ]; then
 else
 	echo .i3 is already a symlink
 fi
+
+# git-hub
+ln -vfs ~/.dotfiles/x1/git-hub-config ~/.git-hub/config
