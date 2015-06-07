@@ -51,7 +51,3 @@ source /etc/bash_completion.d/docker
 
 # git-hub
 source ~/projects/git-hub/init
-
-# donate site
-export NODE_ENV=laptop
-export NODE_HOST=laptop-donate.sanguinebio.com
