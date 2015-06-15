@@ -1,5 +1,6 @@
 " Vundle setup
 " =============================================================================
+" to install: vim +PluginInstall +qall
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -17,11 +18,11 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'                      " Fuzzy finder
 Plugin 'tomtom/tcomment_vim'
 
-" Language support plugins
-" =============================================================================
-Plugin 'fatih/vim-go'     " Go development plugin
+Plugin 'fatih/vim-go'                        " Go development plugin
+Plugin 'majutsushi/tagbar'                   " class outline viewer
 
-Plugin 'MarcWeber/vim-aldon-mw-utils'
+" snippets (all 4 needed)
+Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
