@@ -19,6 +19,13 @@ Plugin 'tomtom/tcomment_vim'
 
 " Language support plugins
 " =============================================================================
+Plugin 'fatih/vim-go'     " Go development plugin
+
+Plugin 'MarcWeber/vim-aldon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
