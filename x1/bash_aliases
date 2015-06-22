@@ -69,7 +69,7 @@ gush() {
 }
 
 gup() {
-  git pull origin $(br)
+  git pull
 }
 
 br() {
@@ -155,7 +155,6 @@ alias r='reset'
 alias u='sudo umount /media/usb'
 
 # git
-alias git=hub
 alias gc='git commit -v'
 alias gca='git commit -v -a'
 alias gpp='git pull && git push'
