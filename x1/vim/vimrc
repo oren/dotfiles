@@ -18,7 +18,7 @@ Plugin 'gmarik/Vundle.vim'
 " ============================================================================
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'                      " Fuzzy finder
-Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-commentary'
 
 Plugin 'fatih/vim-go'                        " Go development plugin
 Plugin 'majutsushi/tagbar'                   " class outline viewer
@@ -29,8 +29,19 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 
+" github commment (both needed)
+Plugin 'mmozuras/vim-github-comment'
+Plugin 'mattn/webapi-vim'
+
+" tag line
+Plugin 'bling/vim-airline'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" vim-github-comment plugin
+let g:github_user = 'oren'
+let g:github_comment_open_browser = 1
 
 syntax enable
 set background=dark
@@ -111,14 +122,14 @@ set cursorline
 " Status line
 " ============================================================================
 set laststatus=2      " always show status line
-set statusline=%f       "full path
-set statusline+=%h    " help file flag
-set statusline+=%m    " modified flag
-set statusline+=%r    " read only flag
-set statusline+=%=    " left/right separator
-set statusline+=%c,   " cursor column
-set statusline+=%l/%L " cursor line/total lines
-set statusline+=\ %P  " percent through file
+" set statusline=%f       "full path
+" set statusline+=%h    " help file flag
+" set statusline+=%m    " modified flag
+" set statusline+=%r    " read only flag
+" set statusline+=%=    " left/right separator
+" set statusline+=%c,   " cursor column
+" set statusline+=%l/%L " cursor line/total lines
+" set statusline+=\ %P  " percent through file
 
 " Persistent undo
 " ============================================================================
