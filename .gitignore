@@ -1,12 +1,12 @@
 # weechat
-x1/weechat/logs
-x1/weechat/weechat.log
-x1/weechat/irc.conf
-x1/vim/.netrwhist
-x1/weechat/highlights.txt
-x1/weechat/active_buffer.txt
-x1/vim/undo/*
-!x1/vim/undo/.keepme
+x1/.weechat/logs
+x1/.weechat/weechat.log
+x1/.weechat/irc.conf
+x1/.vim/.netrwhist
+x1/.weechat/highlights.txt
+x1/.weechat/active_buffer.txt
+x1/.vim/undo/*
+!x1/.vim/undo/.keepme
 
 ubuntu-x120e/weechat/logs
 ubuntu-x120e/weechat/weechat.log
