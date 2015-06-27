@@ -64,3 +64,6 @@ if [ ! -L ~/.i3 ]; then
 else
 	echo .i3 is already a symlink
 fi
+
+# git-hub
+ln -vfs ~/.dotfiles/x1/git-hub-config ~/.git-hub/config

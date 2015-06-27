@@ -1,35 +1,31 @@
-x1/weechat/logs
-x1/weechat/weechat.log
-x1/weechat/irc.conf
-x1/vim/.netrwhist
-x1/weechat/highlights.txt
-x1/weechat/active_buffer.txt
+# weechat
+x1/.weechat/logs
+x1/.weechat/weechat.log
+x1/.weechat/irc.conf
+x1/.vim/.netrwhist
+x1/.weechat/highlights.txt
+x1/.weechat/active_buffer.txt
+x1/.vim/undo/*
+!x1/.vim/undo/.keepme
 
 ubuntu-x120e/weechat/logs
 ubuntu-x120e/weechat/weechat.log
 ubuntu-x120e/weechat/irc.conf
 ubuntu-x120e/vim/.netrwhist
+ubuntu-x120e/weechat/highlights.txt
+ubuntu-x120e/weechat/active_buffer.txt
+ubuntu-x120e/vim/undo/*
+ubuntu-x120e/vim/undo/.keepme
 
 ubuntu-server/weechat/logs
 ubuntu-server/weechat/weechat.log
 ubuntu-server/weechat/irc.conf
 ubuntu-server/vim/.netrwhist
-ubuntu-server/mutt/account
-ubuntu-server/mutt/aliases
 ubuntu-server/weechat/highlights.txt
 ubuntu-server/weechat/active_buffer.txt
+ubuntu-server/vim/undo/*
+ubuntu-server/vim/undo/.keepme
 
-ubuntu-work-desktop/weechat/logs
-ubuntu-work-desktop/weechat/weechat.log
-ubuntu-work-desktop/weechat/irc.conf
-ubuntu-work-desktop/vim/.netrwhist
-
-debian-laptop/weechat/logs
-debian-laptop/weechat/weechat.log
-debian-laptop/weechat/irc.conf
-debian-laptop/vim/.netrwhist
-
-ubuntu/weechat/logs
-ubuntu/weechat/weechat.log
-ubuntu/weechat/irc.conf
-ubuntu/vim/.netrwhist
+# mutt
+ubuntu-server/mutt/account
+ubuntu-server/mutt/aliases

@@ -1,0 +1,64 @@
+general {
+        colors = true
+        interval = 5
+}
+
+order += "volume master"
+order += "battery 0"
+order += "wireless wlan0"
+order += "time"
+
+# order += "load"
+# order += "disk /"
+# order += "run_watch DHCP"
+# order += "run_watch VPN"
+# order += "ethernet eth0"
+
+wireless wlan0 {
+        # format_up = "W: (%quality at %essid) %ip"
+        format_up = "%ip"
+        format_down = "down"
+}
+
+ethernet eth0 {
+        # if you use %speed, i3status requires root privileges
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
+}
+
+battery 0 {
+        format = "%status %percentage %remaining"
+        path = "/sys/class/power_supply/BAT0/uevent"
+        integer_battery_capacity = true
+        last_full_capacity = true
+        low_threshold = 10
+        threshold_type = time
+        /*hide_seconds = true*/
+}
+
+run_watch DHCP {
+        pidfile = "/var/run/dhclient*.pid"
+}
+
+run_watch VPN {
+        pidfile = "/var/run/vpnc/pid"
+}
+
+time {
+        format = "%Y-%m-%d %H:%M"
+}
+
+load {
+        format = "%1min"
+}
+
+disk "/" {
+        format = "%free"
+}
+
+volume master {
+  format = "♪: %volume"
+  device = "default"
+  mixer = "Master"
+  mixer_idx = 0
+}
