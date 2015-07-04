@@ -2,9 +2,9 @@
 
 # i3 run this file when i3 start/restart.
 
-# xkbset m  # not sure why, but without it the xmodmap will not work
-# xmodmap -e "keycode 110 = Pointer_Button1"   # Home -> left click
-# xmodmap -e "keycode 115 = Pointer_Button2"   # End -> middle click
+xkbset m  # not sure why, but without it the xmodmap will not work
+xmodmap -e "keycode 110 = Pointer_Button1"   # Home -> left click
+xmodmap -e "keycode 115 = Pointer_Button2"   # End -> middle click
 
 # if [ -s ~/.Xmodmap ]; then
 #   xmodmap ~/.Xmodmap

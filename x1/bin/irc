@@ -4,9 +4,9 @@
 
 msg=$(ssh do "tail -n 1 ~/.weechat/highlights.txt | sed 's/[^(]\+(\w\+: \(.*\))$/\1/'")
 
-if [[ $msg == irc.freenode.net* ]]; then
-  $msg = ""
-  ssh do "rm ~/.weechat/highlights.txt"
+if [[ $msg == freenode:* ]]; then
+  msg=""
+  # ssh do "rm ~/.weechat/highlights.txt"
 fi
 
 echo $msg
