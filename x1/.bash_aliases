@@ -144,7 +144,9 @@ alias pu='sudo apt-get purge'
 alias se='aptitude search'
 alias sh='apt-cache show'
 
-alias monitor='xrandr --output HDMI2 --auto --above eDP1'
+alias monitor='xrandr --output HDMI1 --auto --above LVDS1'
+# alias monitor='xrandr --output HDMI2 --auto --above LVDS1'
+# alias monitor='xrandr --output DP1 --auto --above LVDS1'
 
 alias hib='sudo pm-hibernate'
 alias reb='sudo reboot'
