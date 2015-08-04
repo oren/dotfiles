@@ -3,6 +3,7 @@
 rm -r .vim .i3
 ln -vfs ~/.dotfiles/x1/.i3 ~/.i3
 ln -vfs ~/.dotfiles/x1/.vim ~/.vim
+ln -vfs ~/.dotfiles/x1/.xbindkeysrc.scm ~/.xbindkeysrc.scm
 
 # ln -vfs ~/.dotfiles/x1/.bash_aliases ~/.bash_aliases
 # ln -vfs ~/.dotfiles/x1/.bash_profile ~/.bash_profile

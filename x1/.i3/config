@@ -157,9 +157,9 @@ bindcode 232 exec --no-startup-id xbacklight -dec 10
 bindcode 233 exec --no-startup-id xbacklight -inc 10
 
 # volume control
-bindcode 121 exec --no-startup-id amixer -c 1 -D pulse set Master toggle
-bindcode 122 exec --no-startup-id ~/.dotfiles/x1/bin/vol-down
-bindcode 123 exec --no-startup-id ~/.dotfiles/x1/bin/vol-up
+# bindcode 121 exec --no-startup-id amixer -D pulse set Master toggle
+# bindcode 122 exec --no-startup-id ~/.dotfiles/x1/bin/vol-down
+# bindcode 123 exec --no-startup-id ~/.dotfiles/x1/bin/vol-up
 
 bindsym $mod+c exec --no-startup-id ~/.dotfiles/x1/bin/irc2
 bindsym $mod+Control+c exec --no-startup-id clip
