@@ -51,5 +51,3 @@ source /etc/bash_completion.d/docker
 
 # git-hub
 source ~/projects/git-hub/init
-
-set -o vi
