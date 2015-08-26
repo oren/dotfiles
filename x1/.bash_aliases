@@ -196,3 +196,4 @@ alias cordova='docker run --rm -it -p 3000:3000 -v $(pwd):/workspace --privilege
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0|grep -E "percentage"'
 # alias morkdown='xhost + && docker run --rm -v $(pwd):/tmp -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --privileged oreng/chromium /run.sh'
 alias orient='docker run -d --name orientdb -p 2424:2424 -p 2480:2480 joaodubas/orientdb:latest'
+alias san='cd ~/projects/sanguine'
