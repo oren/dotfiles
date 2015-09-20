@@ -16,7 +16,8 @@ export PATH=$PATH:~/projects/go_appengine
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 # android
-export ANDROID_BIN="/home/oren/Downloads/android-sdk-linux/tools/android"
+export ANDROID_HOME="/home/oren/projects/android-sdk-linux"
+export ANDROID_BIN="/home/oren/projects/android-sdk-linux/tools/android"
 export PATH="$PATH:/home/oren/projects/android-sdk-linux/tools"
 export PATH="$PATH:/home/oren/projects/android-sdk-linux/platform-tools"
 export PATH="$PATH:/home/oren/projects/android-sdk-linux/build-tools"
