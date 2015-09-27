@@ -49,6 +49,9 @@ colorscheme solarized
 set t_Co=16
 call togglebg#map("<F5>")
 
+" everything I copy goes to the system's clipboard
+set clipboard=unnamed
+
 filetype indent plugin on " turns on filetype detection, and loads indent scripts and plugins
 
 " i have no idea what the following do:
