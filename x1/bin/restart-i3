@@ -18,4 +18,5 @@ xinput --set-prop "TPPS/2 IBM TrackPoint" "Device Accel Constant Deceleration" 0
 xinput --set-prop "Logitech Optical USB Mouse" "Device Accel Constant Deceleration" 0.3
 
 # set touchscreen to be the built-in screen
-xinput map-to-output 10 LVDS1
+touch_id=$(xinput --list|grep eGalaxTouch | awk '{print $7}' |grep -o '[0-9]*')
+xinput map-to-output $touch_id LVDS1
