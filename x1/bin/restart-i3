@@ -2,13 +2,11 @@
 
 # i3 run this file when i3 start/restart.
 
-xkbset m  # not sure why, but without it the xmodmap will not work
-# xmodmap -e "keycode 110 = Pointer_Button1"   # Home -> left click
-# xmodmap -e "keycode 115 = Pointer_Button2"   # End -> middle click
+# volume keys
+xbindkeys
 
-if [ -s ~/.Xmodmap ]; then
-  xmodmap ~/.Xmodmap
-fi
+# turn capslock into esc
+setxkbmap -option caps:escape
 
 # mouse speed
 xinput --set-prop "Logitech USB Trackball" "Device Accel Constant Deceleration" 0.3
@@ -18,3 +16,7 @@ xinput --set-prop "TPPS/2 IBM TrackPoint" "Device Accel Constant Deceleration" 0
 
 # mouse speed
 xinput --set-prop "Logitech Optical USB Mouse" "Device Accel Constant Deceleration" 0.3
+
+# set touchscreen to be the built-in screen
+touch_id=$(xinput --list|grep eGalaxTouch | awk '{print $7}' |grep -o '[0-9]*')
+xinput map-to-output $touch_id LVDS1

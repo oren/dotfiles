@@ -144,7 +144,9 @@ alias pu='sudo apt-get purge'
 alias se='aptitude search'
 alias sh='apt-cache show'
 
-alias monitor='xrandr --output HDMI2 --auto --above eDP1'
+alias monitor='xrandr --output HDMI1 --auto --above LVDS1'
+# alias monitor='xrandr --output HDMI2 --auto --above LVDS1'
+# alias monitor='xrandr --output DP1 --auto --above LVDS1'
 
 alias hib='sudo pm-hibernate'
 alias reb='sudo reboot'
@@ -168,6 +170,8 @@ alias gf='git fetch --prune'
 alias gb='git branch'
 alias ga='git add --all'
 alias gcl='git clone'
+alias gh='git hub'
+
 
 # apps
 alias v='vim'
@@ -189,7 +193,9 @@ alias san='cd ~/projects/sanguine'
 alias d='docker'
 alias dc='docker-compose'
 alias golang='docker run --rm -it -p 3000:3000 -v $(pwd):/go --name go-app oreng/go /bin/bash'
-alias cordova='docker run --rm -it -p 3000:3000 -v $(pwd):/workspace --privileged -v /dev/bus/usb:/dev/bus/usb oreng/cordova cordova'
+# alias cordova='docker run --rm -it -p 3000:3000 -v $(pwd):/workspace --privileged -v /dev/bus/usb:/dev/bus/usb oreng/cordova cordova'
 
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0|grep -E "percentage"'
 # alias morkdown='xhost + && docker run --rm -v $(pwd):/tmp -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --privileged oreng/chromium /run.sh'
+alias orient='docker run -d --name orientdb -p 2424:2424 -p 2480:2480 joaodubas/orientdb:latest'
+alias san='cd ~/projects/sanguine'

@@ -12,21 +12,24 @@ export EDITOR="vim"
 export PATH=$PATH:~/projects/go_appengine
 
 # java
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+# export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 # android
-export ANDROID_BIN="/home/oren/Downloads/android-sdk-linux/tools/android"
-export PATH="$PATH:/home/oren/Downloads/android-sdk-linux/tools"
-export PATH="$PATH:/home/oren/Downloads/android-sdk-linux/platform-tools"
-export PATH="$PATH:/home/oren/Downloads/android-sdk-linux/build-tools"
+export ANDROID_HOME="/home/oren/projects/android-sdk-linux"
+export ANDROID_BIN="/home/oren/projects/android-sdk-linux/tools/android"
+export PATH="$PATH:/home/oren/projects/android-sdk-linux/tools"
+export PATH="$PATH:/home/oren/projects/android-sdk-linux/platform-tools"
+export PATH="$PATH:/home/oren/projects/android-sdk-linux/build-tools"
 
 # go workspace
 export GOPATH=$HOME/projects/go
 export PATH=$PATH:$GOPATH/bin
 
 # go binary
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:/usr/local/go/bin
+# export GOROOT=/usr/local/go
+# export PATH=$PATH:$GOROOT/bin
 
 # use vim for manpages
 export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""

@@ -1,3 +1,4 @@
 #!/bin/bash
 
-amixer -c 1 -D pulse set Master mute
+amixer -D pulse set Master mute
+amixer -D pulse set Headphone mute
