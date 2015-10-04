@@ -69,15 +69,11 @@ gush() {
 }
 
 gup() {
-  git pull origin $(br)
+  git pull
 }
 
 br() {
   test -d .git && git symbolic-ref HEAD 2> /dev/null | sed 's/refs\/heads\///'
-}
-
-function github() {
-  git clone git@github.com:$1.git
 }
 
 # STEP 1: Run tunnel <hostname>
@@ -148,6 +144,10 @@ alias pu='sudo apt-get purge'
 alias se='aptitude search'
 alias sh='apt-cache show'
 
+alias monitor='xrandr --output HDMI1 --auto --above LVDS1'
+# alias monitor='xrandr --output HDMI2 --auto --above LVDS1'
+# alias monitor='xrandr --output DP1 --auto --above LVDS1'
+
 alias hib='sudo pm-hibernate'
 alias reb='sudo reboot'
 alias hal='sudo halt'
@@ -170,19 +170,32 @@ alias gf='git fetch --prune'
 alias gb='git branch'
 alias ga='git add --all'
 alias gcl='git clone'
+alias gh='git hub'
+
 
 # apps
 alias v='vim'
+alias o='xdg-open'
+alias f='feh --full-screen -d'
+alias un='unity-control-center'
+alias m='mpv'
 alias toxic='cd ~/projects/toxic && ./run_toxic.sh'
 alias utox='cd ~/projects/utox && ./utox'
 alias pastebinit='pastebinit -a me -i'
 alias s='python -m SimpleHTTPServer'
+alias google-chrome='LIBGL_DRI3_DISABLE=1 google-chrome'
+alias chromium-browser='LIBGL_DRI3_DISABLE=1 chromium-browser'
+alias drm='docker stop $(docker ps -q) ; docker rm $(docker ps -aq)'
+alias drmi='docker rmi $(docker images -f "dangling=true" -q)'
+alias san='cd ~/projects/sanguine'
 
 # docker
 alias d='docker'
-alias node='docker run --rm -it -p 3000:3000 -v $(pwd):/home/developer oreng/node /bin/bash'
-alias iojs='docker run --rm -it -p 3000:3000 -v $(pwd):/home/developer oreng/iojs /bin/bash'
+alias dc='docker-compose'
 alias golang='docker run --rm -it -p 3000:3000 -v $(pwd):/go --name go-app oreng/go /bin/bash'
-alias drm='docker stop $(docker ps -q) ; docker rm $(docker ps -aq)'
-alias drmi='docker rmi $(docker images -f "dangling=true" -q)'
+# alias cordova='docker run --rm -it -p 3000:3000 -v $(pwd):/workspace --privileged -v /dev/bus/usb:/dev/bus/usb oreng/cordova cordova'
 
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0|grep -E "percentage"'
+# alias morkdown='xhost + && docker run --rm -v $(pwd):/tmp -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --privileged oreng/chromium /run.sh'
+alias orient='docker run -d --name orientdb -p 2424:2424 -p 2480:2480 joaodubas/orientdb:latest'
+alias san='cd ~/projects/sanguine'

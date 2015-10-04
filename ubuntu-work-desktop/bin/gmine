@@ -1,9 +1,0 @@
-#!/bin/bash
-#
-# List branches and tags that were created by you.
-
-NAME="mervine"
-git fetch --all
-git remote prune origin
-git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n | sed 's/refs\/tags\//tag: /g' | sed 's/refs\/heads\///' | sed 's/refs\/remotes\/origin\///' | grep -i "$name" | uniq
-
