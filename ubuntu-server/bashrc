@@ -39,3 +39,7 @@ if [ -f ~/.git-completion ]; then
 fi
 
 complete -F _docker.io docker
+
+# git-hub
+source ~/projects/git-hub/init
+
