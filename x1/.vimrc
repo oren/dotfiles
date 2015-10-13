@@ -23,6 +23,10 @@ Plugin 'tpope/vim-commentary'
 Plugin 'fatih/vim-go'                        " Go development plugin
 Plugin 'majutsushi/tagbar'                   " class outline viewer
 
+" automatic tag file generation (both needed)
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+
 " snippets (all 4 needed)
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -34,7 +38,7 @@ Plugin 'mmozuras/vim-github-comment'
 Plugin 'mattn/webapi-vim'
 
 " tag line
-Plugin 'bling/vim-airline'
+Plugin 'itchyny/lightline.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
