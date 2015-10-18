@@ -18,15 +18,11 @@ Plugin 'gmarik/Vundle.vim'
 " ============================================================================
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'                      " Fuzzy finder
-Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-commentary'                " ,cc
 
 Plugin 'fatih/vim-go'                        " Go development plugin
-Plugin 'majutsushi/tagbar'                   " class outline viewer
-Plugin 'ludovicchabant/vim-gutentags'
-
-" automatic tag file generation (both needed)
-" Plugin 'xolox/vim-misc'
-" Plugin 'xolox/vim-easytags'
+Plugin 'majutsushi/tagbar'                   " class outline viewer. F8
+Plugin 'ludovicchabant/vim-gutentags'        " automatic tag file generation
 
 " snippets (all 4 needed)
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -56,6 +52,9 @@ call togglebg#map("<F5>")
 
 " everything I copy goes to the system's clipboard
 set clipboard=unnamed
+
+" vim-gutentags plugin
+" let g:gutentags_enabled
 
 filetype indent plugin on " turns on filetype detection, and loads indent scripts and plugins
 
@@ -142,7 +141,8 @@ set laststatus=2      " always show status line
 " Persistent undo
 " ============================================================================
 set undofile                " Save undo's after file closes
-set undodir=$HOME/.vim/undo " where to save undo histories
+" set undodir=$HOME/.vim/undo " where to save undo histories
+set undodir=/tmp " where to save undo histories
 set undolevels=1000         " How many undos
 set undoreload=10000        " number of lines to save for undo
 
