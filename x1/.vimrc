@@ -22,10 +22,11 @@ Plugin 'tpope/vim-commentary'
 
 Plugin 'fatih/vim-go'                        " Go development plugin
 Plugin 'majutsushi/tagbar'                   " class outline viewer
+Plugin 'ludovicchabant/vim-gutentags'
 
 " automatic tag file generation (both needed)
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
+" Plugin 'xolox/vim-misc'
+" Plugin 'xolox/vim-easytags'
 
 " snippets (all 4 needed)
 Plugin 'MarcWeber/vim-addon-mw-utils'
