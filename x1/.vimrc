@@ -22,7 +22,7 @@ Plugin 'tpope/vim-commentary'                " ,cc
 
 Plugin 'fatih/vim-go'                        " Go development plugin
 Plugin 'majutsushi/tagbar'                   " class outline viewer. F8
-Plugin 'ludovicchabant/vim-gutentags'        " automatic tag file generation
+" Plugin 'ludovicchabant/vim-gutentags'        " automatic tag file generation
 
 " snippets (all 4 needed)
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -31,8 +31,11 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 
 " github commment (both needed)
-Plugin 'mmozuras/vim-github-comment'
+Plugin 'mmozuras/vim-github-comment'          " :GHComment <your-comment-here>
 Plugin 'mattn/webapi-vim'
+
+Plugin 'suan/vim-instant-markdown'            " npm -g install instant-markdown-d
+                                              " :InstantMarkdownPreview
 
 " tag line
 Plugin 'itchyny/lightline.vim'
@@ -44,6 +47,12 @@ filetype plugin indent on    " required
 let g:github_user = 'oren'
 let g:github_comment_open_browser = 1
 
+" vim-gutentags plugin
+" let g:gutentags_enabled = 0
+
+" vim-instant-markdown plugin
+let g:instant_markdown_autostart = 0
+
 syntax enable
 set background=dark
 colorscheme solarized
@@ -53,8 +62,6 @@ call togglebg#map("<F5>")
 " everything I copy goes to the system's clipboard
 set clipboard=unnamed
 
-" vim-gutentags plugin
-" let g:gutentags_enabled
 
 filetype indent plugin on " turns on filetype detection, and loads indent scripts and plugins
 

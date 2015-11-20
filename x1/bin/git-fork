@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# fork and clone a repo on github
+# usage: git-fork <org name> <repo name>
+# example git-fork sanguinebio sangre
+# modify me to your github user
+
+set -e
+
+me=oren
+org=$1
+repo=$2
+
+if [ "$org" ] && [ "$repo" ]; then
+  git hub fork "$org"/"$repo"
+  git hub clone "$me"/"$repo"
+  cd "$repo"
+  git remote add upstream git@github.com:"$org"/"$repo"
+else
+  echo provide 2 arguments: org repo
+fi

@@ -156,6 +156,8 @@ bindsym $mod+minus scratchpad show
 bindcode 232 exec --no-startup-id xbacklight -dec 10
 bindcode 233 exec --no-startup-id xbacklight -inc 10
 
+bindcode 156 exec --no-startup-id ~/.dotfiles/x1/bin/monitor2
+
 # volume control
 # bindcode 121 exec --no-startup-id amixer -D pulse set Master toggle
 # bindcode 122 exec --no-startup-id ~/.dotfiles/x1/bin/vol-down
