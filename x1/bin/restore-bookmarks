@@ -1,3 +1,3 @@
 #!/bin/sh
 
-cp ~/misc/backup/Bookmarks ~/.config/chromium/Default/
+cp /misc/backup/Bookmarks ~/.config/chromium/Default/
