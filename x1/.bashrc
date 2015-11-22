@@ -1,30 +1,59 @@
-#!/usr/bin/env bash
+#/bin/bash
 
-# Path to the bash it configuration
-export BASH_IT="/home/oren/projects/bash-it"
+# bin
+export PATH=~/.dotfiles/x1/bin:$PATH
+export PATH=/misc/bin:$PATH
 
-# Lock and Load a custom theme file
-# location /.bash_it/themes/
-export BASH_IT_THEME='bobby'
+# env
+export PS1="\w "
+# export PS1=""
+export EDITOR="vim"
 
-# Your place for hosting Git repos. I use this for private repos.
-export GIT_HOSTING='git@git.domain.com'
+# appengine
+# export PATH=$PATH:~/projects/go_appengine
 
-# Don't check mail when opening terminal.
-unset MAILCHECK
+# java
+# export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
-# Change this to your console based IRC client of choice.
-export IRC_CLIENT='irssi'
+# android
+export ANDROID_HOME="/home/oren/projects/android-sdk-linux"
+export ANDROID_BIN="/home/oren/projects/android-sdk-linux/tools/android"
+export PATH="$PATH:/home/oren/projects/android-sdk-linux/tools"
+export PATH="$PATH:/home/oren/projects/android-sdk-linux/platform-tools"
+export PATH="$PATH:/home/oren/projects/android-sdk-linux/build-tools"
 
-# Set this to the command you use for todo.txt-cli
-export TODO="t"
+# go workspace
+export GOPATH=$HOME/projects/go
+export PATH=$PATH:$GOPATH/bin
 
-# Set this to false to turn off version control status checking within the prompt for all themes
-export SCM_CHECK=true
+# go binary
+export PATH=$PATH:/usr/local/go/bin
+# export GOROOT=/usr/local/go
+# export PATH=$PATH:$GOROOT/bin
 
-# Set vcprompt executable path for scm advance info in prompt (demula theme)
-# https://github.com/xvzf/vcprompt
-#export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
+# use vim for manpages
+export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
-# Load Bash It
-source $BASH_IT/bash_it.sh
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+if [ -f ~/.git-completion ]; then
+    . ~/.git-completion
+fi
+
+# Open terminal in current dir
+# Commands to be executed before the prompt is displayed
+PROMPT_COMMAND='pwd > "${HOME}/.cwd"'             # Save current working dir
+[[ -f "${HOME}/.cwd" ]] && cd "$(< ${HOME}/.cwd)" # Change to saved working dir
+
+# docker autocomplete
+# source /etc/bash_completion.d/docker
+
+# git-hub
+source ~/projects/git-hub/init
+
+# bash-git-prompt
+GIT_PROMPT_ONLY_IN_REPO=1
+source ~/projects/.bash-git-prompt/gitprompt.sh

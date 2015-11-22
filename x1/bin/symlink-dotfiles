@@ -1,20 +1,19 @@
 #!/bin/sh
 
-rm -r .vim .i3
-ln -vfs ~/.dotfiles/x1/.i3 ~/.i3
-ln -vfs ~/.dotfiles/x1/.vim ~/.vim
-ln -vfs ~/.dotfiles/x1/.xbindkeysrc.scm ~/.xbindkeysrc.scm
-
-# ln -vfs ~/.dotfiles/x1/.bash_aliases ~/.bash_aliases
-# ln -vfs ~/.dotfiles/x1/.bash_profile ~/.bash_profile
-# ln -vfs ~/.dotfiles/x1/.bashrc ~/.bashrc
-# ln -vfs ~/.dotfiles/x1/.gitcompletion ~/.gitcompletion
-# ln -vfs ~/.dotfiles/x1/.gitconfig ~/.gitconfig
+# rm -r ~/.vim ~/.i3 ~/.mpv ~/.weechat
+# ln -vfs ~/.dotfiles/x1/.vim ~/.vim
+# ln -vfs ~/.dotfiles/x1/.i3 ~/.i3
 # ln -vfs ~/.dotfiles/x1/.mpv ~/.mpv
-# ln -vfs ~/.dotfiles/x1/.npmrc ~/.npmrc
-# ln -vfs ~/.dotfiles/x1/.tmux.conf ~/.tmux.conf
-# ln -vfs ~/.dotfiles/x1/.vimrc ~/.vimrc
 # ln -vfs ~/.dotfiles/x1/.weechat ~/.weechat
-# ln -vfs ~/.dotfiles/x1/.Xresources ~/.Xresources
 
-# rm -r .bash_aliases .git-completion .gitconfig .gvimrc .i3 .mpv .npmrc .pentadactylrc .screenrc .tmux.conf .vim .vimrc .weechat .Xmodmap .Xresources
+# rm ~/.bash_aliases ~/.bash_profile ~/.bashrc ~/.git-completion ~/.gitconfig ~/.npmrc  ~/.tmux.conf ~/.vimrc ~/.Xresources ~/.xbindkeysrc.scm
+ln -vfs ~/.dotfiles/x1/.bash_aliases ~/.bash_aliases
+ln -vfs ~/.dotfiles/x1/.bash_profile ~/.bash_profile
+ln -vfs ~/.dotfiles/x1/.bashrc ~/.bashrc
+ln -vfs ~/.dotfiles/x1/.gitcompletion ~/.gitcompletion
+ln -vfs ~/.dotfiles/x1/.gitconfig ~/.gitconfig
+ln -vfs ~/.dotfiles/x1/.npmrc ~/.npmrc
+ln -vfs ~/.dotfiles/x1/.tmux.conf ~/.tmux.conf
+ln -vfs ~/.dotfiles/x1/.vimrc ~/.vimrc
+ln -vfs ~/.dotfiles/x1/.Xresources ~/.Xresources
+ln -vfs ~/.dotfiles/x1/.xbindkeysrc.scm ~/.xbindkeysrc.scm
