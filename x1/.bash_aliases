@@ -171,7 +171,7 @@ alias gb='git branch'
 alias ga='git add --all'
 alias gcl='git clone'
 alias gh='git hub'
-
+alias pr='git hub pr-new --base'
 
 # apps
 alias v='vim'
@@ -199,5 +199,5 @@ alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0|grep -E "perce
 # alias morkdown='xhost + && docker run --rm -v $(pwd):/tmp -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --privileged oreng/chromium /run.sh'
 alias orient='docker run -d --name orientdb -p 2424:2424 -p 2480:2480 joaodubas/orientdb:latest'
 alias san='cd ~/projects/sanguine'
-alias en=''
-alias de=''
+alias en='gpg -a --cipher-algo AES256 --no-use-agent -c'
+alias de='gpg --no-use-agent'
