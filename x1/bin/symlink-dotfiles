@@ -1,10 +1,11 @@
 #!/bin/sh
 
-# rm -r ~/.vim ~/.i3 ~/.mpv ~/.weechat
+# rm -r ~/.vim ~/.i3 ~/.mpv ~/.weechat ~/.aws
 # ln -vfs ~/.dotfiles/x1/.vim ~/.vim
 # ln -vfs ~/.dotfiles/x1/.i3 ~/.i3
 # ln -vfs ~/.dotfiles/x1/.mpv ~/.mpv
 # ln -vfs ~/.dotfiles/x1/.weechat ~/.weechat
+# ln -vfs /misc/backup/aws ~/.aws
 
 # rm ~/.bash_aliases ~/.bash_profile ~/.bashrc ~/.git-completion ~/.gitconfig ~/.npmrc  ~/.tmux.conf ~/.vimrc ~/.Xresources ~/.xbindkeysrc.scm
 ln -vfs ~/.dotfiles/x1/.bash_aliases ~/.bash_aliases
