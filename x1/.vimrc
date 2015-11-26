@@ -22,7 +22,7 @@ Plugin 'tpope/vim-commentary'                " ,cc
 
 Plugin 'fatih/vim-go'                        " Go development plugin
 Plugin 'majutsushi/tagbar'                   " class outline viewer. F8
-" Plugin 'ludovicchabant/vim-gutentags'        " automatic tag file generation
+Plugin 'ludovicchabant/vim-gutentags'        " automatic tag file generation
 
 " snippets (all 4 needed)
 Plugin 'MarcWeber/vim-addon-mw-utils'
