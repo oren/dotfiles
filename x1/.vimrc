@@ -35,7 +35,6 @@ Plugin 'mmozuras/vim-github-comment'          " :GHComment <your-comment-here>
 Plugin 'mattn/webapi-vim'
 
 Plugin 'suan/vim-instant-markdown'            " npm -g install instant-markdown-d
-                                              " :InstantMarkdownPreview
 
 " tag line
 Plugin 'itchyny/lightline.vim'
