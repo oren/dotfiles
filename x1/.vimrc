@@ -18,6 +18,7 @@ Plugin 'gmarik/Vundle.vim'
 " ============================================================================
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'                      " Fuzzy finder
+Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-commentary'                " ,cc
 
 Plugin 'fatih/vim-go'                        " Go development plugin
@@ -61,7 +62,6 @@ call togglebg#map("<F5>")
 " everything I copy goes to the system's clipboard
 set clipboard=unnamed
 
-
 filetype indent plugin on " turns on filetype detection, and loads indent scripts and plugins
 
 " i have no idea what the following do:
@@ -97,15 +97,23 @@ match ExtraWhitespace /\s\+$/
 
 :noremap <leader>v :vsp<CR>:enew<CR>:pwd<CR>
 :noremap <leader>s :split<CR>:enew<CR>:pwd<CR>
+
 :noremap <leader>l <C-w>l
 :noremap <leader>h <C-w>h
 :noremap <leader>j <C-w>j
 :noremap <leader>k <C-w>k
+
+:noremap <leader>L <C-w>L
+:noremap <leader>H <C-w>H
+:noremap <leader>J <C-w>J
+:noremap <leader>K <C-w>K
+
 :noremap <leader>- <C-W>_
 :noremap <leader>N <C-W>n<C-W>_
 :noremap <leader>? <C-W>n<C-W>H<C-W>q
 :noremap <leader>c :only<CR>:tabonly<CR>
 :noremap K <Esc><C-w>k<C-w>_
+
 :noremap <leader>R :! make test/%<CR>
 :noremap <leader>r :! jshint %<CR>:! jscs %<CR>
 :noremap <leader>/ <C-W>n<C-W>H<C-W>q<C-W>t<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_<C-W>l<C-W>_
@@ -290,3 +298,15 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " open a file named 'auto' as javascript file (for syntax highlight and snippets
 autocmd BufNewFile,BufRead auto set filetype=javascript
+
+
+" vim-go plugin
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Leader>s <Plug>(go-implements)
+let g:go_auto_type_info = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1

@@ -201,4 +201,3 @@ alias orient='docker run -d --name orientdb -p 2424:2424 -p 2480:2480 joaodubas/
 alias san='cd ~/projects/sanguine'
 alias en='gpg -a --cipher-algo AES256 --no-use-agent -c'
 alias de='gpg --no-use-agent'
-alias gotags='ctags -R /usr/local/go/src .'
