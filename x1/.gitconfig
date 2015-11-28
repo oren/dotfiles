@@ -17,3 +17,7 @@
 	default = simple
 [http]
 	cookiefile = /home/oren/.gitcookies
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false

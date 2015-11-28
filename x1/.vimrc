@@ -43,17 +43,59 @@ Plugin 'itchyny/lightline.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" ctrlp plugin
+" ============================================================================
+" Change mapping
+let g:ctrlp_map = '<leader>t'
+" Setup ctrlp (& vim) to use ag search.
+if executable('ag')
+" Use ag over grep
+set grepprg=ag\ --nogroup\ --nocolor
+" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+" ag is fast enough that CtrlP doesn't need to cache
+let g:ctrlp_use_caching = 0
+endif
+" Don't update the ctrlp window until I'm done typing.
+let g:ctrlp_lazy_update = 1
+" Tell ctrlp plugin to ignore the specified patterns.
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|dist/*'
+" path matching mode.
+let g:ctrlp_by_filename = 0
+" Increase the max_files limit for ctrlp so I can search the adobe directory.
+let g:ctrlp_max_files = 0 " Zero means unlimited.
+" Increase the maximum depth that ctrlp will search through the directory tree.
+let g:ctrlp_max_depth = 100
+
+" vim-go plugin
+" ============================================================================
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Leader>s <Plug>(go-implements)
+let g:go_auto_type_info = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
 " vim-github-comment plugin
+" ============================================================================
 let g:github_user = 'oren'
 let g:github_comment_open_browser = 1
 
 " vim-gutentags plugin
+" ============================================================================
 " let g:gutentags_enabled = 0
 
 " vim-instant-markdown plugin
+" ============================================================================
 let g:instant_markdown_autostart = 0
 
-syntax enable
+" syntax enable
+
+" solarized plugin
+" ============================================================================
 set background=dark
 colorscheme solarized
 set t_Co=16
@@ -70,8 +112,6 @@ set showmode                      " Display the mode you're in.
 set scrolloff=3
 set number
 " set title
-
-nnoremap <C-n> :call NumberToggle()<cr>
 
 " Windows
 " ============================================================================
@@ -229,30 +269,9 @@ set fileencoding=utf-8
 " Allow backspace to work on auto indents, EOL, or start of lines.
 set backspace=indent,eol,start
 
-" CtrlP
-" ============================================================================
-" Change mapping
-let g:ctrlp_map = '<leader>t'
-" Setup ctrlp (& vim) to use ag search.
-if executable('ag')
-" Use ag over grep
-set grepprg=ag\ --nogroup\ --nocolor
-" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-" ag is fast enough that CtrlP doesn't need to cache
-let g:ctrlp_use_caching = 0
-endif
-" Don't update the ctrlp window until I'm done typing.
-let g:ctrlp_lazy_update = 1
-" Tell ctrlp plugin to ignore the specified patterns.
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|dist/*'
-" path matching mode.
-let g:ctrlp_by_filename = 0
-" Increase the max_files limit for ctrlp so I can search the adobe directory.
-let g:ctrlp_max_files = 0 " Zero means unlimited.
-" Increase the maximum depth that ctrlp will search through the directory tree.
-let g:ctrlp_max_depth = 100
 
+" misc
+" ============================================================================
 "jump to last cursor position when opening a file
 "dont do it when writing a commit log entry
 autocmd BufReadPost * call SetCursorPosition()
@@ -264,49 +283,5 @@ function! SetCursorPosition()
     end
 endfunction
 
-" needed for gotags - https://github.com/jstemmer/gotags
-let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-    \ }
-
-" Supertab. not sure why it's needed
-let g:SuperTabDefaultCompletionType = "context"
-
 " open a file named 'auto' as javascript file (for syntax highlight and snippets
 autocmd BufNewFile,BufRead auto set filetype=javascript
-
-
-" vim-go plugin
-au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
-au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
-au FileType go nmap <Leader>s <Plug>(go-implements)
-let g:go_auto_type_info = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
