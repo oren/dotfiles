@@ -92,7 +92,7 @@ let g:github_comment_open_browser = 1
 " ============================================================================
 let g:instant_markdown_autostart = 0
 
-" syntax enable
+syntax enable
 
 " solarized plugin
 " ============================================================================
