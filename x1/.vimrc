@@ -21,7 +21,7 @@ Plugin 'kien/ctrlp.vim'                      " Fuzzy finder
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-commentary'                " ,cc
 
-Plugin 'fatih/vim-go'                        " Go development plugin
+
 Plugin 'majutsushi/tagbar'                   " class outline viewer. F8
 Plugin 'ludovicchabant/vim-gutentags'        " automatic tag file generation
 
@@ -39,6 +39,10 @@ Plugin 'suan/vim-instant-markdown'            " npm -g install instant-markdown-
 
 " tag line
 Plugin 'itchyny/lightline.vim'
+
+" languages
+Plugin 'fatih/vim-go'
+Plugin 'lambdatoast/elm.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

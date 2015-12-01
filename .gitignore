@@ -1,4 +1,6 @@
 tags
+tags.lock
+tags.temp
 
 # weechat
 x1/.weechat/logs
