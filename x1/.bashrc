@@ -3,6 +3,7 @@
 # bin
 export PATH=~/.dotfiles/x1/bin:$PATH
 export PATH=/misc/bin:$PATH
+export PATH=~/.npm/bin:$PATH
 
 # env
 export PS1="\w "
