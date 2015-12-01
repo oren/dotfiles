@@ -106,7 +106,7 @@ set t_Co=16
 call togglebg#map("<F5>")
 
 " everything I copy goes to the system's clipboard
-" set clipboard=unnamed
+set clipboard=unnamed
 " set clipboard+=unnamedplus
 " nvim only - double click to mark a word
 :set mouse=
