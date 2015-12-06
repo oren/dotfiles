@@ -21,7 +21,6 @@ Plugin 'kien/ctrlp.vim'                      " Fuzzy finder
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-commentary'                " ,cc
 
-
 Plugin 'majutsushi/tagbar'                   " class outline viewer. F8
 Plugin 'ludovicchabant/vim-gutentags'        " automatic tag file generation
 
