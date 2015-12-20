@@ -30,6 +30,9 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 
+"pair completion
+Plugin 'jiangmiao/auto-pairs'
+
 " github commment (both needed)
 Plugin 'mmozuras/vim-github-comment'          " :GHComment <your-comment-here>
 Plugin 'mattn/webapi-vim'

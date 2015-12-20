@@ -166,6 +166,7 @@ bindcode 156 exec --no-startup-id ~/.dotfiles/x1/bin/monitor2
 bindsym $mod+c exec --no-startup-id ~/.dotfiles/x1/bin/irc2
 bindcode 96 exec --no-startup-id clip
 bindcode 95 exec --no-startup-id dll
+bindcode 76 exec --no-startup-id dll2
 
 # for_window [class="Chromium-browser"] floating enabled
 

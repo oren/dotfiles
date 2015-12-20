@@ -29,9 +29,14 @@ export GOPATH=$HOME/projects/go
 export PATH=$PATH:$GOPATH/bin
 
 # go binary
-export PATH=$PATH:/usr/local/go/bin
-# export GOROOT=/usr/local/go
-# export PATH=$PATH:$GOROOT/bin
+# export PATH=$PATH:/usr/local/go/bin
+
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=/home/$(whoami)/go
+export PATH=$PATH:$GOPATH/bin
+
+export PATH=${PATH}:/home/$(whoami)/projects/go/src/github.com/oren/rumprun/rumprun/bin
 
 # use vim for manpages
 export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
