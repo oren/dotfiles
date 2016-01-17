@@ -4,6 +4,7 @@
 export PATH=~/.dotfiles/x1/bin:$PATH
 export PATH=/misc/bin:$PATH
 export PATH=~/.npm/bin:$PATH
+export PATH=~/projects/neo/neo4j-enterprise-2.3.1/bin:$PATH
 
 # env
 export PS1="\w "
@@ -24,19 +25,9 @@ export PATH="$PATH:/home/oren/projects/android-sdk-linux/tools"
 export PATH="$PATH:/home/oren/projects/android-sdk-linux/platform-tools"
 export PATH="$PATH:/home/oren/projects/android-sdk-linux/build-tools"
 
-# go workspace
+# go
 export GOPATH=$HOME/projects/go
-export PATH=$PATH:$GOPATH/bin
-
-# go binary
-# export PATH=$PATH:/usr/local/go/bin
-
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
-export GOPATH=/home/$(whoami)/go
-export PATH=$PATH:$GOPATH/bin
-
-export PATH=${PATH}:/home/$(whoami)/projects/go/src/github.com/oren/rumprun/rumprun/bin
+export PATH=$PATH:/usr/local/go/bin
 
 # use vim for manpages
 export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""

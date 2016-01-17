@@ -1,0 +1,17 @@
+" python3 plugins
+call remote#host#RegisterPlugin('python3', '/home/oren/.vim/plugged/deoplete.nvim/rplugin/python3/deoplete.py', [
+      \ {'sync': 1, 'name': 'DeopleteInitializePython', 'type': 'command', 'opts': {}},
+     \ ])
+call remote#host#RegisterPlugin('python3', '/home/oren/.vim/plugged/vim-markdown-composer/rplugin/python3/markdown_composer.py', [
+      \ {'sync': 1, 'name': 'FileType', 'type': 'autocmd', 'opts': {'pattern': 'markdown'}},
+      \ {'sync': 0, 'name': 'ComposerOpen', 'type': 'command', 'opts': {}},
+      \ {'sync': 0, 'name': 'ComposerPort', 'type': 'command', 'opts': {}},
+      \ {'sync': 0, 'name': 'ComposerStart', 'type': 'command', 'opts': {}},
+      \ {'sync': 0, 'name': 'CursorHold,CursorHoldI,CursorMoved,CursorMovedI', 'type': 'autocmd', 'opts': {'pattern': '*.md,*.mkd,*.markdown'}},
+      \ {'sync': 1, 'name': 'ComposerUpdate', 'type': 'command', 'opts': {}},
+     \ ])
+
+
+" python plugins
+
+

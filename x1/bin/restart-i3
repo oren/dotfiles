@@ -10,6 +10,7 @@ setxkbmap -option caps:escape
 
 # mouse speed
 xinput --set-prop "Logitech USB Trackball" "Device Accel Constant Deceleration" 0.3
+xinput --set-prop "ELECOM ELECOM TrackBall Mouse" "Device Accel Constant Deceleration" 0.5 # default is 1
 
 # trackpoint speed
 xinput --set-prop "TPPS/2 IBM TrackPoint" "Device Accel Constant Deceleration" 0.2
