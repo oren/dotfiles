@@ -35,6 +35,7 @@ Plug 'lambdatoast/elm.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
   let g:fzf_nvim_statusline = 0 " disable statusline overwriting
+  let $FZF_DEFAULT_COMMAND = 'ag -l -g ""' "respect .gitignore
 
   nnoremap <silent> <leader><space> :Files<CR>
   nnoremap <silent> <leader>a :Buffers<CR>
