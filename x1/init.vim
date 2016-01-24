@@ -16,6 +16,7 @@ call plug#begin()
 Plug 'romainl/flattened'
 
 Plug 'tpope/vim-commentary'                " gcc
+  xmap <silent><Leader>c <Plug>Commentary
   nmap <silent><Leader>c <Plug>CommentaryLine
 Plug 'itchyny/lightline.vim'
 Plug 'benekastah/neomake'
