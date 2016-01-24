@@ -12,7 +12,7 @@
 if [ ! -d "~/.config/nvim" ]; then
   mkdir -p ~/.config/nvim
 fi
-ln -vfs ~/.dotfiles/x1/.init.vim ~/.config/nvim/init.vim
+ln -vfs ~/.dotfiles/x1/init.vim ~/.config/nvim/init.vim
 
 ln -vfs ~/.dotfiles/x1/.bash_aliases ~/.bash_aliases
 ln -vfs ~/.dotfiles/x1/.bash_profile ~/.bash_profile
