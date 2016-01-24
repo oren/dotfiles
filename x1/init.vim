@@ -407,7 +407,7 @@ endfunction
 " gl           git commits
 " ga           git commits of current buffer
 
-" vi           open init.vim in new buffer
+" vi           open init.vim
 " w            save
 " dv           go-def-vertical
 " gb           go-doc-browser
