@@ -30,7 +30,7 @@ export GOPATH=$HOME/projects/go
 export PATH=$PATH:/usr/local/go/bin
 
 # use vim for manpages
-export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
+export MANPAGER="sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -54,3 +54,5 @@ source ~/projects/git-hub/init
 # bash-git-prompt
 GIT_PROMPT_ONLY_IN_REPO=1
 source ~/projects/.bash-git-prompt/gitprompt.sh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

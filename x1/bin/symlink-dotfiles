@@ -7,7 +7,13 @@
 # ln -vfs ~/.dotfiles/x1/.weechat ~/.weechat
 # ln -vfs /misc/backup/aws ~/.aws
 
-# rm ~/.bash_aliases ~/.bash_profile ~/.bashrc ~/.git-completion ~/.gitconfig ~/.npmrc  ~/.tmux.conf ~/.vimrc ~/.Xresources ~/.xbindkeysrc.scm
+# rm ~/.config/nvim/init.vim ~/.bash_aliases ~/.bash_profile ~/.bashrc ~/.git-completion ~/.gitconfig ~/.npmrc  ~/.tmux.conf ~/.Xresources ~/.xbindkeysrc.scm
+
+if [ ! -d "~/.config/nvim" ]; then
+  mkdir -p ~/.config/nvim
+fi
+ln -vfs ~/.dotfiles/x1/.init.vim ~/.config/nvim/init.vim
+
 ln -vfs ~/.dotfiles/x1/.bash_aliases ~/.bash_aliases
 ln -vfs ~/.dotfiles/x1/.bash_profile ~/.bash_profile
 ln -vfs ~/.dotfiles/x1/.bashrc ~/.bashrc
@@ -15,6 +21,5 @@ ln -vfs ~/.dotfiles/x1/.gitcompletion ~/.gitcompletion
 ln -vfs ~/.dotfiles/x1/.gitconfig ~/.gitconfig
 ln -vfs ~/.dotfiles/x1/.npmrc ~/.npmrc
 ln -vfs ~/.dotfiles/x1/.tmux.conf ~/.tmux.conf
-ln -vfs ~/.dotfiles/x1/.vimrc ~/.vimrc
 ln -vfs ~/.dotfiles/x1/.Xresources ~/.Xresources
 ln -vfs ~/.dotfiles/x1/.xbindkeysrc.scm ~/.xbindkeysrc.scm
