@@ -422,4 +422,5 @@ endfunction
 " figure out why i can't put it after the signify plugin
 highlight SignColumn ctermbg=233 guibg=#0D0D0D
 
+" this line set some stuff only for this file
 " vim: set sw=2 ts=2 et foldlevel=99 foldmethod=marker:
