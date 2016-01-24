@@ -10,10 +10,10 @@ call plug#begin()
 Plug 'romainl/flattened'
 
 Plug 'tpope/vim-commentary'                " gcc
-  nnoremap <silent> <leader>c gcc
+  nnoremap <silent> <Leader>c gcc
 Plug 'itchyny/lightline.vim'
 Plug 'benekastah/neomake'
-  nnoremap <silent> <leader>m :Neomake<CR>
+  nnoremap <silent> <Leader>m :Neomake<CR>
 Plug 'mhinz/vim-signify'                    "show git diff
 
 " languages
@@ -37,17 +37,17 @@ Plug 'junegunn/fzf.vim'
   let g:fzf_nvim_statusline = 0 " disable statusline overwriting
   let $FZF_DEFAULT_COMMAND = 'ag -l -g ""' "respect .gitignore
 
-  nnoremap <silent> <leader><space> :Files<CR>
-  nnoremap <silent> <leader>a :Buffers<CR>
-  nnoremap <silent> <leader>; :BLines<CR>
-  nnoremap <silent> <leader>. :Lines<CR>
-  nnoremap <silent> <leader>o :BTags<CR>
-  nnoremap <silent> <leader>O :Tags<CR>
-  nnoremap <silent> <leader>/ :execute 'Ag ' . input('Ag/')<CR>
+  nnoremap <silent> <Leader><space> :Files<CR>
+  nnoremap <silent> <Leader>a :Buffers<CR>
+  nnoremap <silent> <Leader>; :BLines<CR>
+  nnoremap <silent> <Leader>. :Lines<CR>
+  nnoremap <silent> <Leader>o :BTags<CR>
+  nnoremap <silent> <Leader>O :Tags<CR>
+  nnoremap <silent> <Leader>/ :execute 'Ag ' . input('Ag/')<CR>
   nnoremap <silent> K :call SearchWordWithAg()<CR>
   vnoremap <silent> K :call SearchVisualSelectionWithAg()<CR>
-  nnoremap <silent> <leader>gl :Commits<CR>
-  nnoremap <silent> <leader>ga :BCommits<CR>
+  nnoremap <silent> <Leader>gl :Commits<CR>
+  nnoremap <silent> <Leader>ga :BCommits<CR>
 
   imap <C-x><C-f> <plug>(fzf-complete-file-ag)
   imap <C-x><C-l> <plug>(fzf-complete-line)
@@ -80,7 +80,7 @@ Plug 'ludovicchabant/vim-gutentags' " {{{
   let g:gutentags_generate_on_missing = 0
   let g:gutentags_generate_on_write = 0
   let g:gutentags_generate_on_new = 0
-  nnoremap <leader>t! :GutentagsUpdate!<CR>
+  nnoremap <Leader>t! :GutentagsUpdate!<CR>
 " }}}
 call plug#end()
 "}}}
