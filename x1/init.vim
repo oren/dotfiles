@@ -452,6 +452,9 @@ endfunction
 " gl           git commits
 " ga           git commits of current buffer
 
+" Leader key for git:
+" gs, gd, gc, gb, ge, gE, gr, gR, gw, gW, gq, gQ
+
 " vi           open init.vim
 " w            save
 " dv           go-def-vertical
@@ -463,6 +466,7 @@ endfunction
 " F3           :toggle numbers
 " F5           :toggle colorscheme
 "}}}
+"
 
 " figure out why i can't put it after the signify plugin
 highlight SignColumn ctermbg=233 guibg=#0D0D0D
