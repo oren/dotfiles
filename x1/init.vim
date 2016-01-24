@@ -4,13 +4,19 @@ syntax on " syntax highlighting
 
 " Plugins {{{
 " ====================================================================
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
 call plug#begin()
 " Appearance
 " ====================================================================
 Plug 'romainl/flattened'
 
 Plug 'tpope/vim-commentary'                " gcc
-  nnoremap <silent> <Leader>c gcc
+  nmap <silent><Leader>c <Plug>CommentaryLine
 Plug 'itchyny/lightline.vim'
 Plug 'benekastah/neomake'
   nnoremap <silent> <Leader>m :Neomake<CR>
@@ -82,6 +88,44 @@ Plug 'ludovicchabant/vim-gutentags' " {{{
   let g:gutentags_generate_on_new = 0
   nnoremap <Leader>t! :GutentagsUpdate!<CR>
 " }}}
+Plug 'tpope/vim-fugitive'
+" {{{
+  " Fix broken syntax highlight in gitcommit files
+  " (https://github.com/tpope/vim-git/issues/12)
+  let g:fugitive_git_executable = 'LANG=en_US.UTF-8 git'
+
+  nnoremap <silent> <leader>gs :Gstatus<CR>
+  nnoremap <silent> <leader>gd :Gdiff<CR>
+  nnoremap <silent> <leader>gc :Gcommit<CR>
+  nnoremap <silent> <leader>gb :Gblame<CR>
+  nnoremap <silent> <leader>ge :Gedit<CR>
+  nnoremap <silent> <leader>gE :Gedit<space>
+  nnoremap <silent> <leader>gr :Gread<CR>
+  nnoremap <silent> <leader>gR :Gread<space>
+  nnoremap <silent> <leader>gw :Gwrite<CR>
+  nnoremap <silent> <leader>gW :Gwrite!<CR>
+  nnoremap <silent> <leader>gq :Gwq<CR>
+  nnoremap <silent> <leader>gQ :Gwq!<CR>
+
+  function! ReviewLastCommit()
+    if exists('b:git_dir')
+      Gtabedit HEAD^{}
+      nnoremap <buffer> <silent> q :<C-U>bdelete<CR>
+    else
+      echo 'No git a git repository:' expand('%:p')
+    endif
+  endfunction
+  nnoremap <silent> <leader>g` :call ReviewLastCommit()<CR>
+
+  augroup fugitiveSettings
+    autocmd!
+    autocmd FileType gitcommit setlocal nolist
+    autocmd BufReadPost fugitive://* setlocal bufhidden=delete
+  augroup END
+" }}}
+
+" Utility
+Plug 'tpope/vim-unimpaired'
 call plug#end()
 "}}}
 
