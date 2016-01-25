@@ -25,6 +25,7 @@ Plug 'benekastah/neomake'
   nnoremap <silent> <Leader>m :Neomake<CR>
 
 Plug 'mhinz/vim-signify'                    "show git diff
+  let g:signify_vcs_list = [ 'git' ]
 
 " languages
 Plug 'fatih/vim-go'
@@ -132,11 +133,7 @@ Plug 'tpope/vim-fugitive'
 
 " Utility
 Plug 'tpope/vim-unimpaired'
-
 Plug 'Shougo/deoplete.nvim'
-" snippets (engine + actual snippets)
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
 call plug#end()
 "}}}
 
