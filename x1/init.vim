@@ -13,7 +13,7 @@ endif
 call plug#begin()
 " Appearance
 " ====================================================================
-Plug 'romainl/flattened'
+Plug 'romainl/flattened' " solarized-like colorscheme
 
 Plug 'tpope/vim-commentary'                " gcc
   xmap <silent><Leader>c <Plug>Commentary
@@ -133,7 +133,19 @@ Plug 'tpope/vim-fugitive'
 
 " Utility
 Plug 'tpope/vim-unimpaired'
+" Group dependencies, vim-snippets depends on ultisnips
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'Shougo/deoplete.nvim'
+
+" markdown
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    !cargo build --release
+    UpdateRemotePlugins
+  endif
+endfunction
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer')  }
+  let g:markdown_composer_open_browser = 0
 call plug#end()
 "}}}
 
