@@ -18,9 +18,12 @@ Plug 'romainl/flattened'
 Plug 'tpope/vim-commentary'                " gcc
   xmap <silent><Leader>c <Plug>Commentary
   nmap <silent><Leader>c <Plug>CommentaryLine
+
 Plug 'itchyny/lightline.vim'
+
 Plug 'benekastah/neomake'
   nnoremap <silent> <Leader>m :Neomake<CR>
+
 Plug 'mhinz/vim-signify'                    "show git diff
 
 " languages
@@ -74,6 +77,7 @@ Plug 'junegunn/fzf.vim'
     let &clipboard = old_clipboard
     execute 'Ag' selection
   endfunction
+
 Plug 'ludovicchabant/vim-gutentags' " {{{
   let g:gutentags_exclude = [
       \ '*.min.js',
@@ -89,6 +93,7 @@ Plug 'ludovicchabant/vim-gutentags' " {{{
   let g:gutentags_generate_on_new = 0
   nnoremap <Leader>t! :GutentagsUpdate!<CR>
 " }}}
+
 Plug 'tpope/vim-fugitive'
 " {{{
   " Fix broken syntax highlight in gitcommit files
@@ -127,6 +132,11 @@ Plug 'tpope/vim-fugitive'
 
 " Utility
 Plug 'tpope/vim-unimpaired'
+
+Plug 'Shougo/deoplete.nvim'
+" snippets (engine + actual snippets)
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 call plug#end()
 "}}}
 
@@ -471,6 +481,12 @@ endfunction
 
 " figure out why i can't put it after the signify plugin
 highlight SignColumn ctermbg=233 guibg=#0D0D0D
+
+let g:deoplete#enable_at_startup = 1
+" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" xmap <C-k>     <Plug>(neosnippet_expand_target)
+
 
 " this line set some stuff only for this file
 " vim: set sw=2 ts=2 et foldlevel=99 foldmethod=marker:
