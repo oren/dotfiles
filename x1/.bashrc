@@ -49,10 +49,10 @@ PROMPT_COMMAND='pwd > "${HOME}/.cwd"'             # Save current working dir
 # source /etc/bash_completion.d/docker
 
 # git-hub
-source ~/projects/git-hub/init
+source ~/p/git-hub/init
 
 # bash-git-prompt
 GIT_PROMPT_ONLY_IN_REPO=1
-source ~/projects/.bash-git-prompt/gitprompt.sh
+source ~/.bash-git-prompt/gitprompt.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
