@@ -2,7 +2,7 @@
 
 export MISC=~/m
 export PROJECTS=~/p
-export WORK=~/s
+export DOWNLOADS=~/s
 export TMP=~/t
 
 # bin
