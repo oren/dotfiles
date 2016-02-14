@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ $1 ]; then
-  cat ~/misc/$1*
+  cat $MISC/$1*
 else
-  ls ~/misc/
+  ls $MISC/
 fi
 
 

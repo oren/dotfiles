@@ -1,10 +1,15 @@
 #/bin/bash
 
+export MISC=~/m
+export PROJECTS=~/p
+export WORK=~/s
+export TMP=~/t
+
 # bin
 export PATH=~/.dotfiles/x1/bin:$PATH
 export PATH=~/m/bin:$PATH
 export PATH=~/.npm/bin:$PATH
-export PATH=~/projects/neo/neo4j-enterprise-2.3.1/bin:$PATH
+# export PATH=$PROJECTS/neo/neo4j-enterprise-2.3.1/bin:$PATH
 
 # env
 export PS1="\w "
@@ -12,21 +17,21 @@ export PS1="\w "
 export EDITOR="vim"
 
 # appengine
-# export PATH=$PATH:~/projects/go_appengine
+# export PATH=$PATH:$PROJECTS/go_appengine
 
 # java
 # export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 # android
-export ANDROID_HOME="/home/oren/projects/android-sdk-linux"
-export ANDROID_BIN="/home/oren/projects/android-sdk-linux/tools/android"
-export PATH="$PATH:/home/oren/projects/android-sdk-linux/tools"
-export PATH="$PATH:/home/oren/projects/android-sdk-linux/platform-tools"
-export PATH="$PATH:/home/oren/projects/android-sdk-linux/build-tools"
+# export ANDROID_HOME="$PROJECTS/android-sdk-linux"
+# export ANDROID_BIN="$PROJECTS/android-sdk-linux/tools/android"
+# export PATH="$PATH:$PROJECTS/android-sdk-linux/tools"
+# export PATH="$PATH:$PROJECTS/android-sdk-linux/platform-tools"
+# export PATH="$PATH:$PROJECTS/android-sdk-linux/build-tools"
 
 # go
-export GOPATH=$HOME/projects/go
+export GOPATH=$PROJECTS/go
 export PATH=$PATH:/usr/local/go/bin
 
 # use vim for manpages
@@ -36,17 +41,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-if [ -f ~/.git-completion ]; then
-    . ~/.git-completion
-fi
-
 # Open terminal in current dir
 # Commands to be executed before the prompt is displayed
 PROMPT_COMMAND='pwd > "${HOME}/.cwd"'             # Save current working dir
 [[ -f "${HOME}/.cwd" ]] && cd "$(< ${HOME}/.cwd)" # Change to saved working dir
-
-# docker autocomplete
-# source /etc/bash_completion.d/docker
 
 # git-hub
 source ~/p/git-hub/init
