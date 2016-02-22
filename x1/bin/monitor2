@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# external monitor 
+# external monitor
 
 set -e
 set -u
@@ -15,4 +15,5 @@ fi
 
 echo external monitor
 xrandr --output "$monitor" --auto --above LVDS1
+# xrandr --output "$monitor" --auto --same-as LVDS1
 

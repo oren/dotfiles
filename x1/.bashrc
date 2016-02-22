@@ -4,6 +4,7 @@ export MISC=~/m
 export PROJECTS=~/p
 export DOWNLOADS=~/s
 export TMP=~/t
+# export BROWSER=chromium-browser
 
 # bin
 export PATH=~/.dotfiles/x1/bin:$PATH
@@ -35,7 +36,7 @@ export GOPATH=$PROJECTS/go
 export PATH=$PATH:/usr/local/go/bin
 
 # use vim for manpages
-export MANPAGER="sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
+# export MANPAGER="sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases

@@ -189,7 +189,6 @@ alias google-chrome='LIBGL_DRI3_DISABLE=1 google-chrome'
 alias chromium-browser='LIBGL_DRI3_DISABLE=1 chromium-browser'
 alias drm='docker stop $(docker ps -q) ; docker rm $(docker ps -aq)'
 alias drmi='docker rmi $(docker images -f "dangling=true" -q)'
-alias san='cd ~/projects/sanguine'
 
 # docker
 alias d='docker'
@@ -200,6 +199,6 @@ alias golang='docker run --rm -it -p 3000:3000 -v $(pwd):/go --name go-app oreng
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0|grep -E "percentage"'
 # alias morkdown='xhost + && docker run --rm -v $(pwd):/tmp -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --privileged oreng/chromium /run.sh'
 alias orient='docker run -d --name orientdb -p 2424:2424 -p 2480:2480 joaodubas/orientdb:latest'
-alias san='cd ~/projects/sanguine'
+alias san='cd $PROJECTS/s'
 alias en='gpg -a --cipher-algo AES256 --no-use-agent -c'
 alias de='gpg --no-use-agent'
