@@ -1,4 +1,5 @@
-!! xrdb ~/.Xresources
+!! apply: xrdb ~/.Xresources
+!! query: xrdb -query -all
 !! drop in Solarized colorscheme for Xresources/Xdefaults
 
 !!SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
@@ -90,7 +91,7 @@ Xcursor.size: 20
 ! Chinese
 xterm*utf8: true
 xterm*faceName: DejaVu Sans Mono Book
-xterm*faceNameDoublesize: WenQuanYi Zen Hei Mono
+/* xterm*faceNameDoublesize: WenQuanYi Zen Hei Mono */
 ! xterm*faceNameDoublesize: Micro Zen Hei Mono
 xterm*faceSize: 11
 ! workaround of disappearing underscore ('_') character

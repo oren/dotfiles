@@ -15,7 +15,7 @@ export PATH=~/.npm/bin:$PATH
 # env
 export PS1="\w "
 # export PS1=""
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # appengine
 # export PATH=$PATH:$PROJECTS/go_appengine
@@ -34,6 +34,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 # go
 export GOPATH=$PROJECTS/go
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$GOPATH/bin
 
 # use vim for manpages
 # export MANPAGER="sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
