@@ -33,6 +33,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 # go
 export GOPATH=$PROJECTS/go
+export GOBIN=$PROJECTS/go/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
