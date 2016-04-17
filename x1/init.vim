@@ -263,7 +263,8 @@ nnoremap <Leader><BS>s :1,$s/[ ]*$//<CR>:nohlsearch<CR>1G
 " open init.vim
 nnoremap <Leader>vi :e $MYVIMRC<CR>
 
-nnoremap <CR> :up<CR>
+" if file was modified, enter will save it. no need for :w
+nnoremap <CR> :<C-u>update<CR>
 
 nnoremap <F3> :set nonumber!<CR>
 
