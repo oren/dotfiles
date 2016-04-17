@@ -28,11 +28,12 @@ Plug 'benekastah/neomake'
 Plug 'mhinz/vim-signify'                    "show git diff
   let g:signify_vcs_list = [ 'git' ]
 
+
 " languages
 Plug 'fatih/vim-go'
   au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
   au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
-  au FileType go nmap <leader>r <Plug>(go-run)
+  au FileType go nmap <leader>r <Plug>(go-run-split)
   au FileType go nmap <leader>b <Plug>(go-build)
   let g:go_auto_type_info = 1
   let g:go_highlight_functions = 1
@@ -42,6 +43,7 @@ Plug 'fatih/vim-go'
   let g:go_highlight_build_constraints = 1
   " add missing imports on save
   let g:go_fmt_command = "goimports"
+  let g:go_term_height = 10
 
 Plug 'lambdatoast/elm.vim'
 
@@ -392,36 +394,12 @@ augroup vimGeneralCallbacks
   autocmd BufWritePost .nvimrc nested source ~/.nvimrc
 augroup END
 
-augroup fileTypeSpecific
-  autocmd!
-  " Rabl support
-  autocmd BufRead,BufNewFile *.rabl setfiletype ruby
-  " Make ?s part of words
-  autocmd FileType ruby,eruby,yaml setlocal iskeyword+=?
-  " JST support
-  autocmd BufNewFile,BufRead *.ejs set filetype=jst
-  autocmd BufNewFile,BufRead *.jst set filetype=jst
-  autocmd BufNewFile,BufRead *.djs set filetype=jst
-  autocmd BufNewFile,BufRead *.hamljs set filetype=jst
-  autocmd BufNewFile,BufRead *.ect set filetype=jst
-
-  " Gnuplot support
-  autocmd BufNewFile,BufRead *.plt set filetype=gnuplot
-
-  autocmd FileType jst set syntax=htmldjango
-augroup END
-
 augroup quickFixSettings
   autocmd!
   autocmd FileType qf
         \ nnoremap <buffer> <silent> q :close<CR> |
         \ map <buffer> <silent> <F4> :close<CR> |
         \ map <buffer> <silent> <F8> :close<CR>
-augroup END
-
-augroup terminalCallbacks
-  autocmd!
-  autocmd TermClose * call feedkeys('<cr>')
 augroup END
 
 "jump to last cursor position when opening a file
