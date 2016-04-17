@@ -11,6 +11,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin()
+Plug 'SirVer/ultisnips'
 " Appearance
 " ====================================================================
 Plug 'romainl/flattened' " solarized-like colorscheme
@@ -31,6 +32,8 @@ Plug 'mhinz/vim-signify'                    "show git diff
 Plug 'fatih/vim-go'
   au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
   au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+  au FileType go nmap <leader>r <Plug>(go-run)
+  au FileType go nmap <leader>b <Plug>(go-build)
   let g:go_auto_type_info = 1
   let g:go_highlight_functions = 1
   let g:go_highlight_methods = 1
@@ -260,6 +263,8 @@ nnoremap <Leader><BS>s :1,$s/[ ]*$//<CR>:nohlsearch<CR>1G
 " open init.vim
 nnoremap <Leader>vi :e $MYVIMRC<CR>
 
+nnoremap <CR> :up<CR>
+
 nnoremap <F3> :set nonumber!<CR>
 
 " fix indentation
@@ -479,6 +484,8 @@ endfunction
 " w            save
 " dv           go-def-vertical
 " gb           go-doc-browser
+" r            go-run
+" b            go-build
 "
 " F keys:
 " F1           Explore directory of current dir
