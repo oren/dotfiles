@@ -28,7 +28,6 @@ Plug 'benekastah/neomake'
 Plug 'mhinz/vim-signify'                    "show git diff
   let g:signify_vcs_list = [ 'git' ]
 
-
 " languages
 Plug 'fatih/vim-go'
   au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
@@ -46,7 +45,7 @@ Plug 'fatih/vim-go'
   let g:go_term_height = 10
   let g:go_def_mapping_enabled = 0
 
-Plug 'lambdatoast/elm.vim'
+"Plug 'lambdatoast/elm.vim' TODO: gcc is not working with this plugin
 
 " File Navigation
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
