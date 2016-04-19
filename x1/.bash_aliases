@@ -202,5 +202,7 @@ alias orient='docker run -d --name orientdb -p 2424:2424 -p 2480:2480 joaodubas/
 alias san='cd $PROJECTS/s'
 alias en='gpg -a --cipher-algo AES256 --no-use-agent -c'
 alias de='gpg --no-use-agent'
-# alias vpn='sudo ipsec up sanguine'
-# alias vpnd='sudo ipsec down sanguine'
+
+alias vpnr='sudo ipsec restart'
+alias vpn='sudo ipsec up'
+alias vpnd='sudo ipsec down'

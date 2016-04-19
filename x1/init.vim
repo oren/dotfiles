@@ -256,8 +256,11 @@ set cursorline     " highlight current line
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
+" remove whitespace with w
+noremap <leader>w :%s/\s\+$//<CR>
+
 " Remove trailing whitespaces in current buffer
-nnoremap <Leader><BS>s :1,$s/[ ]*$//<CR>:nohlsearch<CR>1G
+" nnoremap <Leader><BS>s :1,$s/[ ]*$//<CR>:nohlsearch<CR>1G
 " }}}
 
 " Key Mappings " {{{
@@ -272,9 +275,6 @@ nnoremap <F3> :set nonumber!<CR>
 
 " fix indentation
 map <F7> mzgg=G`z
-
-" Quick way to save file
-nnoremap <Leader>w :w<CR>
 
 " Y behave like D or C
 nnoremap Y y$
@@ -441,7 +441,7 @@ endfunction
 " j space      new buffer + fzf
 
 " m            Neomake
-" backspace s  remove whitespace
+" w            remove whitespace
 " f            toggle folds
 
 " Leader key for fzf:
