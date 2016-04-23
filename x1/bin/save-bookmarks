@@ -1,6 +1,0 @@
-#!/bin/sh
-
-chrome_data=~/.config/chromium/Default
-backup_path=/misc/backup/chromium
-
-cp $chrome_data/Bookmarks $backup_path/

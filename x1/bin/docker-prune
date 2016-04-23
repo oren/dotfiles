@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# remove stopped containers
-docker ps -a | awk '{ print $1}' | xargs docker rm
-
-# remove untagged images
-docker rmi $(docker images -f "dangling=true" -q)

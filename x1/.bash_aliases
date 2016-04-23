@@ -204,5 +204,5 @@ alias en='gpg -a --cipher-algo AES256 --no-use-agent -c'
 alias de='gpg --no-use-agent'
 
 alias vpnr='sudo ipsec restart'
-alias vpn='sudo ipsec up'
+# alias vpn='sudo ipsec up'
 alias vpnd='sudo ipsec down'

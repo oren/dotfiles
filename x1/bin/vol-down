@@ -1,5 +1,0 @@
-#!/bin/bash
-
-amixer set Master 2- unmute > /dev/null 2>&1
-amixer set Headphone 2- unmute > /dev/null 2>&1
-amixer set Speaker 2- unmute > /dev/null 2>&1

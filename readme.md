@@ -1,23 +1,22 @@
 Dotfiles FTW
 ============
 
-    cd ~/
-    git clone git://github.com/oren/dotfiles.git
-    mv dotfiles .dotfiles
+setup
+```
+cd ~/
+git clone git://github.com/oren/dotfiles.git
+mv dotfiles .dotfiles
+```
 
-run one of the following:
+create symlinks
+```
+stow -v x1
+```
 
-    ~/.dotfiles/ubuntu-x120e/bin/symlink-dotfiles
-    ~/.dotfiles/ubuntu-server/bin/symlink-dotfiles
+testing
+```
+stow -v -t ~/destination x1
+stow -v -t ~/destination x1 --ignore='.Trash'        # ignore
+stow -D -v -t ~/destination x1                       # delete
+stow -R -v -t ~/destination x1                       # relink (if i added a file)
 
-    # You're done!
-
-Assupmtions
------------
-
-Make sure to `rm -r .vim .i3 .weechat` before symlinking.
-
-Credits
--------
-
-Most of the credits would go to http://peepcode.com/products/advanced-command-line.

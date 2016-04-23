@@ -1,3 +1,0 @@
-#!/bin/bash
-
-amixer -c 1 -D pulse set Master unmute

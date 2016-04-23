@@ -1,5 +1,0 @@
-#!/bin/bash
-
-mplayer -ao null out.ogv-vo jpeg:outdir=output               # capture JPEG screenshots
-convert output/* output.gif                                  # use ImageMagick to convert the screenshots into an animated gifs
-convert output.gif -fuzz 10% -layers Optimize optimised.gif  # optimize the screenshots

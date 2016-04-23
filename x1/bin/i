@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [ $1 ]; then
-  cat $MISC/$1*
-else
-  ls $MISC/
-fi
-
-
