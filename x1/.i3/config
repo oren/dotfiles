@@ -12,10 +12,10 @@
 set $mod Mod4
 
 # exec commands run only on startup
-exec --no-startup-id ~/.dotfiles/x1/bin/boot
+exec --no-startup-id ~/m/bin/boot
 
 # exec_always commands run on startup and restart i3
-exec_always --no-startup-id ~/.dotfiles/x1/bin/restart-i3
+exec_always --no-startup-id ~/m/bin/restart-i3
 
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -156,14 +156,14 @@ bindsym $mod+minus scratchpad show
 bindcode 232 exec --no-startup-id xbacklight -dec 10
 bindcode 233 exec --no-startup-id xbacklight -inc 10
 
-bindcode 156 exec --no-startup-id ~/.dotfiles/x1/bin/monitor2
+bindcode 156 exec --no-startup-id ~/m/bin/monitor2
 
 # volume control
 # bindcode 121 exec --no-startup-id amixer -D pulse set Master toggle
 # bindcode 122 exec --no-startup-id ~/.dotfiles/x1/bin/vol-down
 # bindcode 123 exec --no-startup-id ~/.dotfiles/x1/bin/vol-up
 
-bindsym $mod+c exec --no-startup-id ~/.dotfiles/x1/bin/irc2
+bindsym $mod+c exec --no-startup-id ~/m/bin/irc2
 # f12
 # bindcode 75 exec --no-startup-id /home/oren/m/bin/clip
 # f11
