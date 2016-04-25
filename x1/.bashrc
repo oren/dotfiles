@@ -37,6 +37,9 @@ export GOBIN=$PROJECTS/go/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
+# go engine
+export PATH=$PATH:$TMP/apps/go_appengine/
+
 # use vim for manpages
 # export MANPAGER="sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
