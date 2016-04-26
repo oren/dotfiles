@@ -256,6 +256,9 @@ set cursorline     " highlight current line
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
+" replace current word
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
 " remove whitespace with w
 noremap <leader>w :%s/\s\+$//<CR>
 
