@@ -204,3 +204,4 @@ alias en='gpg -a --cipher-algo AES256 --no-use-agent -c'
 alias de='gpg --no-use-agent'
 
 alias vpnr='sudo ipsec restart'
+alias mutt='docker run -it -e GMAIL=orengolan@gmail.com -e GMAIL_NAME="Oren Golan" -e GMAIL_FROM=orengolan@gmail.com mutt'
