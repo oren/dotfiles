@@ -143,19 +143,20 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'Shougo/deoplete.nvim'
 
 " markdown
-function! BuildComposer(info)
-  if a:info.status != 'unchanged' || a:info.force
-    !cargo build --release
-    UpdateRemotePlugins
-  endif
-endfunction
-Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer')  }
-  let g:markdown_composer_open_browser = 0
+" function! BuildComposer(info)
+"   if a:info.status != 'unchanged' || a:info.force
+"     !cargo build --release
+"     UpdateRemotePlugins
+"   endif
+" endfunction
+" Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer')  }
+"   let g:markdown_composer_open_browser = 0
 call plug#end()
 "}}}
 
 " General settings {{{
 " ====================================================================
+"
 
 " ; is easier than :
 nnoremap ; :
