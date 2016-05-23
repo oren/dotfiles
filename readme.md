@@ -20,3 +20,4 @@ stow -v -t ~/destination x1 --ignore='.Trash'        # ignore
 stow -D -v -t ~/destination x1                       # delete
 stow -R -v -t ~/destination x1                       # relink (if i added a file)
 
+
