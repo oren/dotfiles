@@ -25,7 +25,7 @@ export EDITOR="nvim"
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 # android
-# export ANDROID_HOME="$PROJECTS/android-sdk-linux"
+export ANDROID_HOME="~/Android/Sdk"
 # export ANDROID_BIN="$PROJECTS/android-sdk-linux/tools/android"
 # export PATH="$PATH:$PROJECTS/android-sdk-linux/tools"
 # export PATH="$PATH:$PROJECTS/android-sdk-linux/platform-tools"
