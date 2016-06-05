@@ -26,6 +26,11 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 # android
 export ANDROID_HOME="~/Android/Sdk"
+PATH="~/Android/Sdk/tools:~/Android/Sdk/platform-tools:${PATH}"
+export PATH
+
+PATH="/usr/local/android-studio/bin:${PATH}"
+export PATH
 # export ANDROID_BIN="$PROJECTS/android-sdk-linux/tools/android"
 # export PATH="$PATH:$PROJECTS/android-sdk-linux/tools"
 # export PATH="$PATH:$PROJECTS/android-sdk-linux/platform-tools"
