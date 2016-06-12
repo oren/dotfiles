@@ -25,8 +25,8 @@ export EDITOR="nvim"
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 # android
-export ANDROID_HOME="~/Android/Sdk"
-PATH="~/Android/Sdk/tools:~/Android/Sdk/platform-tools:${PATH}"
+export ANDROID_HOME="/home/oren/Android/Sdk"
+PATH="/home/oren/Android/Sdk/tools:/home/oren/Android/Sdk/platform-tools:${PATH}"
 export PATH
 
 PATH="/usr/local/android-studio/bin:${PATH}"
@@ -65,3 +65,9 @@ GIT_PROMPT_ONLY_IN_REPO=1
 source ~/.bash-git-prompt/gitprompt.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+PATH="/home/oren/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/oren/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/oren/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/oren/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/oren/perl5"; export PERL_MM_OPT;
