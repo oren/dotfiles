@@ -52,6 +52,12 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if hash ag 2>/dev/null; then
+  # tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null; }
+  tag() { command tag "$@"; source "/tmp/tag_aliases" 2>/dev/null; }
+  alias ag=tag
+fi
+
 # Open terminal in current dir
 # Commands to be executed before the prompt is displayed
 PROMPT_COMMAND='pwd > "${HOME}/.cwd"'             # Save current working dir
