@@ -189,7 +189,7 @@ alias drm='docker stop $(docker ps -q) ; docker rm $(docker ps -aq)'
 alias drmi='docker rmi $(docker images -f "dangling=true" -q)'
 
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0|grep -E "percentage"'
-alias me='cd ~/p/go/src/github.com/oren'
+alias me='cd ~/p/me'
 alias en='gpg -a --cipher-algo AES256 --no-use-agent -c'
 alias de='gpg --no-use-agent'
 alias mutt='docker run -it -e GMAIL=orengolan@gmail.com -e GMAIL_NAME="Oren Golan" -e GMAIL_FROM=orengolan@gmail.com mutt'
