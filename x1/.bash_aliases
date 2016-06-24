@@ -181,6 +181,7 @@ alias un='unity-control-center'
 alias m='mpv'
 alias pastebinit='pastebinit -a me -i'
 alias s='python -m SimpleHTTPServer'
+alias kp='kpcli'
 
 # docker
 alias d='docker'
