@@ -144,7 +144,7 @@ alias pu='sudo apt-get purge'
 alias se='aptitude search'
 alias sh='apt-cache show'
 
-alias monitor='xrandr --output HDMI1 --auto --above LVDS1'
+# alias monitor='xrandr --output HDMI1 --auto --above LVDS1'
 
 alias hib='sudo pm-hibernate'
 alias reb='sudo reboot'
@@ -181,7 +181,6 @@ alias un='unity-control-center'
 alias m='mpv'
 alias pastebinit='pastebinit -a me -i'
 alias s='python -m SimpleHTTPServer'
-alias kp='kpcli'
 
 # docker
 alias d='docker'
