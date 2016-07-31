@@ -1,5 +1,6 @@
 call plug#begin()
 Plug 'fatih/vim-go'
+  let g:go_fmt_command = "goimports"
 Plug 'romainl/flattened'
 Plug 'tpope/vim-commentary'                " gcc
   xmap <silent><Leader>c <Plug>Commentary
@@ -60,62 +61,59 @@ set viminfo=!,h,f1,'100
 set wildignore+=*.a,*.o,*.pyc,*~,*.swp,*.tmp
 set wildmode=list:longest,full
 
-set laststatus=2 " always show status line
 set showcmd      " always show current command
+set laststatus=2
+
+set statusline=
+set statusline+=%<\                       " cut at start
+set statusline+=%2*[%n%H%M%R%W]%*\        " flags and buf no
+set statusline+=%-40f\                    " path
+set statusline+=%=%1*%y%*%*\              " file type
+set statusline+=%10((%l,%c)%)\            " line and column
+set statusline+=%P                        " percentage of file
+
 
 set nowrap        " disable wrap for long lines
 set textwidth=0   " disable auto break long lines
 
-"folds
-set foldmethod=manual
-" remove underscores. sets every time after a colorscheme was chosen
-:au ColorScheme * hi Folded cterm=NONE
-" remove dashes
-set fillchars="fold: "
-" toggle folds
-fun! ToggleFold()
-    if &foldlevel == 0
-      exe "normal zR"
-    else
-      exe "normal zM"
-    endif
-endfun
+" Persistent undo
+set undofile                " Save undo's after file closes
+set undodir=/tmp " where to save undo histories
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
 
-nnoremap <Leader>f :call ToggleFold()<CR>
+set cursorline
 
 " Disable search highlighting
 " ====================================================================
 " if file was modified, enter will save it. no need for :w
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
 
-set expandtab     " replace <Tab with spaces
+set expandtab     " replace Tab with spaces
 set tabstop=2     " number of spaces that a <Tab> in the file counts for
 set softtabstop=2 " remove <Tab> symbols as it was spaces
 set shiftwidth=2  " indent size for << and >>
 set shiftround    " round indent to multiple of 'shiftwidth' (for << and >>)
 
+" search
 set ignorecase " ignore case of letters
 set smartcase  " override the 'ignorecase' when there is uppercase letters
 set gdefault   " when on, the :substitute flag 'g' is default on
+
+" Cursor configuration {{{
+" ====================================================================
+" Use a blinking upright bar cursor in Insert mode, a solid block in normal
+" and a blinking underline in replace mode
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+  let &t_SI = "\<Esc>[5 q"
+  let &t_SR = "\<Esc>[3 q"
+  let &t_EI = "\<Esc>[2 q"
+" }}}
 
 if executable("ag")
   set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
   set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
-
-set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
-"              | | | | |  |   |      |  |     |    |
-"              | | | | |  |   |      |  |     |    +-- current column
-"              | | | | |  |   |      |  |     +-- current line
-"              | | | | |  |   |      |  +-- current % into file
-"              | | | | |  |   |      +-- current syntax
-"              | | | | |  |   +-- current fileformat
-"              | | | | |  +-- number of lines
-"              | | | | +-- preview flag in square brackets
-"              | | | +-- help flag in square brackets
-"              | | +-- readonly flag in square brackets
-"              | +-- rodified flag in square brackets
-"              +-- full path to file in the buffer
 
 nnoremap <leader>a :argadd <c-r>=fnameescape(expand('%:p:h'))<cr>/*<C-d>
 nnoremap <leader>b :b <C-d>
@@ -135,6 +133,15 @@ inoremap <silent> ,n <C-x><C-n>
 inoremap <silent> ,o <C-x><C-o>
 inoremap <silent> ,t <C-x><C-]>
 inoremap <silent> ,u <C-x><C-u>
+
+" Netrw
+let g:netrw_banner = 0 " disable netrw banner with
+let g:netrw_hide   = 1 " don't show hidden files
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+' " hide dotfiles
+
+" Show trailing whitespace in red
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
 function! StripTrailingWhitespace()
   if !&binary && &filetype != 'diff'
@@ -157,6 +164,10 @@ function! SetCursorPosition()
     end
 endfunction
 "}}}
+
+" autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
+" :setlocal spell spelllang=en_us
+" :setlocal nospell
 
 " this line set some stuff only for this file
 " vim: set sw=2 ts=2 et foldlevel=99 foldmethod=marker:

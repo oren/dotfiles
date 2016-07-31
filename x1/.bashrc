@@ -45,17 +45,14 @@ export PATH=$PATH:$GOPATH/bin
 # go engine
 export PATH=$PATH:$TMP/apps/go_appengine/
 
+# marp
+export PATH=$PATH:$TMP/apps/marp/
+
 # use vim for manpages
 # export MANPAGER="sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
-fi
-
-if hash ag 2>/dev/null; then
-  # tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null; }
-  tag() { command tag "$@"; source "/tmp/tag_aliases" 2>/dev/null; }
-  alias ag=tag
 fi
 
 # Open terminal in current dir
@@ -69,11 +66,3 @@ source ~/p/git-hub/init
 # bash-git-prompt
 GIT_PROMPT_ONLY_IN_REPO=1
 source ~/.bash-git-prompt/gitprompt.sh
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-PATH="/home/oren/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/oren/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/oren/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/oren/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/oren/perl5"; export PERL_MM_OPT;

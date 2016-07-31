@@ -174,7 +174,6 @@ alias pr='git hub pr-new --base'
 # apps
 alias v='nvim'
 alias vi='nvim'
-alias vim='nvim'
 alias o='xdg-open'
 alias f='feh --full-screen -d'
 alias un='unity-control-center'
