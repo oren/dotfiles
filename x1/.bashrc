@@ -49,7 +49,7 @@ export PATH=$PATH:$TMP/apps/go_appengine/
 export PATH=$PATH:$TMP/apps/marp/
 
 # use vim for manpages
-# export MANPAGER="sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
+export MANPAGER="sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
