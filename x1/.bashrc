@@ -62,7 +62,7 @@ PROMPT_COMMAND='pwd > "${HOME}/.cwd"'             # Save current working dir
 [[ -f "${HOME}/.cwd" ]] && cd "$(< ${HOME}/.cwd)" # Change to saved working dir
 
 # git-hub
-source ~/p/git-hub/init
+source ~/p/git-hub/.rc
 
 # bash-git-prompt
 GIT_PROMPT_ONLY_IN_REPO=1
