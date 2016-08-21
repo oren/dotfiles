@@ -25,6 +25,8 @@ call plug#end()
 let g:mapleader = "\<Space>"
 colorscheme flattened_dark
 
+" colorscheme nofrils-dark
+
 " if file was modified, enter will save it. no need for :w
 nnoremap <CR> :<C-u>update<CR>
 

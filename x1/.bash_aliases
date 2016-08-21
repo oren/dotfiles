@@ -192,5 +192,3 @@ alias me='cd ~/p/me'
 alias en='gpg -a --cipher-algo AES256 --no-use-agent -c'
 alias de='gpg --no-use-agent'
 alias mutt='docker run -it -e GMAIL=orengolan@gmail.com -e GMAIL_NAME="Oren Golan" -e GMAIL_FROM=orengolan@gmail.com mutt'
-
-alias lll='(( RANDOM < 10000 )) && curl -s http://www.degraeve.com/img2txt-yay.php\?url\=http%3A%2F%2Fwww.placecage.com%2Fg%2F$(((RANDOM % 20) + 350))%2F360.jpg\&mode\=A\&size\=80\&charstr\=ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890%60\~%21%40%23%24%25%5E%26\*%28%29-_%3D%2B%5B%5D%7B%7D%3B%27%3A%22%2C.%2F%3C%3E%3F\&order\=R\&invert\=N | awk "/<pre>/ { g=1;next } /<\/pre>/ { g=0;next }g"; ls -G'

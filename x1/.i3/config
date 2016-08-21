@@ -25,6 +25,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec xterm
+# bindsym $mod+Return exec --no-startup-id gnome-terminal
 
 # kill focused window
 # bindsym $mod+Shift+Q kill
@@ -164,12 +165,13 @@ bindcode 156 exec --no-startup-id ~/m/bin/monitor2
 # bindcode 123 exec --no-startup-id ~/.dotfiles/x1/bin/vol-up
 
 bindsym $mod+c exec --no-startup-id ~/m/bin/irc2
+
 # f12
-# bindcode 75 exec --no-startup-id /home/oren/m/bin/clip
+bindcode 96 exec --no-startup-id ~/m/bin/clip
 # f11
-# bindcode 95 exec --no-startup-id dll
+bindcode 95 exec --no-startup-id ~/m/bin/dll
 # f10
-# bindcode 76 exec --no-startup-id dll2
+bindcode 76 exec --no-startup-id ~/m/bin/dll2
 
 # for_window [class="Chromium-browser"] floating enabled
 
