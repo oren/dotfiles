@@ -97,9 +97,9 @@ XTerm*metaSendsEscape: true
 ! what terminal emulator to use
 XTerm.termName: xterm-256color
 
-! xterm*faceName: Inconsolata
+/* xterm*faceName: Inconsolata */
 ! xterm*faceSize: 11
-! xterm*faceName: DejaVuSansMono
+/* xterm*faceName: DejaVuSansMono */
 ! xterm*faceSize: 12
 ! xterm*faceName: liberationmono-regular
 ! xterm*faceSize: 14
