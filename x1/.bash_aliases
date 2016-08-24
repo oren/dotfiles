@@ -138,6 +138,8 @@ alias l='ls --color'
 alias ls='ls --color'
 alias la='ls -Fa'
 alias ld='ls -al -d * | egrep "^d"' # only subdirectories
+LS_COLORS='di=36:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
+export LS_COLORS
 
 alias in='sudo apt-get install -y'
 alias pu='sudo apt-get purge'
@@ -176,7 +178,7 @@ alias v='nvim'
 alias vi='nvim'
 alias o='xdg-open'
 alias f='feh --full-screen -d'
-alias un='unity-control-center'
+alias un='XDG_CURRENT_DESKTOP=Unity unity-control-center'
 alias m='mpv'
 alias pastebinit='pastebinit -a me -i'
 alias s='python -m SimpleHTTPServer'
