@@ -10,7 +10,6 @@ export TMP=~/t
 export PATH=~/.dotfiles/x1/bin:$PATH
 export PATH=~/m/bin:$PATH
 export PATH=~/.npm/bin:$PATH
-# export PATH=$PROJECTS/neo/neo4j-enterprise-2.3.1/bin:$PATH
 
 # env
 export PS1="\w "
@@ -21,7 +20,7 @@ export EDITOR="nvim"
 # export PATH=$PATH:$PROJECTS/go_appengine
 
 # java
-# export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+# export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 # android

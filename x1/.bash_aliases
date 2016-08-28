@@ -138,7 +138,7 @@ alias l='ls --color'
 alias ls='ls --color'
 alias la='ls -Fa'
 alias ld='ls -al -d * | egrep "^d"' # only subdirectories
-LS_COLORS='di=36:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
+LS_COLORS='di=36:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'  # http://linux-sxs.org/housekeeping/lscolors.html
 export LS_COLORS
 
 alias in='sudo apt-get install -y'

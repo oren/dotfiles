@@ -167,7 +167,7 @@ function! SetCursorPosition()
 endfunction
 "}}}
 
-" autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
+" autocmd BufNewFile,BuRead *.txt setlocal spell spelllang=en_us
 " :setlocal spell spelllang=en_us
 " :setlocal nospell
 
