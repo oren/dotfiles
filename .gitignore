@@ -25,3 +25,4 @@ server/mutt/account
 server/mutt/aliases
 
 x1/.config/nvim/.netrwhist
+x1/.config/nvim/plugged
