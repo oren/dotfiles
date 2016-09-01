@@ -25,14 +25,6 @@ call plug#end()
 let g:mapleader = "\<Space>"
 colorscheme flattened_dark
 
-" colorscheme nofrils-dark
-
-" if file was modified, enter will save it. no need for :w
-nnoremap <CR> :<C-u>update<CR>
-
-" open init.vim
-nnoremap <Leader>vi :e $MYVIMRC<CR>
-
 " ; is easier than :
 nnoremap ; :
 
@@ -135,6 +127,15 @@ inoremap <silent> ,n <C-x><C-n>
 inoremap <silent> ,o <C-x><C-o>
 inoremap <silent> ,t <C-x><C-]>
 inoremap <silent> ,u <C-x><C-u>
+
+" if file was modified, enter will save it. no need for :w
+nnoremap <CR> :<C-u>update<CR>
+
+" replace current word
+nnoremap <Leader>r :%s/\<<C-r><C-w>\>/
+
+" open init.vim
+nnoremap <Leader>vi :e $MYVIMRC<CR>
 
 " Netrw
 let g:netrw_banner = 0 " disable netrw banner with

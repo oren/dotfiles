@@ -40,7 +40,7 @@ export GOPATH=$PROJECTS/go
 export GOBIN=$PROJECTS/go/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
-# export PATH=$PATH:~/cayley/src/github.com/cayleygraph/cayley
+export PATH=$PATH:~/p/go/src/github.com/cayleygraph/cayley
 
 # go engine
 export PATH=$PATH:$TMP/apps/go_appengine/
