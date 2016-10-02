@@ -19,6 +19,9 @@ export EDITOR="nvim"
 # appengine
 # export PATH=$PATH:$PROJECTS/go_appengine
 
+# caddy
+export PATH=$PATH:$TMP/apps
+
 # java
 # export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
