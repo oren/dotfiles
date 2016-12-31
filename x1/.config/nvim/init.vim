@@ -2,6 +2,7 @@ call plug#begin()
 Plug 'fatih/vim-go'
   let g:go_fmt_command = "goimports"
 Plug 'romainl/flattened'
+Plug 'iCyMind/NeoSolarized'
 Plug 'tpope/vim-commentary'                " gcc
   xmap <silent><Leader>c <Plug>Commentary
   nmap <silent><Leader>c <Plug>CommentaryLine
@@ -23,7 +24,9 @@ Plug 'ludovicchabant/vim-gutentags' " {{{
 call plug#end()
 
 let g:mapleader = "\<Space>"
-colorscheme flattened_dark
+" colorscheme flattened_dark
+set background=dark
+colorscheme NeoSolarized
 
 " ; is easier than :
 nnoremap ; :
@@ -78,10 +81,8 @@ set undoreload=10000        " number of lines to save for undo
 
 set cursorline
 
-" Disable search highlighting
-" ====================================================================
-" if file was modified, enter will save it. no need for :w
-nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
+" Disable search highlighting with esc
+nnoremap <silent> <esc> :silent :nohlsearch<cr>
 
 set expandtab     " replace Tab with spaces
 set tabstop=2     " number of spaces that a <Tab> in the file counts for
