@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
   let g:go_fmt_command = "goimports"
 Plug 'romainl/flattened'
