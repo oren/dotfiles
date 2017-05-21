@@ -58,7 +58,7 @@ set viminfo=!,h,f1,'100
 " ignore pattern for wildmenu
 " try this:
 set wildignore+=*.a,*.o,*.pyc,*~,*.swp,*.tmp
-set wildignore+=node_modules/*      " ignores node_modules
+set wildignore+=**/node_modules"
 set wildmode=list:longest,full
 
 set showcmd      " always show current command
@@ -113,7 +113,7 @@ if executable("ag")
   set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
-nnoremap <leader>a :argadd <c-r>=fnameescape(expand('%:p:h'))<cr>/*<C-d> "open all files in a dir where current file is
+nnoremap <leader>a :argadd <c-r>=fnameescape(expand('%:p:h'))<cr>/*<C-d>
 nnoremap <leader>b :b <C-d>
 nnoremap <leader>e :e **/
 nnoremap <leader>g :grep<space>
