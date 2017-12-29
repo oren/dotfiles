@@ -179,7 +179,7 @@ new_window none
 # hide_edge_borders both
 
 # put workspaces on external monitor if it's connected
-workspace 2 output HDMI1
+workspace 1 output HDMI1
 workspace 3 output HDMI1
 workspace 4 output HDMI1
 workspace 5 output HDMI1

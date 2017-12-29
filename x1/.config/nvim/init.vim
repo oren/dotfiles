@@ -107,7 +107,7 @@
 "     to move a block of code from a view to a new partial.
 "
 "   vim-abolish:
-"     :S/<pattern>                     - smartly search for pattern 
+"     :S/<pattern>                     - smartly search for pattern
 "
 "     :%S/facilit{y,ies}/building{,s}/ - change all facilities to buildings
 "     :%S/old_name/new_description/    - old_name --> new_description
@@ -136,29 +136,13 @@
 "       <CTRL-s>         - add a surround
 "       <CTRL-s><CTRL-s> - add a new line + surround + indent
 "
+"
 call plug#begin()
-Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
-  let g:go_fmt_command = "goimports"
-Plug 'romainl/flattened'
 Plug 'iCyMind/NeoSolarized'
 Plug 'tpope/vim-commentary'                " gcc
   xmap <silent><Leader>c <Plug>Commentary
   nmap <silent><Leader>c <Plug>CommentaryLine
-Plug 'ludovicchabant/vim-gutentags' " {{{
-  " let g:gutentags_exclude = [
-  "     \ '*.min.js',
-  "     \ '*html*',
-  "     \ 'jquery*.js',
-  "     \ '*/vendor/*',
-  "     \ '*/node_modules/*',
-  "     \ '*/python2.7/*',
-  "     \ '*/migrate/*.rb'
-  "     \ ]
-  let g:gutentags_generate_on_missing = 0
-  let g:gutentags_generate_on_write = 0
-  let g:gutentags_generate_on_new = 0
-  nnoremap <Leader>t! :GutentagsUpdate!<CR>
 " }}}
 call plug#end()
 
@@ -176,6 +160,7 @@ inoremap hh <ESC>
 map <C-h> <Esc>:bp<CR>
 map <C-t> <Esc>:bn<CR>
 
+" F5 - toggle spell. hit ctrl+n to correct a spelling
 noremap <F5> :call Spelling()<CR>
 
 set clipboard=unnamed,unnamedplus
@@ -188,6 +173,13 @@ set mouse=         " disable mouse
 set scrolloff=3       " always keep cursor 3 lines from the top and bottom
 set virtualedit=onemore " allow the cursor to move just past the end of the line
 set undolevels=5000     " set maximum undo levels
+
+
+" Go
+" not sure
+" set autowrite
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
 
 " ! save global variables that doesn't contains lowercase letters
 " h disable the effect of 'hlsearch' when loading the viminfo
@@ -344,6 +336,14 @@ function! Spelling()
         echo "Spell mode disabled"
     endif
 endfunction
+
+" navigate in the quickfix list with ctr+n, ctr+p, and leader a
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
+" use quickfix instead of location lists
+let g:go_list_type = "quickfix"
 
 " autocmd BufNewFile,BuRead *.txt setlocal spell spelllang=en_us
 " :setlocal spell spelllang=en_us

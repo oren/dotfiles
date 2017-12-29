@@ -1,7 +1,150 @@
+" TIPS & TRICKS
+"
+" Useful insert mode commands:
+"   Ctrl-o       for one time normal mode command (zz being most useful)
+"   Ctrl-r<reg>  for insertion from a named register
+"   Ctrl-b       delete backward a word
+"   Ctrl-r=      expression register (eg 43 + 44 --> 87)
+"
+" Useful cursor positioning and movement commands:
+"   zt      move text under cursor to the top
+"   zz      move text under cursor to the center
+"   zb      move text under cursor to the bottom
+"   zl      move text under cursor one character to the left
+"   zL      move text under cursor half a screen to the left
+"   H       move to top of screen
+"   M       move to middle of screen
+"   L       move to end of screen
+"   g;      move back to where you were last editing
+"   mm      set a mark in the current file
+"   'm      return back to 'm' mark in the current file
+"   mM      set a global mark
+"   'M      return back to the global 'M' mark
+"   {/}     move between paragraphs
+"   (/)     move between sentences
+"   ge/gE   move to the end of the previous word/WORD
+"   Ctrl-e  scroll file up one line at a time
+"   Ctrl-y  scroll file down one line at a time
+"
+" Completion sub-types when in insert completion-mode initiated via Ctrl-x:
+"   Ctrl-f  file name completion based on files in the CWD
+"   Ctrl-k  dictionary completion
+"   Ctrl-l  line completion
+"   Ctrl-o  omni completion
+"   Ctrl-]  tag completion
+"
+" Spelling commands:
+"   z=      Suggest spelling correction
+"   ]s      Move to next spelling error
+"   [s      Move to previous spelling error
+"   zg      Add current word to dictionary
+"   zw      Delete current word from dictionary
+"
+" Tag navigation:
+"   Ctrl-]  find definition under cursor
+"   Ctrl-o  return back from definition
+"
+" Visual mode commands:
+"   gv           repeat last visual selection
+"   u/U          change visual selection to lower or upper case
+"   vip/vap      visual select paragraph
+"   vis/vas      visual select sentence
+"   vit/vat      visual select tag
+"   :'<,'>!sort  sort visual selection
+"   :'<,'>!uniq  uniq visual selection
+"   gx           open link in a browser
+"
+" Substitute in visual block:
+"   '<,'>s/\%Vfoo/bar/c
+"
+" Misc commands:
+"   X                  delete backwards
+"   gf                 go to file under cursor
+"   gq                 format text
+"   :r !ls *.txt       read in selected filenames
+"   /<term>            search forward for 'term'
+"   ?<term>            search backward for 'term'
+"   :%s//<new>         replace last search 'term' with 'new'
+"   :%s//<new>/c       replace, with confirmation, last search 'term' with 'new'
+"   :%s///n            list match count for the last search
+"   :g/<pattern>       list all lines containing 'pattern'
+"   :g/<pattern>/d     delete all lines containing 'pattern'
+"   :v/<pattern>       list all lines NOT containing 'pattern'
+"   :v/<pattern>/d     delete all lines NOT containing 'pattern'
+"   :g/<pattern/normal @q execute macro 'q' over all lines that match pattern
+"
+"   /<term>            search for 'term'
+"   cgn                replace last search match
+"   dgn                delete last search match
+"   .                  repeat last change
+"
+"   % vim $(find **/*.txt)  edit all txt files from the current path down
+"   % vim $(ag -l foo)      edit all files that contain foo
+"
+"   % cat do.vim
+"   :%s/term/new/g
+"   :wq
+"   % vim -es file.txt < do.vim  'sed' style scripted edits
+"
+"   :h digraph-table             list all displayable characters
+"
+"   :syntime on      start syntax performance monitoring
+"   :syntime report  display sorted list of expensive syntax patterns
+"
+"   :term            start nvim terminal
+"
+" Plugin details:
+"
+"   vim-grepper.vim:
+"     '-G extension$ <searchterm>' to restrict ag to a particular file extension
+"     '-t<type> <searchterm>' to restrict rg to a particular file type
+"
+"   vim-bundler:
+"     Run 'gem ctags' to generate ctags for installed gems (required just once).
+"
+"   vim-rails:
+"     Use a visual selection in conjunction with ':Rextract <<partial-name>>'
+"     to move a block of code from a view to a new partial.
+"
+"   vim-abolish:
+"     :S/<pattern>                     - smartly search for pattern
+"
+"     :%S/facilit{y,ies}/building{,s}/ - change all facilities to buildings
+"     :%S/old_name/new_description/    - old_name --> new_description
+"                                        OldName  --> NewDescription
+"     :%S/h{2,3}/h{3,2}/               - change all h2 to h3
+"
+"     crs - change to snake_case
+"     crc - change to camelCase
+"     crm - change to MixCase
+"
+"     ~/dotfiles/vim/after/plugin/abolish.vim - list of abbreviations
+"
+"   vim-commentary:
+"     gc                 - comment out a visual block
+"
+"   vim-surround:
+"     Normal mode:
+"       ds<surround>     - delete a surround
+"       cs<old><new>     - change a surround
+"       ysiw<surround>   - add a surround to the current word
+"
+"     Visual mode:
+"       S                - add a surround
+"
+"     Insert mode:
+"       <CTRL-s>         - add a surround
+"       <CTRL-s><CTRL-s> - add a new line + surround + indent
+"
+"
+" shortcuts
+" F5 - toggle spell. hit ctrl+n to correct a spelling
+"
 call plug#begin()
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
   let g:go_fmt_command = "goimports"
+  let g:go_fmt_autosave = 1
 Plug 'romainl/flattened'
 Plug 'iCyMind/NeoSolarized'
 Plug 'tpope/vim-commentary'                " gcc
@@ -38,6 +181,8 @@ inoremap hh <ESC>
 map <C-h> <Esc>:bp<CR>
 map <C-t> <Esc>:bn<CR>
 
+noremap <F5> :call Spelling()<CR>
+
 set clipboard=unnamed,unnamedplus
 set number         " show line numbers
 set noswapfile     " disable creating of *.swp files
@@ -58,7 +203,8 @@ set viminfo=!,h,f1,'100
 " ignore pattern for wildmenu
 " try this:
 set wildignore+=*.a,*.o,*.pyc,*~,*.swp,*.tmp
-set wildignore+=**/node_modules"
+set wildignore+=node_modules/*      " ignores node_modules
+set wildignore+=build/*      " ignores node_modules
 set wildmode=list:longest,full
 
 set showcmd      " always show current command
@@ -75,6 +221,9 @@ set statusline+=%P                        " percentage of file
 
 set nowrap        " disable wrap for long lines
 set textwidth=0   " disable auto break long lines
+
+" (perfermance improvement) only syntax highlighting the first 200 characters of each line
+set synmaxcol=200
 
 " Persistent undo
 set undofile                " Save undo's after file closes
@@ -113,6 +262,7 @@ if executable("ag")
   set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
+"open all files in a dir where current file is
 nnoremap <leader>a :argadd <c-r>=fnameescape(expand('%:p:h'))<cr>/*<C-d>
 nnoremap <leader>b :b <C-d>
 nnoremap <leader>e :e **/
@@ -171,6 +321,34 @@ function! SetCursorPosition()
     end
 endfunction
 "}}}
+
+set autoread
+
+" Autosave will automatically save to disk the currently edited buffer upon leaving insert mode as well as after a text edit has occurred.
+" Autoread will automatically update an open buffer if it has been changed outside the current edit session, usually by an external program.
+augroup autoSaveAndRead
+    autocmd!
+    autocmd TextChanged,InsertLeave,FocusLost * silent! wall
+    autocmd CursorHold * silent! checktime
+augroup END
+
+" equalize Vim splits that have been munged by some type of resize event
+autocmd VimResized * wincmd =
+
+" Toggle spelling mode and add the dictionary to the completion list of
+" sources if spelling mode has been entered, otherwise remove it when
+" leaving spelling mode.
+"
+function! Spelling()
+    setlocal spell!
+    if &spell
+        set complete+=kspell
+        echo "Spell mode enabled"
+    else
+        set complete-=kspell
+        echo "Spell mode disabled"
+    endif
+endfunction
 
 " autocmd BufNewFile,BuRead *.txt setlocal spell spelllang=en_us
 " :setlocal spell spelllang=en_us
