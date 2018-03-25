@@ -138,16 +138,14 @@
 "
 "
 call plug#begin()
-Plug 'fatih/vim-go'
-Plug 'iCyMind/NeoSolarized'
-Plug 'tpope/vim-commentary'                " gcc
-  xmap <silent><Leader>c <Plug>Commentary
-  nmap <silent><Leader>c <Plug>CommentaryLine
-" }}}
+  Plug 'fatih/vim-go'
+  Plug 'iCyMind/NeoSolarized'
+  Plug 'tpope/vim-commentary'                " gcc
+    xmap <silent><Leader>c <Plug>Commentary
+    nmap <silent><Leader>c <Plug>CommentaryLine
 call plug#end()
 
 let g:mapleader = "\<Space>"
-" colorscheme flattened_dark
 set background=dark
 colorscheme NeoSolarized
 
@@ -180,6 +178,26 @@ set undolevels=5000     " set maximum undo levels
 " set autowrite
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
+au FileType go nmap <F9> <Plug>(go-def)
+au FileType go set noexpandtab
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_auto_sameids = 1
+let g:go_fmt_command = "goimports"
+let g:go_auto_type_info = 1 "Show type information in status line
+
+" Error and warning signs.
+let g:ale_sign_error = '⤫'
+let g:ale_sign_warning = '⚠'
 
 " ! save global variables that doesn't contains lowercase letters
 " h disable the effect of 'hlsearch' when loading the viminfo
@@ -234,7 +252,6 @@ set ignorecase " ignore case of letters
 set smartcase  " override the 'ignorecase' when there is uppercase letters
 set gdefault   " when on, the :substitute flag 'g' is default on
 
-" Cursor configuration {{{
 " ====================================================================
 " Use a blinking upright bar cursor in Insert mode, a solid block in normal
 " and a blinking underline in replace mode
@@ -242,7 +259,6 @@ set gdefault   " when on, the :substitute flag 'g' is default on
   let &t_SI = "\<Esc>[5 q"
   let &t_SR = "\<Esc>[3 q"
   let &t_EI = "\<Esc>[2 q"
-" }}}
 
 if executable("ag")
   set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
@@ -307,17 +323,18 @@ function! SetCursorPosition()
         endif
     end
 endfunction
-"}}}
 
 set autoread
 
+
+" When this is enabled the Go imports doesn't work
 " Autosave will automatically save to disk the currently edited buffer upon leaving insert mode as well as after a text edit has occurred.
 " Autoread will automatically update an open buffer if it has been changed outside the current edit session, usually by an external program.
-augroup autoSaveAndRead
-    autocmd!
-    autocmd TextChanged,InsertLeave,FocusLost * silent! wall
-    autocmd CursorHold * silent! checktime
-augroup END
+" augroup autoSaveAndRead
+"     autocmd!
+"     autocmd TextChanged,InsertLeave,FocusLost * silent! wall
+"     autocmd CursorHold * silent! checktime
+" augroup END
 
 " equalize Vim splits that have been munged by some type of resize event
 autocmd VimResized * wincmd =
@@ -339,7 +356,8 @@ endfunction
 
 " navigate in the quickfix list with ctr+n, ctr+p, and leader a
 map <C-n> :cnext<CR>
-map <C-m> :cprevious<CR>
+" when this is enabled, everytime i hit enter I see 'E42: No Error'
+" map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
 
 " use quickfix instead of location lists
