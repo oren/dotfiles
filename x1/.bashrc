@@ -60,7 +60,7 @@ PROMPT_COMMAND='pwd > "${HOME}/.cwd"'             # Save current working dir
 source ~/p/git-hub/.rc
 
 # bash-git-prompt
-GIT_PROMPT_ONLY_IN_REPO=1
-source ~/.bash-git-prompt/gitprompt.sh
+# GIT_PROMPT_ONLY_IN_REPO=1
+# source ~/.bash-git-prompt/gitprompt.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

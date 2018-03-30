@@ -1,8 +1,0 @@
-#!/bin/bash
-
-cd /tmp
-wget http://winhelp2002.mvps.org/hosts.txt
-sudo mv /etc/hosts /etc/hosts-backup
-sudo mv hosts.txt /etc/hosts
-sudo cat /etc/hosts-backup >> /etc/hosts
-
