@@ -179,6 +179,7 @@ bindcode 76 exec --no-startup-id ~/m/bin/dll2
 new_window none
 # hide_edge_borders both
 
+
 # put workspaces on external monitor if it's connected
 workspace 1 output HDMI1
 workspace 2 output HDMI1

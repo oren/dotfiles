@@ -143,10 +143,14 @@ call plug#begin()
   Plug 'tpope/vim-commentary'                " gcc
     xmap <silent><Leader>c <Plug>Commentary
     nmap <silent><Leader>c <Plug>CommentaryLine
+    Plug 'blindFS/vim-taskwarrior'
+    Plug 'posva/vim-vue'
+    Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 let g:mapleader = "\<Space>"
 set background=dark
+"set background=light
 colorscheme NeoSolarized
 
 " ; is easier than :
@@ -154,6 +158,9 @@ nnoremap ; :
 
 " hh is easier than esc
 inoremap hh <ESC>
+
+" save on esc
+inoremap <Esc> <Esc>:w<CR>
 
 map <C-h> <Esc>:bp<CR>
 map <C-t> <Esc>:bn<CR>
@@ -266,7 +273,7 @@ if executable("ag")
 endif
 
 "open all files in a dir where current file is
-nnoremap <leader>a :argadd <c-r>=fnameescape(expand('%:p:h'))<cr>/*<C-d>
+" nnoremap <leader>a :argadd <c-r>=fnameescape(expand('%:p:h'))<cr>/*<C-d>
 nnoremap <leader>b :b <C-d>
 nnoremap <leader>e :e **/
 nnoremap <leader>g :grep<space>

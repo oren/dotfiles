@@ -176,6 +176,7 @@ alias pr='git hub pr-new --base'
 # apps
 alias v='nvim'
 alias vi='nvim'
+alias vim='nvim'
 alias o='xdg-open'
 alias f='feh --full-screen -d'
 alias un='XDG_CURRENT_DESKTOP=Unity unity-control-center'
@@ -193,3 +194,5 @@ alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0|grep -E "perce
 alias me='cd ~/p/me'
 alias en='gpg -a --cipher-algo AES256 --no-use-agent -c'
 alias de='gpg --no-use-agent'
+
+alias t='task'
