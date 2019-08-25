@@ -139,7 +139,7 @@
 "
 call plug#begin()
   Plug 'fatih/vim-go'
-  Plug 'sbdchd/neoformat'
+  Plug 'w0rp/ale'                            " run prettier for js files
   Plug 'iCyMind/NeoSolarized'
   Plug 'tpope/vim-commentary'                " gcc
     xmap <silent><Leader>c <Plug>Commentary
@@ -344,17 +344,13 @@ set autoread
 "     autocmd CursorHold * silent! checktime
 " augroup END
 
-let g:neoformat_try_formatprg = 1
 
-augroup NeoformatAutoFormat
-    autocmd!
-    autocmd FileType javascript setlocal formatprg=prettier\
-                                             \--stdin\
-                                             \--print-width\ 80\
-                                             \--single-quote\
-                                             \--trailing-comma\ es5
-    autocmd BufWritePre *.js Neoformat
-augroup END
+" ALE Plugin
+let g:ale_linters_explicit = 1
+let g:ale_javascript_prettier_options = '--single-quote --no-semi'
+let g:ale_fixers = { 'javascript': ['prettier'], 'css': ['prettier'], }
+let g:ale_linters = { 'javascript': ['eslint'], }
+" let g:ale_fix_on_save = 1 "run it on save
 
 " equalize Vim splits that have been munged by some type of resize event
 autocmd VimResized * wincmd =
