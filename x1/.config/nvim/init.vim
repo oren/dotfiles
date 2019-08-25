@@ -139,6 +139,7 @@
 "
 call plug#begin()
   Plug 'fatih/vim-go'
+  Plug 'sbdchd/neoformat'
   Plug 'iCyMind/NeoSolarized'
   Plug 'tpope/vim-commentary'                " gcc
     xmap <silent><Leader>c <Plug>Commentary
@@ -248,7 +249,7 @@ set cursorline
 " Disable search highlighting with esc
 nnoremap <silent> <esc> :silent :nohlsearch<cr>
 
-set expandtab     " replace Tab with spaces
+set noexpandtab   " Use tabs
 set tabstop=2     " number of spaces that a <Tab> in the file counts for
 set softtabstop=2 " remove <Tab> symbols as it was spaces
 set shiftwidth=2  " indent size for << and >>
@@ -342,6 +343,18 @@ set autoread
 "     autocmd TextChanged,InsertLeave,FocusLost * silent! wall
 "     autocmd CursorHold * silent! checktime
 " augroup END
+
+let g:neoformat_try_formatprg = 1
+
+augroup NeoformatAutoFormat
+    autocmd!
+    autocmd FileType javascript setlocal formatprg=prettier\
+                                             \--stdin\
+                                             \--print-width\ 80\
+                                             \--single-quote\
+                                             \--trailing-comma\ es5
+    autocmd BufWritePre *.js Neoformat
+augroup END
 
 " equalize Vim splits that have been munged by some type of resize event
 autocmd VimResized * wincmd =
