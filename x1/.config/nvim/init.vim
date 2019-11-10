@@ -1,142 +1,3 @@
-" TIPS & TRICKS
-"
-" Useful insert mode commands:
-"   Ctrl-o       for one time normal mode command (zz being most useful)
-"   Ctrl-r<reg>  for insertion from a named register
-"   Ctrl-b       delete backward a word
-"   Ctrl-r=      expression register (eg 43 + 44 --> 87)
-"
-" Useful cursor positioning and movement commands:
-"   zt      move text under cursor to the top
-"   zz      move text under cursor to the center
-"   zb      move text under cursor to the bottom
-"   zl      move text under cursor one character to the left
-"   zL      move text under cursor half a screen to the left
-"   H       move to top of screen
-"   M       move to middle of screen
-"   L       move to end of screen
-"   g;      move back to where you were last editing
-"   mm      set a mark in the current file
-"   'm      return back to 'm' mark in the current file
-"   mM      set a global mark
-"   'M      return back to the global 'M' mark
-"   {/}     move between paragraphs
-"   (/)     move between sentences
-"   ge/gE   move to the end of the previous word/WORD
-"   Ctrl-e  scroll file up one line at a time
-"   Ctrl-y  scroll file down one line at a time
-"
-" Completion sub-types when in insert completion-mode initiated via Ctrl-x:
-"   Ctrl-f  file name completion based on files in the CWD
-"   Ctrl-k  dictionary completion
-"   Ctrl-l  line completion
-"   Ctrl-o  omni completion
-"   Ctrl-]  tag completion
-"
-" Spelling commands:
-"   z=      Suggest spelling correction
-"   ]s      Move to next spelling error
-"   [s      Move to previous spelling error
-"   zg      Add current word to dictionary
-"   zw      Delete current word from dictionary
-"
-" Tag navigation:
-"   Ctrl-]  find definition under cursor
-"   Ctrl-o  return back from definition
-"
-" Visual mode commands:
-"   gv           repeat last visual selection
-"   u/U          change visual selection to lower or upper case
-"   vip/vap      visual select paragraph
-"   vis/vas      visual select sentence
-"   vit/vat      visual select tag
-"   :'<,'>!sort  sort visual selection
-"   :'<,'>!uniq  uniq visual selection
-"   gx           open link in a browser
-"
-" Substitute in visual block:
-"   '<,'>s/\%Vfoo/bar/c
-"
-" Misc commands:
-"   X                  delete backwards
-"   gf                 go to file under cursor
-"   gq                 format text
-"   :r !ls *.txt       read in selected filenames
-"   /<term>            search forward for 'term'
-"   ?<term>            search backward for 'term'
-"   :%s//<new>         replace last search 'term' with 'new'
-"   :%s//<new>/c       replace, with confirmation, last search 'term' with 'new'
-"   :%s///n            list match count for the last search
-"   :g/<pattern>       list all lines containing 'pattern'
-"   :g/<pattern>/d     delete all lines containing 'pattern'
-"   :v/<pattern>       list all lines NOT containing 'pattern'
-"   :v/<pattern>/d     delete all lines NOT containing 'pattern'
-"   :g/<pattern/normal @q execute macro 'q' over all lines that match pattern
-"
-"   /<term>            search for 'term'
-"   cgn                replace last search match
-"   dgn                delete last search match
-"   .                  repeat last change
-"
-"   % vim $(find **/*.txt)  edit all txt files from the current path down
-"   % vim $(ag -l foo)      edit all files that contain foo
-"
-"   % cat do.vim
-"   :%s/term/new/g
-"   :wq
-"   % vim -es file.txt < do.vim  'sed' style scripted edits
-"
-"   :h digraph-table             list all displayable characters
-"
-"   :syntime on      start syntax performance monitoring
-"   :syntime report  display sorted list of expensive syntax patterns
-"
-"   :term            start nvim terminal
-"
-" Plugin details:
-"
-"   vim-grepper.vim:
-"     '-G extension$ <searchterm>' to restrict ag to a particular file extension
-"     '-t<type> <searchterm>' to restrict rg to a particular file type
-"
-"   vim-bundler:
-"     Run 'gem ctags' to generate ctags for installed gems (required just once).
-"
-"   vim-rails:
-"     Use a visual selection in conjunction with ':Rextract <<partial-name>>'
-"     to move a block of code from a view to a new partial.
-"
-"   vim-abolish:
-"     :S/<pattern>                     - smartly search for pattern
-"
-"     :%S/facilit{y,ies}/building{,s}/ - change all facilities to buildings
-"     :%S/old_name/new_description/    - old_name --> new_description
-"                                        OldName  --> NewDescription
-"     :%S/h{2,3}/h{3,2}/               - change all h2 to h3
-"
-"     crs - change to snake_case
-"     crc - change to camelCase
-"     crm - change to MixCase
-"
-"     ~/dotfiles/vim/after/plugin/abolish.vim - list of abbreviations
-"
-"   vim-commentary:
-"     gc                 - comment out a visual block
-"
-"   vim-surround:
-"     Normal mode:
-"       ds<surround>     - delete a surround
-"       cs<old><new>     - change a surround
-"       ysiw<surround>   - add a surround to the current word
-"
-"     Visual mode:
-"       S                - add a surround
-"
-"     Insert mode:
-"       <CTRL-s>         - add a surround
-"       <CTRL-s><CTRL-s> - add a new line + surround + indent
-"
-"
 call plug#begin()
   Plug 'fatih/vim-go'
   Plug 'w0rp/ale'                            " run prettier for js files
@@ -147,6 +8,7 @@ call plug#begin()
     Plug 'blindFS/vim-taskwarrior'
     Plug 'posva/vim-vue'
     Plug 'leafgarland/typescript-vim'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 call plug#end()
 
 let g:mapleader = "\<Space>"
@@ -350,7 +212,7 @@ let g:ale_linters_explicit = 1
 let g:ale_javascript_prettier_options = '--single-quote --no-semi'
 let g:ale_fixers = { 'javascript': ['prettier'], 'css': ['prettier'], }
 let g:ale_linters = { 'javascript': ['eslint'], }
-" let g:ale_fix_on_save = 1 "run it on save
+let g:ale_fix_on_save = 1 "run it on save
 
 " equalize Vim splits that have been munged by some type of resize event
 autocmd VimResized * wincmd =
@@ -385,3 +247,143 @@ let g:go_list_type = "quickfix"
 
 " this line set some stuff only for this file
 " vim: set sw=2 ts=2 et foldlevel=99 foldmethod=marker:
+
+" TIPS & TRICKS
+"
+" Useful insert mode commands:
+"   Ctrl-o       for one time normal mode command (zz being most useful)
+"   Ctrl-r<reg>  for insertion from a named register
+"   Ctrl-b       delete backward a word
+"   Ctrl-r=      expression register (eg 43 + 44 --> 87)
+"
+" Useful cursor positioning and movement commands:
+"   zt      move text under cursor to the top
+"   zz      move text under cursor to the center
+"   zb      move text under cursor to the bottom
+"   zl      move text under cursor one character to the left
+"   zL      move text under cursor half a screen to the left
+"   H       move to top of screen
+"   M       move to middle of screen
+"   L       move to end of screen
+"   g;      move back to where you were last editing
+"   mm      set a mark in the current file
+"   'm      return back to 'm' mark in the current file
+"   mM      set a global mark
+"   'M      return back to the global 'M' mark
+"   {/}     move between paragraphs
+"   (/)     move between sentences
+"   ge/gE   move to the end of the previous word/WORD
+"   Ctrl-e  scroll file up one line at a time
+"   Ctrl-y  scroll file down one line at a time
+"
+" Completion sub-types when in insert completion-mode initiated via Ctrl-x:
+"   Ctrl-f  file name completion based on files in the CWD
+"   Ctrl-k  dictionary completion
+"   Ctrl-l  line completion
+"   Ctrl-o  omni completion
+"   Ctrl-]  tag completion
+"
+" Spelling commands:
+"   z=      Suggest spelling correction
+"   ]s      Move to next spelling error
+"   [s      Move to previous spelling error
+"   zg      Add current word to dictionary
+"   zw      Delete current word from dictionary
+"
+" Tag navigation:
+"   Ctrl-]  find definition under cursor
+"   Ctrl-o  return back from definition
+"
+" Visual mode commands:
+"   gv           repeat last visual selection
+"   u/U          change visual selection to lower or upper case
+"   vip/vap      visual select paragraph
+"   vis/vas      visual select sentence
+"   vit/vat      visual select tag
+"   :'<,'>!sort  sort visual selection
+"   :'<,'>!uniq  uniq visual selection
+"   gx           open link in a browser
+"
+" Substitute in visual block:
+"   '<,'>s/\%Vfoo/bar/c
+"
+" Misc commands:
+"   X                  delete backwards
+"   gf                 go to file under cursor
+"   gq                 format text
+"   :r !ls *.txt       read in selected filenames
+"   /<term>            search forward for 'term'
+"   ?<term>            search backward for 'term'
+"   :%s//<new>         replace last search 'term' with 'new'
+"   :%s//<new>/c       replace, with confirmation, last search 'term' with 'new'
+"   :%s///n            list match count for the last search
+"   :g/<pattern>       list all lines containing 'pattern'
+"   :g/<pattern>/d     delete all lines containing 'pattern'
+"   :v/<pattern>       list all lines NOT containing 'pattern'
+"   :v/<pattern>/d     delete all lines NOT containing 'pattern'
+"   :g/<pattern/normal @q execute macro 'q' over all lines that match pattern
+"
+"   /<term>            search for 'term'
+"   cgn                replace last search match
+"   dgn                delete last search match
+"   .                  repeat last change
+"
+"   % vim $(find **/*.txt)  edit all txt files from the current path down
+"   % vim $(ag -l foo)      edit all files that contain foo
+"
+"   % cat do.vim
+"   :%s/term/new/g
+"   :wq
+"   % vim -es file.txt < do.vim  'sed' style scripted edits
+"
+"   :h digraph-table             list all displayable characters
+"
+"   :syntime on      start syntax performance monitoring
+"   :syntime report  display sorted list of expensive syntax patterns
+"
+"   :term            start nvim terminal
+"
+" Plugin details:
+"
+"   vim-grepper.vim:
+"     '-G extension$ <searchterm>' to restrict ag to a particular file extension
+"     '-t<type> <searchterm>' to restrict rg to a particular file type
+"
+"   vim-bundler:
+"     Run 'gem ctags' to generate ctags for installed gems (required just once).
+"
+"   vim-rails:
+"     Use a visual selection in conjunction with ':Rextract <<partial-name>>'
+"     to move a block of code from a view to a new partial.
+"
+"   vim-abolish:
+"     :S/<pattern>                     - smartly search for pattern
+"
+"     :%S/facilit{y,ies}/building{,s}/ - change all facilities to buildings
+"     :%S/old_name/new_description/    - old_name --> new_description
+"                                        OldName  --> NewDescription
+"     :%S/h{2,3}/h{3,2}/               - change all h2 to h3
+"
+"     crs - change to snake_case
+"     crc - change to camelCase
+"     crm - change to MixCase
+"
+"     ~/dotfiles/vim/after/plugin/abolish.vim - list of abbreviations
+"
+"   vim-commentary:
+"     gc                 - comment out a visual block
+"
+"   vim-surround:
+"     Normal mode:
+"       ds<surround>     - delete a surround
+"       cs<old><new>     - change a surround
+"       ysiw<surround>   - add a surround to the current word
+"
+"     Visual mode:
+"       S                - add a surround
+"
+"     Insert mode:
+"       <CTRL-s>         - add a surround
+"       <CTRL-s><CTRL-s> - add a new line + surround + indent
+"
+"
