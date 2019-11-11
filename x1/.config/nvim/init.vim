@@ -241,6 +241,9 @@ nnoremap <leader>a :cclose<CR>
 " use quickfix instead of location lists
 let g:go_list_type = "quickfix"
 
+" treat all *.svelte files as HTML
+au! BufNewFile,BufRead *.svelte set ft=html
+
 " autocmd BufNewFile,BuRead *.txt setlocal spell spelllang=en_us
 " :setlocal spell spelllang=en_us
 " :setlocal nospell
