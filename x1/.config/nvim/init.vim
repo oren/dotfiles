@@ -1,6 +1,8 @@
 call plug#begin()
   Plug 'fatih/vim-go'
   Plug 'w0rp/ale'                            " run prettier for js files
+	Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+	Plug 'rhysd/vim-crystal'
   Plug 'iCyMind/NeoSolarized'
   Plug 'tpope/vim-commentary'                " gcc
     xmap <silent><Leader>c <Plug>Commentary
@@ -243,6 +245,9 @@ let g:go_list_type = "quickfix"
 
 " treat all *.svelte files as HTML
 au! BufNewFile,BufRead *.svelte set ft=html
+
+" fix bug with svelte/sapper - https://github.com/rollup/rollup/issues/2988
+set backupcopy=yes
 
 " autocmd BufNewFile,BuRead *.txt setlocal spell spelllang=en_us
 " :setlocal spell spelllang=en_us

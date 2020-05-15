@@ -16,12 +16,6 @@ export PS1="\w "
 # export PS1=""
 export EDITOR="nvim"
 
-# appengine
-# export PATH=$PATH:$PROJECTS/go_appengine
-
-# caddy
-export PATH=$PATH:$TMP/apps
-
 # java
 # export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
@@ -32,12 +26,6 @@ export GOBIN=$PROJECTS/go/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:~/p/go/src/github.com/cayleygraph/cayley
-
-# go engine
-export PATH=$PATH:$TMP/apps/go_appengine/
-
-# marp
-export PATH=$PATH:$TMP/apps/marp/
 
 export PATH=$PATH:$TMP/apps/adr-tools-2.1.0/src/
 
@@ -59,6 +47,7 @@ PROMPT_COMMAND='pwd > "${HOME}/.cwd"'             # Save current working dir
 # git-hub
 source ~/p/git-hub/.rc
 
+
 # bash-git-prompt
 # GIT_PROMPT_ONLY_IN_REPO=1
 # source ~/.bash-git-prompt/gitprompt.sh
@@ -76,3 +65,11 @@ export PATH="$HOME/gems/bin:$PATH"
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# Cake
+export CAKEROOT=$HOME/.cake
+export PATH=$PATH:$CAKEROOT/bin
+
+export DENO_INSTALL="/home/oren/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
