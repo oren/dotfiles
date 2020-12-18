@@ -2,27 +2,5 @@ tags
 tags.lock
 tags.temp
 
-x120e/weechat/logs
-x120e/weechat/weechat.log
-x120e/weechat/irc.conf
-x120e/vim/.netrwhist
-x120e/weechat/highlights.txt
-x120e/weechat/active_buffer.txt
-x120e/vim/undo/*
-x120e/vim/undo/.keepme
-
-server/weechat/logs
-server/weechat/weechat.log
-server/weechat/irc.conf
-server/vim/.netrwhist
-server/weechat/highlights.txt
-server/weechat/active_buffer.txt
-server/vim/undo/*
-server/vim/undo/.keepme
-
-# mutt
-server/mutt/account
-server/mutt/aliases
-
-x1/.config/nvim/.netrwhist
-x1/.config/nvim/plugged
+x1-gen1/.config/nvim/.netrwhist
+x1-gen1/.config/nvim/plugged
