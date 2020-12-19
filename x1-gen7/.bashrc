@@ -119,3 +119,11 @@ if ! shopt -oq posix; then
   fi
 fi
 source "$HOME/.cargo/env"
+
+# Open terminal in current dir
+# Commands to be executed before the prompt is displayed
+PROMPT_COMMAND='pwd > "${HOME}/.cwd"'             # Save current working dir
+[[ -f "${HOME}/.cwd" ]] && cd "$(< ${HOME}/.cwd)" # Change to saved working dir
+
+# show path in prompt
+export PS1="\w "
