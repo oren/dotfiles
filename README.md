@@ -11,7 +11,7 @@ mv dotfiles .dotfiles
 
 create symlinks
 ```
-stow -v x1
+stow -v x1-gen7
 ```
 
 Note: whenever I need to save a config file, I should add it to 

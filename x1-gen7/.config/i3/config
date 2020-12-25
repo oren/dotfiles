@@ -3,7 +3,8 @@
 #
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
-# test config file: i3-msg reload
+# test config file: i3 -C
+# reload: i3-msg reload
 
 # i3 config file (v4)
 #
@@ -124,7 +125,7 @@ bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
+#bindsym $mod+0 workspace number $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -149,10 +150,12 @@ workspace 7 output HDMI1
 workspace 8 output HDMI1
 # workspace 9 output HDMI1
 
+assign [class="Firefox"] $ws1
+
 # reload the configuration file
-bindsym $mod+Shift+C reload
+bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+R restart
+bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+greater exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
@@ -196,6 +199,27 @@ bindsym $mod+Escape workspace back_and_forth
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
+
+# Set shut down, restart and locking features
+bindsym $mod+0 mode "$mode_system"
+set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+
+    # exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# bindsym Print exec --no-startup-id i3-scrot.sh -s
+# not working
+#bindcode 107 exec --no-startup-id ~/m/bin/i3-scrot.sh -s
 
 # brigthness
 bindcode 232 exec --no-startup-id ~/m/bin/bright-dec.sh
