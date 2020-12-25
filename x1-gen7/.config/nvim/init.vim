@@ -9,6 +9,7 @@ call plug#begin()
     nmap <silent><Leader>c <Plug>CommentaryLine
     Plug 'leafgarland/typescript-vim'
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+		Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 let g:mapleader = "\<Space>"
@@ -64,6 +65,26 @@ let g:go_highlight_types = 1
 let g:go_auto_sameids = 1
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1 "Show type information in status line
+"""
+
+" Rust
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+"""
 
 " Error and warning signs.
 let g:ale_sign_error = '⤫'

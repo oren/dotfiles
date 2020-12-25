@@ -84,9 +84,6 @@ bindsym $mod+h split h
 # split in vertical orientation
 bindsym $mod+v split v
 
-# enter fullscreen mode for the focused container
-bindsym $mod+u fullscreen toggle
-
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+o layout stacking
 bindsym $mod+comma layout tabbed
@@ -190,15 +187,33 @@ bindsym $mod+r mode "resize"
 
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
- 
+
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
 
 # switch between the current and the previously focused one
 bindsym $mod+Escape workspace back_and_forth
 
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# brigthness
+bindcode 232 exec --no-startup-id ~/m/bin/bright-dec.sh
+bindcode 233 exec --no-startup-id ~/m/bin/bright-inc.sh
+
+# set extarnal monitor
+bindcode 235 exec --no-startup-id ~/m/bin/monitor2
+
+# f12
+bindcode 96 exec --no-startup-id ~/m/bin/clip
+# f11
+bindcode 95 exec --no-startup-id ~/m/bin/dll
+# f10
+bindcode 76 exec --no-startup-id ~/m/bin/dll2
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
         status_command i3status
+				font pango:DejaVu Sans Mono 10
 }

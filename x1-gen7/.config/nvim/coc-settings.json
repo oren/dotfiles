@@ -1,0 +1,5 @@
+{
+	"rust-analyzer.updates.channel": "nightly",
+	"rust-analyzer.inlayHints.enable": true,
+	"rust-analyzer.inlayHints.chainingHints": true
+}

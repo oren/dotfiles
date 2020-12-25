@@ -20,62 +20,6 @@ extract () {
     fi
 }
 
-pg() {
-  if [ $1 == "start" ]
-  then
-    pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
-  else
-    pg_ctl -D /usr/local/var/postgres stop -s -m fast
-  fi
-}
-
-# Kudos to djanowski for this. Use ack to search files and open it in
-# `vi` with the searched text as the last searched phrase in vi.
-vack() {
-  vi -p -c "/$1" $(ack -al $@)
-}
-
-function take() {
-    mkdir -p "$1"
-    cd "$1"
-}
-
-# git
-ghpage() {
-
-  git symbolic-ref HEAD refs/heads/gh-pages
-  rm .git/index
-  git clean -fdx
-}
-
-gush() {
-  REMOTE_EXISTS=$(git branch -r | grep $(br))
-
-  if [ -n "$REMOTE_EXISTS" ]; then
-    git push origin $(br)
-  else
-    git push -u origin $(br)
-  fi
-}
-
-gush() {
-  REMOTE_EXISTS=$(git branch -r | grep $(br))
-
-  if [ -n "$REMOTE_EXISTS" ]; then
-    git push origin $(br)
-  else
-    git push -u origin $(br)
-  fi
-}
-
-gup() {
-  git pull
-}
-
-br() {
-  test -d .git && git symbolic-ref HEAD 2> /dev/null | sed 's/refs\/heads\///'
-}
-
 # STEP 1: Run tunnel <hostname>
 # STEP 2: Go to network, SOCKS proxy, and specify localhost 9999
 # STEP 3: BAM, profit :-)
@@ -170,7 +114,7 @@ alias gf='git fetch --prune'
 alias gb='git branch'
 alias ga='git add --all'
 alias gcl='git clone'
-alias gh='git hub'
+#alias gh='git hub'
 alias pr='git hub pr-new --base'
 
 # apps

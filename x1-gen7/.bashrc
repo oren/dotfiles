@@ -9,6 +9,7 @@ case $- in
 esac
 
 export TERM=alacritty
+export EDITOR=vim
 export PATH=~/m/bin:$PATH
 
 # don't put duplicate lines or lines starting with space in the history.
