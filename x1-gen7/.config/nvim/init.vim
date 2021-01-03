@@ -7,9 +7,9 @@ call plug#begin()
   Plug 'tpope/vim-commentary'                " gcc
     xmap <silent><Leader>c <Plug>Commentary
     nmap <silent><Leader>c <Plug>CommentaryLine
-    Plug 'leafgarland/typescript-vim'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
-		Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'leafgarland/typescript-vim'
+	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 let g:mapleader = "\<Space>"
