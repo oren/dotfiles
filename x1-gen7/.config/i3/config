@@ -143,7 +143,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # put workspaces on external monitor if it's connected
-workspace 1 output HDMI1
+#workspace 1 output HDMI1
 workspace 2 output HDMI1
 workspace 3 output HDMI1
 workspace 4 output HDMI1
@@ -151,9 +151,9 @@ workspace 5 output HDMI1
 workspace 6 output HDMI1
 workspace 7 output HDMI1
 workspace 8 output HDMI1
-# workspace 9 output HDMI1
+workspace 9 output HDMI1
 
-assign [class="Firefox"] $ws1
+#assign [class="Firefox"] $ws2
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -225,11 +225,11 @@ mode "$mode_system" {
 #bindcode 107 exec --no-startup-id ~/m/bin/i3-scrot.sh -s
 
 # brigthness
-bindcode 232 exec --no-startup-id ~/m/bin/bright-dec.sh
-bindcode 233 exec --no-startup-id ~/m/bin/bright-inc.sh
+bindcode 71 exec --no-startup-id ~/m/bin/bright-dec.sh
+bindcode 72 exec --no-startup-id ~/m/bin/bright-inc.sh
 
 # set extarnal monitor
-bindcode 235 exec --no-startup-id ~/m/bin/monitor2
+bindcode 73 exec --no-startup-id ~/m/bin/monitor2
 
 # f12
 bindcode 96 exec --no-startup-id ~/m/bin/clip
