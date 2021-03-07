@@ -121,6 +121,8 @@ if ! shopt -oq posix; then
 fi
 source "$HOME/.cargo/env"
 
+export PATH=$PATH:/usr/local/go/bin
+
 # Open terminal in current dir
 # Commands to be executed before the prompt is displayed
 PROMPT_COMMAND='pwd > "${HOME}/.cwd"'             # Save current working dir
