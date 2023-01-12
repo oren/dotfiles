@@ -42,7 +42,7 @@ set mouse=         " disable mouse
 set scrolloff=3       " always keep cursor 3 lines from the top and bottom
 set virtualedit=onemore " allow the cursor to move just past the end of the line
 set undolevels=5000     " set maximum undo levels
-
+set nobackup            " no backup files
 
 " Go
 " not sure

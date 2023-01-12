@@ -11,6 +11,11 @@ esac
 export TERM=alacritty
 export EDITOR=vim
 export PATH=~/m/bin:$PATH
+export PATH=~/a/firefox:$PATH
+
+# deno
+export DENO_INSTALL="/home/oren/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -123,6 +128,10 @@ source "$HOME/.cargo/env"
 
 export PATH=$PATH:/usr/local/go/bin
 
+#bun
+BUN_INSTALL="/home/oren/.bun"
+PATH="$BUN_INSTALL/bin:$PATH"
+
 # Open terminal in current dir
 # Commands to be executed before the prompt is displayed
 PROMPT_COMMAND='pwd > "${HOME}/.cwd"'             # Save current working dir
@@ -130,3 +139,8 @@ PROMPT_COMMAND='pwd > "${HOME}/.cwd"'             # Save current working dir
 
 # show path in prompt
 export PS1="\w "
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+. "$HOME/.cargo/env"
