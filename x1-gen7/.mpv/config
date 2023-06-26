@@ -3,3 +3,4 @@ osd-font-size=30
 osd-scale-by-window=no
 fullscreen
 audio-display=no
+sub-font-size=30
