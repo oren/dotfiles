@@ -139,8 +139,11 @@ alias me='cd ~/p/me'
 alias en='gpg -a --cipher-algo AES256 --no-use-agent -c'
 alias de='gpg --no-use-agent'
 
-alias dl='youtube-dl'
-alias t='tmuxinator'
+alias dl='yt-dlp'
+# alias t='tmuxinator'
+
+# https://github.com/oren/todo
+alias t='todo'
 
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
